@@ -1,0 +1,52 @@
+/* From Uiverse.io by Ali-Tahmazi99 */ 
+/* From uiverse.io by @Ali-Tahmazi99 */
+.sec-button {
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    /* border-radius: 30%; */
+    border: 1px solid #9f193f;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   }
+   
+   .sec-button::before,
+   .sec-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   .sec-button::before {
+    left: -10px;
+    background: #9f193f;
+   }
+   
+   .sec-button::after {
+    right: -10px;
+    background: #28536B;
+   }
+   
+   .sec-button:hover::before,
+   .sec-button:hover::after {
+    width: 58%;
+   }
+   
+   .sec-button:hover span {
+    color: #fff;
+    transition: 0.3s;
+   }
+   
+   .sec-button span {
+    color: #9f193f;
+    /* font-size: 1; */
+    transition: all 0.3s ease-in;
+   }
