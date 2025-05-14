@@ -16,12 +16,12 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       <AboutHero />
-      <OurStory/>
+      {/* <OurStory/>
       <Hello/>
   
       
       <WayAreWeUnique />
-      <CallToAction/>
+      <CallToAction/> */}
       {/* <OurJourney /> */}
       {/* <OurTeam /> */}
     </div>
