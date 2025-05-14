@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import AboutHero from '@/components/about/AboutHero';
 import WayAreWeUnique from '@/components/about/WayAreWeUnique';
@@ -7,21 +8,21 @@ import OurStory from '@/components/about/OurStory';
 import CallToAction from '@/components/home/CallToAction';
 import Hello from '@/components/about/Hello';
 
-export const metadata = {
-  title: 'About Us | TechNexus',
-  description: 'Learn about TechNexus - our story, mission, values and the team behind our innovative IT solutions.',
-};
+// export const metadata = {
+//   title: 'About Us | TechNexus',
+//   description: 'Learn about TechNexus - our story, mission, values and the team behind our innovative IT solutions.',
+// };
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
       <AboutHero />
-      {/* <OurStory/>
+      <OurStory/>
       <Hello/>
   
       
       <WayAreWeUnique />
-      <CallToAction/> */}
+      <CallToAction/>
       {/* <OurJourney /> */}
       {/* <OurTeam /> */}
     </div>
