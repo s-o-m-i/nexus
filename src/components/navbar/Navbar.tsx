@@ -40,7 +40,9 @@ const Navbar = () => {
                     </li>
                     </Link>
                     <li className="cursor-pointer transition navbar-items"><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></li>
+                    <Link href={"/contact"}>
                     <li className="cursor-pointer transition navbar-items"><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></li>
+                    </Link>
                 </ul>
                 <div className="md:hidden">
                     <button>

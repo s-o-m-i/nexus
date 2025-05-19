@@ -6,7 +6,8 @@ import ModernCard from '@/ui/ModernCard'
 const WPOurServices = () => {
     return (
         <div>
-            <section className="py-20 px-8 md:px-16 bg-white">
+            <section className="py-20 px-8 md:px-16 bg-white relative">
+                
                 <h2 className='text-[32px] sm:text-[42px] font-bold text-[#04213F]  text-center'>Our Web Development Services
                 </h2>
                 <div className="flex justify-center">

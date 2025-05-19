@@ -5,11 +5,11 @@ const CallToAction = ({desc = "Ready to take your business to the next level wit
   return (
     <div>
       <section className="py-20 px-8 md:px-16 bg-white">
-        <div className="p-[90px] rounded-[16px] bg-[#9f193f]">
+        <div className="p-[90px] w-full   rounded-2xl bg-[#F9FAFB] border border-gray-200 shadow transition-shadow hover:shadow-lg relative overflow-hidden">
           <div className="grid grid-cols-12">
             <div className="col-span-8">
 
-              <h3 className='text-[42px] text-white leading-[63px]'>{desc}
+              <h3 className='text-[42px] text-black leading-[63px]'>{desc}
               </h3>
             </div>
             <div className="col-span-4 flex items-center gap-5">

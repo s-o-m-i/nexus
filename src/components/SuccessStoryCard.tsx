@@ -19,7 +19,7 @@ const SuccessStoryCard = ({
   }) => {
   return (
 <>
-<div className="transition-all duration-300 cursor-pointer rounded-xl px-5 py-4 border-2 border-gray-200 hover:bg-gray-50 hover:shadow-sm">
+<div className="transition-all duration-300 cursor-pointer rounded-xl px-5 py-4 border-2 border-gray-200 hover:bg-gray-50 hover:shadow-sm ">
       {/* Header */}
       <div className="flex items-center gap-4 mb-4">
         <div className="bg-[#9F1940] p-3 rounded-full">

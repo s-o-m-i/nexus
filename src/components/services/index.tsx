@@ -10,6 +10,7 @@ import CTA from '../home/CTA.jsx'
 import CallToAction from '@/components/home/CallToAction';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import StatsCard from './StatsCard'
 
 const Services = () => {
 
@@ -29,7 +30,9 @@ const Services = () => {
         <Lottie style={{color:"white" }} animationData={servicesLottie} loop={true} /> 
         </div>
       </section>
-      <div className="py-20 px-8 md:px-16">
+
+      <StatsCard/>
+      <div className="py-20 px-8 md:px-16 ">
         <h2 className='text-[#28536B] text-[32px] font-medium sm:text-[42px] text-center'>Our <span>Services</span></h2>
         <div className="flex justify-center">
           <p className="text-[16px] text-gray-700  sm:w-[75%]  mt-5 text-center">
@@ -42,6 +45,7 @@ const Services = () => {
              key={index}
              className="service-card w-full p-6 sm:p-8 rounded-2xl bg-[#F9FAFB] border border-gray-200 shadow transition-shadow hover:shadow-lg"
            >
+            
              <div className="flex justify-center">
                <div className="icon-box bg-[#9F193F] mb-6 w-20 h-20 flex items-center justify-center rounded-full shadow-md hover:scale-105 transition-transform duration-300">
                  {service.icon}

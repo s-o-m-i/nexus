@@ -6,7 +6,8 @@ import { FaChartBar, FaLaptopCode } from 'react-icons/fa'; // Replace with your 
 const SuccessStory = ({ data }: any) => {
     return (
         <>
-            <section className="py-20 px-8 md:px-16 bg-white">
+            <section className="py-20 px-8 md:px-16 bg-white relative">
+               
                 <h2 className="text-[32px] sm:text-[42px] font-bold text-[#04213F] text-center">
                     Success Stories        </h2>
                 <div className="flex justify-center">

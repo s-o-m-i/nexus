@@ -3,7 +3,7 @@ import CallToAction from '@/components/home/CallToAction'
 import WDPortfolio from '@/components/services/web-development/WDPortfolio'
 import WebDevelopment from '@/components/services/web-development/WebDevelopment'
 import WPFAQS from '@/components/services/web-development/WPFAQS'
-import WPForMultiChannel from '@/components/services/web-development/WPForMultiChannel'
+import Name from '@/components/services/web-development/Name'
 import WPOurServices from '@/components/services/web-development/WPOurServices'
 import WPProcess from '@/components/services/web-development/WPProcess'
 import WPWhyChooseUs from '@/components/services/web-development/WPWhyChooseUs'
@@ -21,7 +21,7 @@ const page = () => {
       {/* <WPIdeal/> */}
       <WPOurServices />
       <SuccessStory data={webDevSuccessStoriesData} />
-      <WPForMultiChannel />
+      {/* <Name /> */}
       <WPProcess />
       <GenericTechStack
         interactiveTechs={interactiveTechs}
