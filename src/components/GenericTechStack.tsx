@@ -41,7 +41,7 @@ const GenericTechStack: React.FC<GenericTechStackProps> = ({
 
       {/* Interactive Panel */}
       <div className="grid grid-cols-2 mt-20 gap-8">
-        <div className="technologies space-y-3">
+        <div className="technologies space-y-3 custom-scrollbar max-h-[300px] overflow-y-auto overflow-hidden">
           {techNames.map((tech, index) => (
             <div
               key={tech}
@@ -82,14 +82,14 @@ const GenericTechStack: React.FC<GenericTechStackProps> = ({
         {techCategories.map((category, index) => (
           <div
             key={index}
-            className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="group bg-[#F9FAFB] border border-gray-200 rounded-2xl p-6 shadow transition-shadow hover:shadow-lg duration-300  hover:border-[#9F1940] hover:bg-[#fff5f7] h-[250px] overflow-y-auto overflow-hidden custom-scrollbar"
           >
             <h2 className="text-center  text-xl font-semibold text-[#04213F] mb-4 pb-2 border-b-2 border-[#9F1940]">
             {category.title.length > 19 ? category.title.slice(0, 19) + "..." : category.title}
             </h2>
             <ul className="space-y-2">
               {category.items.map((tech, i) => (
-                <li key={i} className="text-gray-700 text-base group-hover:text-[#9F1940] transition-colors">
+                <li key={i} className="text-gray-700 text-base  transition-colors">
                   {tech}
                 </li>
               ))}

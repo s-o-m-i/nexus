@@ -11,10 +11,7 @@ export const techCategories = [
         id: 3,
         name: "On-Page Optimization"
     },
-    {
-        id: 4,
-        name: "Content Strategy"
-    },
+   
     {
         id: 5,
         name: "Reporting & Analytics"
@@ -70,24 +67,7 @@ export const interactiveTechs = [
         img: "/pagespeed-logo.svg",
         categories: [2]
     },
-    {
-        id: 9,
-        name: "Surfer SEO",
-        img: "/surfer-logo.svg",
-        categories: [3, 4]
-    },
-    {
-        id: 10,
-        name: "MarketMuse",
-        img: "/marketmuse-logo.svg",
-        categories: [3, 4]
-    },
-    {
-        id: 11,
-        name: "Clearscope",
-        img: "/clearscope-logo.svg",
-        categories: [3, 4]
-    },
+        
     {
         id: 12,
         name: "Schema App",

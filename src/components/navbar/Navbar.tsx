@@ -13,7 +13,7 @@ const Navbar = () => {
         { name: "Cloud Computing", description: "Scalable infrastructure solutions" ,path:"/services"},
         { name: "Cybersecurity", description: "Protection against digital threats" ,path:"/services"},
         { name: "Digital Marketing", description: "Strategic online marketing campaigns" ,path:"/services"},
-        { name: "SEO", description: "Search engine visibility enhancement" ,path:"/services"},
+        { name: "SEO", description: "Search engine visibility enhancement" ,path:"/services/seo-services"},
         { name: "AI & Machine Learning", description: "Intelligent automation solutions" ,path:"/services"},
         { name: "Blockchain", description: "Secure distributed ledger technology",path:"/services" }
     ];

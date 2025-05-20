@@ -52,7 +52,7 @@ const SeoWhyChooseUs = () => {
                     </div>
                     
                     {/* Stats section */}
-                    <div className="mt-20 bg-gradient-to-r from-[#04213F] to-[#9f193f] rounded-2xl p-10 text-white shadow-xl">
+                    <div className="mt-20 bg-[#04213F] rounded-2xl p-10 text-white shadow-xl">
                         <div className="text-center mb-10">
                             <h3 className="text-2xl font-bold mb-2">Our SEO Success by the Numbers</h3>
                             <p className="text-white/80">Proven results that speak for themselves</p>

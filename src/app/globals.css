@@ -347,3 +347,25 @@ input {
     conic-gradient(from 135deg at 25% 37.5%, var(--c)) var(--p),
     repeating-conic-gradient(from 90deg, var(--c), var(--c2) 0 50%) 0 0/var(--s) var(--s);
 }
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  margin-left: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #9f193f;
+  border-radius: 50px;
+  height: 3px;
+  width: 3px;
+
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9f193f;
+}
+
