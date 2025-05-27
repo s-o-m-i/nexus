@@ -12,7 +12,7 @@ const Lottie = dynamic(() => import('lottie-react'), {
 const OurStory = () => {
     return (
         <>
-            <section className="py-20 px-8 md:px-16 bg-white">
+            <section className="py-20 container mx-auto px-18 bg-white">
                 <h2 className='text-[32px] sm:text-[42px] font-bold text-[#04213F]  text-center'>Our Story</h2>
                 {/* <div className="w-24 h-1 mt-3    bg-[#9f193f] mx-auto mb-6"></div> */}
                 {/* <div className="flex justify-center">

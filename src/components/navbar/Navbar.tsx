@@ -10,6 +10,7 @@ const Navbar = () => {
         { name: "Web Development", description: "Custom, responsive websites and applications" ,path:"/services/web-development"},
         { name: "Mobile App Development", description: "iOS and Android applications" ,path:"/services/mobile-app-development"},
         { name: "UI/UX Design", description: "Intuitive, user-centered interfaces" ,path:"/services"},
+        { name: "Graphic Designing", description: "Intuitive, user-centered interfaces" ,path:"/services/graphic-design"},
         { name: "Cloud Computing", description: "Scalable infrastructure solutions" ,path:"/services"},
         { name: "Cybersecurity", description: "Protection against digital threats" ,path:"/services"},
         { name: "Digital Marketing", description: "Strategic online marketing campaigns" ,path:"/services"},
@@ -19,7 +20,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className='p-4 relative bg-[#f2f2f2] h-[100px]'>
+        <div className='p-4 relative bg-[#f8f9ff] h-[100px]'>
             <nav className="flex items-center rounded-full justify-between p-4 px-[60px] bg-[#9F1940]  text-[#235789] shadow-md">
                 <div className="text-[24px] font-bold text-[#fff]">
                    <Link href={"/"}> TechNexus</Link></div>
@@ -39,7 +40,9 @@ const Navbar = () => {
                         <span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span>
                     </li>
                     </Link>
+                    <Link href={"/portfolio"}>
                     <li className="cursor-pointer transition navbar-items"><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></li>
+                    </Link>
                     <Link href={"/contact"}>
                     <li className="cursor-pointer transition navbar-items"><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></li>
                     </Link>

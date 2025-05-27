@@ -61,7 +61,8 @@ const CoreValues = () => {
   ];
 
   return (
-    <section className="py-24 px-8 md:px-16 bg-[#f8f8f8] relative overflow-hidden">
+    <section className="py-24 px-8 md:px-18 bg-[#f8f8f8] relative overflow-hidden">
+      <div className='container mx-auto '>
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-[10%] -right-[10%] w-[40%] h-[40%] bg-[#28536B]/5 rounded-full blur-3xl"></div>
@@ -83,6 +84,7 @@ const CoreValues = () => {
           <FancyCard key={index} title={value.title} desc={value.description} />
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ import { FaSearch, FaChartLine, FaAward } from 'react-icons/fa';
 const SeoServices = () => {
     return (
         <section className='relative min-h-[calc(100vh-100px)] overflow-hidden bg-[#9f193f]'>
+            <div className='container mx-auto px-4'>
             {/* Background with gradient overlay */}
             {/* <div className="absolute inset-0 bg-[#9f193f] opacity-90 z-0"></div> */}
             
@@ -67,7 +68,7 @@ const SeoServices = () => {
                     </div>
                 </div>
             </div>
-            
+            </div>
         </section>
     );
 };

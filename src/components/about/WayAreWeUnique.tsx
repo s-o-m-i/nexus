@@ -4,7 +4,8 @@ import { Uniqueness } from "../../utils/why-are-unique"
 
 const WayAreWeUnique = () => {
   return (
-    <section className="py-20 px-8 md:px-16 bg-[#9F193F]">
+    <section className="py-20  bg-[#9F193F]">
+      <div className='container mx-auto px-18'>
       <h2 className='text-[32px] sm:text-[42px] font-bold text-[#fff]  text-center'>Way Are We Unique?</h2>
       {/* <div className="w-24 h-1 mt-6 bg-[#9f193f] mx-auto mb-6"></div> */}
       <div className="flex justify-center">
@@ -23,7 +24,7 @@ const WayAreWeUnique = () => {
         })}
       </div>
 
-
+      </div>
     </section>
   )
 }

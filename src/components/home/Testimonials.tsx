@@ -89,7 +89,7 @@ const Testimonials = () => {
 
   return (
     <div className="bg-gradient-to-b from-white to-[#f8f8f8] py-24 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-18">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">
             Testimonials

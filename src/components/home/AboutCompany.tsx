@@ -22,7 +22,7 @@ const AboutCompany = () => {
               start: "top 0%",
               end: "top -50%",
               scrub: 1,
-              markers: true,
+              // markers: true,
             },
             stagger: 0.3,
           });
@@ -37,7 +37,7 @@ const AboutCompany = () => {
               start: "top 0%",
               end: "top -50%",
               scrub: 1,
-              markers: true,
+              // markers: true,
             },
             stagger: 0.3,
           });

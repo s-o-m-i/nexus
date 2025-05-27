@@ -4,7 +4,8 @@ import React from 'react'
 const CallToAction = ({desc = "Ready to take your business to the next level with our expert services?"}) => {
   return (
     <div>
-      <section className="py-20 px-8 md:px-16 bg-white">
+      <section className="py-20  bg-white">
+        <div className='container mx-auto px-4'>
         <div className="p-[90px] w-full   rounded-2xl bg-[#F9FAFB] border border-gray-200 shadow transition-shadow hover:shadow-lg relative overflow-hidden">
           <div className="grid grid-cols-12">
             <div className="col-span-8">
@@ -35,6 +36,7 @@ const CallToAction = ({desc = "Ready to take your business to the next level wit
             </div>
 
           </div>
+        </div>
         </div>
       </section>
     </div>

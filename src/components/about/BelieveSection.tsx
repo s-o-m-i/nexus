@@ -60,9 +60,9 @@ const BelieveSection = () => {
     },
   };
 
-  return (
-    <section className="bg-[#fff] py-16 px-4 relative">
-      <div className="max-w-6xl mx-auto">
+  return (  
+    <section className="bg-[#fff] py-20 container mx-auto px-18 relative">
+      <div className="">
         <p className="uppercase text-[#9F193F] font-semibold tracking-wide mb-1 text-base">
           The values we share
         </p>

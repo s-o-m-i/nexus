@@ -6,7 +6,8 @@ import RegularCard from '@/ui/RegularCard'
 const AboutServices = () => {
     return (
         <div>
-            <section className="py-20 px-8 md:px-16 bg-[#f8f8f8]">
+            <section className="py-20  bg-[#f8f8f8]">
+                <div className='container mx-auto px-18'>
                 <h2 className='text-[32px] sm:text-[42px] font-bold text-[#04213F]  text-center'>Why Choose Us?
 
                 </h2>
@@ -20,6 +21,7 @@ const AboutServices = () => {
                     ))}
 
 
+                </div>
                 </div>
             </section>
         </div>
