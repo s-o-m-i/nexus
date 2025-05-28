@@ -416,7 +416,7 @@ const PortfolioPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="relative group"
               >
-                <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl overflow-hidden">
+                <div className="bg-[#2D5C76] rounded-2xl overflow-hidden">
                   <div className="p-8 md:p-10">
                     <div className="mb-6">
                       <div className="inline-block px-3 py-1 bg-white/10 text-white rounded-md text-sm">Case Study #{study.id}</div>
@@ -429,7 +429,7 @@ const PortfolioPage = () => {
                         
                         <Link 
                           href={`/case-studies/${study.id}`} 
-                          className="inline-flex items-center text-[#9F1940] hover:text-[#b82d54] transition-colors duration-300"
+                          className="inline-flex items-center text-[#fff] hover:text-[#b82d54] transition-colors duration-300"
                         >
                           View case study
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
@@ -449,9 +449,9 @@ const PortfolioPage = () => {
                           <div className="text-white">Comprehensive SEO strategy implementation</div>
                         </div>
                         
-                        <div className="bg-[#9F1940]/20 p-4 rounded-xl">
-                          <div className="text-sm text-[#9F1940] mb-1">Result</div>
-                          <div className="text-white font-medium">200% increase in organic traffic</div>
+                        <div className="bg-white p-4 rounded-xl">
+                          <div className="text-sm text-[#000] mb-1">Result</div>
+                          <div className="text-black font-medium">200% increase in organic traffic</div>
                         </div>
                       </div>
                     </div>

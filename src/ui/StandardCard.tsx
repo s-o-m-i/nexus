@@ -9,7 +9,6 @@ interface StandardCardProps {
 const StandardCard: React.FC<StandardCardProps> = ({count, title, desc }) => {
     return (
         <div className=' bg-[#F9FAFB] border-gray-200 p-6 relative border min-h-[200px]  grid grid-cols-12  rounded-lg shadow-sm hover:shadow-md transition-shadow'>
-            <div className="w-[40px] h-[40px] absolute -top-5 -right-5 bg-[#F3A462] rounded-full"></div>
             <div className="col-span-2 flex  items-center ">
                 <div className="w-[50px] h-[50px] bg-[#9F193F] shadow-md rounded-[50%] flex items-center justify-center">
                 <h2 className='text-xl text-white'>{count}</h2>

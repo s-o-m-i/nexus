@@ -5,7 +5,7 @@ import React from "react";
 
 const LandingPage = () => {
   return (
-    <div className="bg-[#f8f9ff] h-[calc(100vh-100px)] relative">
+    <div className="bg-[#ffff] h-[calc(100vh-100px)] relative">
       {/* Elegant Right Side Design */}
       <div className="absolute top-0 right-0 bg-pattern w-[40%] h-full z-10 rounded-tl-[100%] rounded-bl-[100%] flex flex-col items-center justify-center gap-6">
         

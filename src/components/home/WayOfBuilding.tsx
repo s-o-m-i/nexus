@@ -5,8 +5,8 @@ import { TiUser } from "react-icons/ti";
 
 const WayOfBuilding = () => {
   return (
-    <section className="py-20 md:py-28 min-h-screen px-6 md:px-16 bg-[#9f193f] relative overflow-hidden">
-    <div className="card-one bg-[#FFF8EF] rounded-4xl relative p-8">
+    <section className="py-20 md:py-28 min-h-screen px-6 md:px-16 bg-[#fff] relative overflow-hidden">
+    <div className="card-one bg-[#F9FAFB] border border-gray-200 shadow rounded-4xl relative p-8">
         <div className="absolute w-[30px] h-[30px] rounded-full top-5 -left-9 bg-[#F3A462]"></div>
         <div className="grid grid-cols-2 gap-8">
             <div className="">
@@ -22,17 +22,17 @@ const WayOfBuilding = () => {
         
             </div>
             <div className="flex flex-col items-center">
-                <Image src={"/images/imageOne.png"} alt='' width={300} height={200}/>
+                <Image src={"/images/imageOne.png"} alt='' width={300} height={200} className='rounded-full'/>
             <p className='mt-5 italic font-bold text-[#04213F]'>&quot;Teamwork is key to identify larger problems no individual is&quot; equipped to handle on their own</p>
             </div>
         </div>
     </div>
 
-    <div className="card-two bg-[#FFF8EF] rounded-4xl relative mt-20 p-8">
+    <div className="card-two bg-[#F9FAFB] border border-gray-200 shadow rounded-4xl relative mt-20 p-8">
     <div className="absolute w-[30px] h-[30px] rounded-full top-5 -left-9 bg-[#04213F]"></div>
         <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col items-center justify-center">
-                <Image src={"/images/imageTwo.png"} alt='' width={300} height={200}/>
+                <Image src={"/images/imageTwo.png"} alt='' width={300} height={200} className='rounded-full'/>
             <p className='mt-5 italic font-bold text-[#04213F] mt-18'>&quot;Software is a great combination of artistry and engineering.Without these systems modern society cannot run.&quot;</p>
             </div>
             <div className="">
@@ -50,7 +50,7 @@ const WayOfBuilding = () => {
         </div>
     </div>
 
-    <div className="card-three bg-[#FFF8EF] rounded-4xl relative mt-20 p-8">
+    <div className="card-three bg-[#F9FAFB] border border-gray-200 shadow rounded-4xl relative mt-20 p-8">
         <div className="absolute w-[30px] h-[30px] rounded-full top-5 -left-9 bg-[#F3A462]"></div>
         <div className="grid grid-cols-2 gap-8">
             <div className="">
@@ -66,7 +66,7 @@ const WayOfBuilding = () => {
         
             </div>
             <div className="flex flex-col items-center">
-                <Image src={"/images/imageOne.png"} alt='' width={300} height={200}/>
+                <Image src={"/images/imageOne.png"} alt='' width={300} height={200} className='rounded-full'/>
             <p className='mt-5 italic font-bold text-[#04213F]'>&quot;Great teams don&apos;t hold back with one another. They are unafraid to air their dirty laundry, admit their mistakes and weaknesses.&quot;</p>
             </div>
         </div>

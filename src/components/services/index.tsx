@@ -10,6 +10,7 @@ import { motion } from 'framer-motion'
 import { FiArrowRight } from "react-icons/fi"
 import Link from 'next/link'
 import MainServicesCard from './MainServicesCard'
+import PrimaryButton from '@/ui/PrimaryButton/PrimaryButton'
 // 3D Grid Component with Enhanced Visual Elements
 const IsometricGrid = () => {
   return (
@@ -20,7 +21,7 @@ const IsometricGrid = () => {
         {Array.from({ length: 25 }).map((_, index) => (
           <div 
             key={index} 
-            className="border border-[#9F193F]/10 bg-white/80"
+            className="border border-[#9F193F]/10 bg-white/80 shadow-lg"
             style={{
               transform: index % 3 === 0 ? `translateZ(${(index % 7) * 4}px)` : 'none',
               transition: 'transform 0.5s ease-out'
@@ -205,7 +206,7 @@ const Services = () => {
   return (
     <div>
       {/* Hero Section with 3D Elements */}
-      <section className="relative overflow-hidden bg-[#f8f9ff] ">
+      <section className="relative overflow-hidden bg-[#ffff] ">
         <div className="container mx-auto px-18">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -232,10 +233,9 @@ const Services = () => {
               >
                 <Link 
                   href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-[#9F193F] to-[#b22240] text-white font-medium rounded-lg hover:shadow-lg hover:shadow-[#9F193F]/20 transition-all duration-300"
+                 
                 >
-                  Get Started
-                </Link>
+<PrimaryButton text='Get Started'/>                </Link>
               </motion.div>
             </motion.div>
             
@@ -326,7 +326,7 @@ const Services = () => {
       </div>
 
       {/* Services Section with Enhanced Visuals */}
-      <div className="py-24 bg-[#f8f9ff] relative overflow-hidden" ref={servicesRef}>
+      <div className="py-24 bg-[#fff] relative overflow-hidden" ref={servicesRef}>
         <div className="container mx-auto px-6 md:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -348,27 +348,13 @@ const Services = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             {services.map((service, index) => (
               <MainServicesCard key={index} service={service} index={index} />
             ))}
           </div>
 
-          {/* Added a "View All Services" button */}
-          <div className="text-center mt-16">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block"
-            >
-              <Link
-                href="/services/all"
-                className="px-8 py-4 bg-white text-[#9F193F] font-medium rounded-lg border border-[#9F193F] hover:bg-[#9F193F] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"
-              >
-                View All Services
-              </Link>
-            </motion.div>
-          </div>
+         
         </div>
         
         {/* Enhanced background decoration */}
@@ -388,77 +374,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Workflow Section with 3D Elements */}
-      <div className="py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-6 md:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <div className="inline-block mb-4">
-              <div className="px-4 py-1.5 bg-[#9F193F]/10 text-[#9F193F] rounded-full text-sm font-medium">
-                Our Process
-              </div>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              How We Work
-            </h2>
-            <p className="text-lg text-gray-600">
-              Our streamlined approach ensures consistent results and maximum efficiency for every project.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
-            {[
-              { step: 1, title: "Discovery", desc: "We start by understanding your business, goals, and target audience.", icon: "🔍" },
-              { step: 2, title: "Strategy", desc: "Develop a tailored roadmap based on research and analysis.", icon: "📊" },
-              { step: 3, title: "Implementation", desc: "Turn strategy into reality with expert execution.", icon: "⚙️" },
-              { step: 4, title: "Growth", desc: "Continuous optimization to improve performance and results.", icon: "📈" }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ 
-                  y: -10,
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-                }}
-                className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 relative overflow-hidden"
-              >
-                {/* Accent corner */}
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#9F193F]/10 to-[#9F193F]/5 rounded-bl-3xl"></div>
-                
-                {/* Step number with icon and gradient */}
-                <div className="relative mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#9F193F] to-[#b22240] rounded-xl text-white flex items-center justify-center font-bold text-xl mb-4 shadow-lg transform rotate-3">
-                    {item.icon}
-                  </div>
-                  <div className="absolute -right-1 -top-1 w-6 h-6 bg-[#28536B]/10 rounded-full flex items-center justify-center text-xs font-bold text-[#28536B]">
-                    {item.step}
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-                
-                {/* Connection line between steps (visible on desktop only) */}
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-16 -right-4 w-8 h-0.5 bg-gradient-to-r from-[#9F193F] to-transparent z-10"></div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Background decoration */}
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#9F193F]/5 rounded-full blur-3xl -mr-32 -mb-32"></div>
-        <div className="absolute top-1/4 left-0 w-64 h-64 bg-[#28536B]/5 rounded-full blur-3xl -ml-32"></div>
-      </div>
+    
 
       {/* Call to Action */}
       <CallToAction />
