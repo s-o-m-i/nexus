@@ -1,6 +1,28 @@
 import Image from 'next/image';
 import React from 'react';
 
+interface ClientLogo {
+  id: number
+  name: string
+}
+
+const clientLogos: ClientLogo[] = [
+  { id: 1, name: "App Development" },
+  { id: 2, name: "Web Development" },
+  { id: 3, name: "UI/UX Design" },
+  { id: 4, name: "Digital Marketing" },
+  { id: 5, name: "SEO Services" },
+  { id: 6, name: "Content Writing" },
+  { id: 7, name: "Wireframe" },
+  { id: 8, name: "Prototyping" },
+  { id: 9, name: "Branding" },
+  { id: 10, name: "Graphic Design" },
+  { id: 11, name: "Video Production" },
+  { id: 12, name: "Social Media Marketing" },
+  { id: 13, name: "Email Marketing" },
+  { id: 14, name: "Search Engine Optimization" },
+]
+
 const WhyUs = () => {
   const reasons = [
     {
@@ -42,18 +64,19 @@ const WhyUs = () => {
   ];
 
   return (
+    <>
     <section className="py-16 md:py-24 px-6 md:px-20  rounded-[50px]">
       <div className="grid md:grid-cols-2 gap-10  ">
         {/* Left Side */}
         <div className="">
           <div className='bg-[#9f193f] flex justify-center  rounded-4xl h-full'>
-          <Image src="/images/whychooseus2.png" width={400} height={400} alt="Why Choose Us" className="object-contain " />
+            <Image src="/images/whychooseus2.png" width={400} height={400} alt="Why Choose Us" className="object-contain " />
           </div>
         </div>
 
         {/* Right Side */}
         <div>
-          <h2 className="text-3xl sm:text-4xl  text-[#04213F] font-bold mb-4">Why Choose Us</h2>
+          <h2 className="text-3xl sm:text-4xl  text-[#2D5C76] font-bold mb-4">Why Choose Us</h2>
           <p className=" mb-10">
             Take your businesses and organizations to another level by taking our development and design services by adding automatic and easy user experiences to your existing structures and new start-ups.
           </p>
@@ -66,7 +89,7 @@ const WhyUs = () => {
               >
                 <div className="absolute group-hover:w-[100%] transition-all duration-300 ease-in-out group-hover:rounded-[0px] group-hover:h-full w-[50px] rounded-[50%] z-[1px] top-0 right-0 h-[50px] bg-[#9f193f]"></div>
                 <div className="mb-4 relative">{reason.icon}</div>
-                <h4 className="font-semibold  relative text-lg mb-2 group-hover:text-white">{reason.title}</h4>
+                <h4 className="font-semibold text-[#2D5C76]  relative text-lg mb-2 group-hover:text-white">{reason.title}</h4>
                 <p className="text-sm relative group-hover:text-white">{reason.description}</p>
               </div>
             ))}
@@ -74,6 +97,33 @@ const WhyUs = () => {
         </div>
       </div>
     </section>
+      <div className="relative overflow-hidden ">
+        <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-[#f8f9ff] to-transparent z-10"></div>
+        <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-[#f8f9ff] to-transparent z-10"></div>
+        <div className="flex animate-marquee overflow-hidden rotate-x-[100deg] skew-12 whitespace-nowrap bg-[#9f193f] mt-20 py-4">
+          {[...Array(2)].map((_, repeat) => (
+            <div key={repeat} className="flex space-x-24 pl-24">
+              {clientLogos.map((logo) => (
+                <div key={`${repeat}-${logo.id}`} className="flex items-center justify-center">
+                  <div className="text-white font-bold text-xl">{logo.name}</div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="flex  animate-marquee-reverse overflow-hidden whitespace-nowrap bg-[#2D5C76] py-2">
+            {[...Array(2)].map((_, repeat) => (
+              <div key={repeat} className="flex space-x-24 pl-24">
+                {clientLogos.map((logo) => (
+                  <div key={`${repeat}-${logo.id}`} className="flex items-center justify-center">
+                    <div className="text-white font-bold text-xl">{logo.name}</div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+      </div>
+      </>
   );
 };
 

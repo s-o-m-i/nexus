@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 // Custom Arrow Components
 const PrevArrow = ({ onClick }: any) => (
   <button
-    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-300 p-2 rounded-full shadow hover:bg-gray-100"
+    className="absolute left-5 top-1/2 transform -translate-y-1/2 z-10 bg-[#9f193f] border text-white border-gray-300 p-2 w-[40px] h-[40px] flex items-center justify-center rounded-full shadow hover:bg-[#2D5C76]"
     onClick={onClick}
   >
     ←
@@ -16,7 +16,7 @@ const PrevArrow = ({ onClick }: any) => (
 
 const NextArrow = ({ onClick }: any) => (
   <button
-    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-300 p-2 rounded-full shadow hover:bg-gray-100"
+    className="absolute right-5 top-1/2 transform -translate-y-1/2 z-10 bg-[#9f193f] text-white border border-gray-300 p-2 w-[40px]  flex items-center justify-center h-[40px] rounded-full shadow hover:bg-[#2D5C76]"
     onClick={onClick}
   >
     →
@@ -88,7 +88,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-[#f8f8f8] py-24 relative overflow-hidden">
+    <div className="bg-white  py-24 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-18">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">
@@ -107,7 +107,7 @@ const Testimonials = () => {
           <Slider ref={sliderRef} {...settings}>
             {testimonials.map((t) => (
               <div key={t.id}>
-                <div className="bg-white rounded-xl p-8 shadow-xl max-w-5xl mx-auto text-center">
+                <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-xl max-w-5xl mx-auto text-center">
                   <img
                     src={t.image}
                     alt={t.name}
@@ -117,11 +117,12 @@ const Testimonials = () => {
                   <h3 className="text-lg font-semibold text-[#9f193f]">{t.name}</h3>
                   <p className="text-sm text-gray-500">{t.position}</p>
                   {t.logo && (
-                    <img
-                      src={t.logo}
-                      alt={`${t.company} logo`}
-                      className="mx-auto mt-4 h-6"
-                    />
+                    // <img
+                    //   src={t.logo}
+                    //   alt={`${t.company} logo`}
+                    //   className="mx-auto mt-4 h-6"
+                    // />
+                    <h3 className="text-base font-semibold text-start text-[#9f193f]">{t.company}</h3>
                   )}
                 </div>
               </div>

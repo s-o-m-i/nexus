@@ -1,7 +1,38 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import { graphicDesignPortfolioProjects } from '@/utils/graphic-design-portfolio-projects';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import PortfolioModal from '@/components/portfolio/PortfolioModal';
+
+interface Project {
+  technologies: string[]
+  id: number
+  title: string
+  description: string
+  category: string
+  image: string
+  tags: string[]
+  liveUrl?: string
+  githubUrl?: string
+  challenge?: string
+  solution?: string
+}
+
 
 const GraphicDesignPortfolio = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleOpenModal = (project: Project) => {
+    setSelectedProject(project)
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedProject(null)
+  }
   return (
     <section className="py-24 px-8 md:px-16 bg-white relative overflow-hidden">
       {/* Minimal decorative elements */}
@@ -29,47 +60,56 @@ const GraphicDesignPortfolio = () => {
         </div>
         
         {/* Portfolio grid with hover effects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
           {graphicDesignPortfolioProjects.map((project, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              {/* Project image with overlay on hover */}
-              <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#04213F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="h-full w-full relative">
-                  {/* Replace with actual image. Using a colored div as placeholder */}
-                  <div 
-                    className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300"
-                    style={{background: `url(${project.image}) center/cover no-repeat` || ''}}
-                  ></div>
-                </div>
-                
-                {/* Project details that appear on hover */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <span className="inline-block px-3 py-1 bg-[#9f193f] text-white text-xs rounded-full mb-3">
-                    {project.category}
+            <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: project.id * 0.1 }}
+            whileHover={{ y: -8, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+            className="relative group bg-white rounded-2xl overflow-hidden border border-gray-100 p-1"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-gray-50 z-0"></div>
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gray-50 to-transparent z-0"></div>
+
+            <div className="relative z-10 p-6 md:p-8">
+              <div className="relative h-[300px] overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                {project.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-[#F9FAFB] text-[#2D5C76] text-sm rounded-full"
+                  >
+                    {tag}
                   </span>
-                  <h3 className="text-white text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-white/90 text-sm mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="text-xs bg-white/20 text-white px-2 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                ))}
               </div>
-              
-              {/* Project title visible without hover */}
-              <div className="p-4 bg-white">
-                <h3 className="font-medium text-[#04213F] group-hover:text-[#9f193f] transition-colors duration-300">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-gray-500">{project.category}</p>
-              </div>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+              <p className="text-gray-600 mb-6">{project.description}</p>
+
+              <button
+                className="inline-flex items-center text-sm font-medium
+                cursor-pointer"
+                onClick={() => handleOpenModal(project as Project)}
+              >
+                View Details
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
             </div>
+          </motion.div>
           ))}
         </div>
         
@@ -80,6 +120,14 @@ const GraphicDesignPortfolio = () => {
           </button>
         </div>
       </div>
+
+      {selectedProject && (
+        <PortfolioModal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          project={selectedProject}
+        />
+      )}
     </section>
   );
 };

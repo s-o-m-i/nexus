@@ -4,13 +4,11 @@ import WhyUs from './WhyUs';
 import Portfolio from './Portfolio';
 import Testimonials from './Testimonials';
 import CTA from './CTA';
-import ServicesPage from '../services';
-import OurTeam from './OurTeam';
 import AboutCompany from './AboutCompany';
-import WayOfBuilding from './WayOfBuilding';
 import CallToAction from './CallToAction';
-import WayOfBuildingTwo from './WayOfBuildingTwo';
+
 import HomeServices from './HomeServices';
+import SuccessStories from './SuccessStories';
 
 const HomePage = () => {
   return (
@@ -19,8 +17,9 @@ const HomePage = () => {
       <AboutCompany/>
       <HomeServices/>
       <WhyUs />
+      <SuccessStories/>
       {/* <WayOfBuildingTwo/> */}
-      <WayOfBuilding/>
+      {/* <WayOfBuilding/> */}
       {/* <OurTeam/> */}
       
       <Portfolio />

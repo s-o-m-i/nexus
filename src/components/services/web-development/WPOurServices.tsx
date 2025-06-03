@@ -1,37 +1,36 @@
 import React from 'react'
 import { WPOurServicesData } from '../../../utils/wp-services'
-import RegularCard from '@/ui/RegularCard'
-import StandardCard from '@/ui/StandardCard'
-import ModernCard from '@/ui/ModernCard'
+
 const WPOurServices = () => {
     return (
         <div>
-            <section className="py-20 px-8 md:px-16 bg-white relative">
+            <section className="py-20 px-8 md:px-16 bg-[#2D5C76] relative">
                 
-                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#04213F]  text-center'>Our Web Development Services
+                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#fff]  text-center'>Our Web Development Services
                 </h2>
                 <div className="flex justify-center">
-                    <p className='text-base text-gray-600 sm:w-[65%]  mt-5 text-center'>From the first spark of an idea to a fully scaled product, we offer everything you need to build exceptional digital experiences.</p>
+                    <p className='text-base text-[#fff] sm:w-[65%]  mt-5 text-center'>From the first spark of an idea to a fully scaled product, we offer everything you need to build exceptional digital experiences.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-20">
                     {WPOurServicesData.length > 0 && WPOurServicesData.map((card, index) => {
                         return (
                             <>
                                 {/* <ModernCard  key={index} step={card.step} title={card.title} desc={card.desc} /> */}
-                                <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-lg w-full border-t-4 border-t-[#9F1940]/60 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl group overflow-hidden">
+                                
+                                <div key={index} className="relative bg-gray-50  backdrop-blur-md border border-gray-200  rounded-2xl p-6  w-full border-t-4 border-t-[#9F1940]/60 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl group overflow-hidden hover:bg-white">
                                     {/* Gradient glow ring */}
                                     <div className="absolute inset-0 z-0 rounded-2xl pointer-events-none group-hover:animate-pulse-glow" />
 
                                     <div className="relative z-10">
-                                        <h3 className="text-xl font-semibold text-[#04213F] mb-3 tracking-wide group-hover:text-[#9F1940] transition-colors duration-300">
+                                        <h3 className="text-xl font-semibold text-[#04213F] mb-3 tracking-wide  transition-colors duration-300 ">
                                             {card.title}
                                         </h3>
 
-                                        <p className="text-sm text-[#04213F] opacity-80 leading-relaxed">
+                                        <p className="text-sm  opacity-80 leading-relaxed text-[#04213F]">
                                             {card.desc}
                                         </p>
 
-                                        <div className="mt-5 pt-3 border-t border-[#9F1940]/40 text-lg font-medium text-[#04213F]/90">
+                                        <div className="mt-5 pt-3 border-t border-[#9F1940]/40 text-lg font-medium text-[#9f193f]">
                                             {card.step}
                                         </div>
                                     </div>

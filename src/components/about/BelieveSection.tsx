@@ -66,7 +66,7 @@ const BelieveSection = () => {
         <p className="uppercase text-[#9F193F] font-semibold tracking-wide mb-1 text-base">
           The values we share
         </p>
-        <h2 className="text-[32px] sm:text-[42px] font-bold text-[#04213F] mb-10">
+        <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-10">
           What we believe in
         </h2>
 
@@ -92,7 +92,7 @@ const BelieveSection = () => {
               <div
                 className={`w-6 h-6 border-2 rounded-full mt-2 transition-all duration-300 ${
                   activeIndex === index
-                    ? "border-[#9F193F] bg-[#04213F]"
+                    ? "border-[#9F193F] bg-[#2D5C76]"
                     : "border-gray-200"
                 }`}
               ></div>

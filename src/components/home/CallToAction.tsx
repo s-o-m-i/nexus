@@ -14,7 +14,7 @@ group-hover:w-full group-hover:bottom-0 transition-all duration-300
             <div className="grid grid-cols-12">
               <div className="col-span-8">
 
-                <h3 className='text-[42px] sm:w-[85%] text-black leading-[1.2] group-hover:text-white relative z-10'>{desc}
+                <h3 className='text-[42px] sm:w-[85%] text-[#04213F] leading-[1.2] group-hover:text-white relative z-10'>{desc}
                 </h3>
               </div>
               <div className="col-span-4 flex items-center gap-5 justify-center">

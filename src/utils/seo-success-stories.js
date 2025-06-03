@@ -1,44 +1,61 @@
+import { FaChartLine, FaStore, FaBuilding } from 'react-icons/fa';
+
 export const seoSuccessStoriesData = [
     {
+        title: 'E-commerce Success Story',
         id: 1,
-        title: "E-commerce Revenue Growth",
-        desc: "A leading online retailer struggling with declining organic traffic approached us for a comprehensive SEO strategy. After implementing technical optimizations, content improvements, and a strategic link building campaign, the client saw a dramatic increase in organic search visibility.",
-        results: [
-            "187% increase in organic traffic within 6 months",
-            "143% growth in revenue from organic search",
-            "Top 3 rankings for 75+ high-value commercial keywords",
-            "38% reduction in bounce rate from search traffic"
+        image: '/images/portfolio/someOne.jpg',
+        description: 'XYZ Mobile Innovations is a mobile app development company that specializes in creating innovative and user-friendly mobile applications.',
+        metrics: [
+            { label: 'Downloads', value: '100,000+' },
+            { label: 'Active Users', value: '50,000+' },
+            { label: 'Rating', value: '4.8/5' },
         ],
-        img: "/ecommerce-success.jpg",
-        cta: "Want similar results for your e-commerce store?",
-        slug: "ecommerce-success-story"
+        tags: ['Technical SEO', 'Content Strategy'],
+        icon: <FaStore className="text-white text-xl" />,
+        challenge:
+            'A leading e-commerce platform was struggling with poor organic visibility and declining sales. They needed a comprehensive SEO strategy to improve their search rankings and drive more qualified traffic.',
+        solution:
+            'We implemented a holistic SEO approach, including technical optimization, content enhancement, and internal linking structure improvements. Our strategy focused on optimizing product pages and category structures while building quality backlinks.',
+        ctaText: 'Read Full Story',
+        ctaLink: '/success-stories/ecommerce-seo',
     },
     {
         id: 2,
-        title: "Local Business Expansion",
-        desc: "A multi-location restaurant chain was struggling to gain visibility in local search results across their different locations. We implemented a comprehensive local SEO strategy, including Google Business Profile optimization, local content creation, and citation building.",
-        results: [
-            "156% increase in local organic traffic",
-            "92 local keywords ranking in the top 3 positions",
-            "89% growth in online reservation bookings",
-            "165% increase in 'Get Directions' clicks from Google Business Profile"
+        image: '/images/portfolio/someOne.jpg',
+        description: 'XYZ Mobile Innovations is a mobile app development company that specializes in creating innovative and user-friendly mobile applications.',
+        metrics: [
+            { label: 'Downloads', value: '100,000+' },
+            { label: 'Active Users', value: '50,000+' },
+            { label: 'Rating', value: '4.8/5' },
         ],
-        img: "/local-business-success.jpg",
-        cta: "Ready to dominate local search results?",
-        slug: "local-business-success-story"
+        title: 'SaaS Growth Story',
+        tags: ['Enterprise SEO', 'Content Marketing'],
+        icon: <FaChartLine className="text-white text-xl" />,
+        challenge:
+            'A B2B SaaS company was struggling to generate qualified leads through organic search and had limited visibility in their target market.',
+        solution:
+            'We developed a comprehensive SEO strategy focusing on high-intent keywords, technical optimization, and thought leadership content. This resulted in improved rankings for key terms and a significant increase in qualified leads.',
+        ctaText: 'Read Full Story',
+        ctaLink: '/success-stories/saas-seo',
     },
     {
         id: 3,
-        title: "SaaS Lead Generation",
-        desc: "A B2B SaaS company came to us with the goal of increasing qualified leads through organic search. We developed a content-focused SEO strategy targeting the entire customer journey, from awareness to decision-making phases.",
-        results: [
-            "215% increase in organic traffic to key landing pages",
-            "168% growth in demo requests from organic search",
-            "42% reduction in cost per acquisition compared to paid channels",
-            "Top positions for 175+ industry-specific keywords"
+        image: '/images/portfolio/someOne.jpg',
+        description: 'XYZ Mobile Innovations is a mobile app development company that specializes in creating innovative and user-friendly mobile applications.',
+        metrics: [
+            { label: 'Downloads', value: '100,000+' },
+            { label: 'Active Users', value: '50,000+' },
+            { label: 'Rating', value: '4.8/5' },
         ],
-        img: "/saas-success.jpg",
-        cta: "Want to generate more qualified B2B leads?",
-        slug: "saas-lead-generation-success-story"
+        title: 'Real Estate Agency Growth',
+        tags: ['Local SEO', 'Content Strategy'],
+        icon: <FaBuilding className="text-white text-xl" />,
+        challenge:
+            'A real estate agency needed to improve their local search visibility and generate more property inquiries in a highly competitive market.',
+        solution:
+            'We implemented a local SEO strategy focusing on location-specific keywords, Google Business Profile optimization, and local content creation. This led to improved local rankings and increased property inquiries.',
+        ctaText: 'Read Full Story',
+        ctaLink: '/success-stories/realestate-seo',
     }
 ]; 

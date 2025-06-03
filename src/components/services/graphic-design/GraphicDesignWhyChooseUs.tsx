@@ -14,14 +14,14 @@ const GraphicDesignWhyChooseUs = () => {
                 <div className="max-w-7xl mx-auto">
                     {/* Section header with minimal design elements */}
                     <div className="text-center mb-16 max-w-3xl mx-auto">
-                        <div className="inline-block">
+                        {/* <div className="inline-block">
                             <div className="flex items-center justify-center mb-3">
                                 <div className="h-1 w-10 bg-[#9f193f] rounded-full mr-2"></div>
                                 <span className="text-[#9f193f] font-medium uppercase text-sm tracking-wider">Our Advantage</span>
                                 <div className="h-1 w-10 bg-[#9f193f] rounded-full ml-2"></div>
                             </div>
-                        </div>
-                        <h2 className='text-[38px] sm:text-[48px] font-bold text-[#04213F] mb-6'>Why Choose Us for <span className="text-[#9f193f]">Design Services</span>?</h2>
+                        </div> */}
+                        <h2 className='text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-6'>Why Choose Us for Design Services?</h2>
                         <p className="text-[#666] text-lg max-w-2xl mx-auto">Our design team combines creativity with strategic thinking to deliver visual solutions that not only look stunning but also achieve your business objectives.</p>
                     </div>
                     
@@ -49,7 +49,7 @@ const GraphicDesignWhyChooseUs = () => {
                     </div>
                     
                     {/* Stats section with minimalistic design */}
-                    <div className="mt-20 bg-[#04213F] rounded-2xl p-10 text-white shadow-xl">
+                    <div className="mt-20 bg-[#2D5C76] rounded-2xl p-10 text-white shadow-xl">
                         <div className="text-center mb-10">
                             <h3 className="text-2xl font-bold mb-2">Our Design Excellence by the Numbers</h3>
                             <p className="text-white/80">Results that demonstrate our commitment to quality</p>

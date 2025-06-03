@@ -8,7 +8,7 @@ const AboutServices = () => {
         <div>
             <section className="py-20  bg-[#f8f8f8]">
                 <div className='container mx-auto px-18'>
-                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#04213F]  text-center'>Why Choose Us?
+                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#2D5C76]  text-center'>Why Choose Us?
 
                 </h2>
                 <div className="flex justify-center">

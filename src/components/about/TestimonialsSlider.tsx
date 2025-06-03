@@ -5,7 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
+import PrimaryButton from "@/ui/PrimaryButton/PrimaryButton";
+import Link from "next/link";
 
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 interface ArrowProps {
   className?: string;
   style?: React.CSSProperties;
@@ -15,20 +18,24 @@ interface ArrowProps {
 function NextArrow({ className, style, onClick }: ArrowProps) {
   return (
     <div
-      className={`${className} !flex !items-center !justify-center !w-12 !h-12 !bg-white !shadow-lg hover:!shadow-xl !rounded-full !border !border-gray-100 !text-[#9F193F] transition-all duration-300 hover:!bg-[#9F193F]/5`}
-      style={{ ...style, right: "0", top: "-70px", zIndex: 10 }}
+      className={`${className} !flex !items-center !justify-center !w-12 !h-12 bg-[#9F193F] !shadow-lg hover:!shadow-xl !rounded-full !border !border-gray-100 text-[#9F193F] transition-all duration-300 hover:!bg-[#9F193F]/5 `}
+      style={{  right: "0", top: "-70px", zIndex: 10 }}
       onClick={onClick}
-    />
+    >
+      <FaArrowRight />
+    </div>
   );
 }
 
 function PrevArrow({ className, style, onClick }: ArrowProps) {
   return (
     <div
-      className={`${className} !flex !items-center !justify-center !w-12 !h-12 !bg-white !shadow-lg hover:!shadow-xl !rounded-full !border !border-gray-100 !text-[#9F193F] transition-all duration-300 hover:!bg-[#9F193F]/5`}
-      style={{ ...style, left: "auto", right: "70px", top: "-70px", zIndex: 10 }}
+      className={`${className} !flex !items-center !justify-center !w-12 !h-12 !bg-white !shadow-lg hover:!shadow-xl !rounded-full !border !border-gray-100 text-[#9F193F] transition-all duration-300 hover:!bg-[#9F193F]/5`}
+      style={{ left: "auto", right: "70px", top: "-70px", zIndex: 10 }}
       onClick={onClick}
-    />
+    >
+      <FaArrowLeft />
+    </div>
   );
 }
 
@@ -135,10 +142,10 @@ function TestimonialsSlider() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-white to-[#f9f9ff] py-24 overflow-hidden">
+    <section className="w-full bg-white py-24 overflow-hidden">
       <div className="container mx-auto px-18">
         <div className="mb-16 relative">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -146,84 +153,88 @@ function TestimonialsSlider() {
             className="flex flex-col items-center text-center max-w-3xl mx-auto"
           >
             <span className="text-sm font-medium px-4 py-1.5 bg-[#9F193F]/10 text-[#9F193F] rounded-full mb-4">Testimonials</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2D5C76] mb-6">
               What Our Clients Say
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl">
               Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience working with us.
             </p>
           </motion.div>
-          
+
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-40 h-40 bg-[#9F193F]/5 rounded-full -z-10 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#28536B]/5 rounded-full -z-10 blur-3xl"></div>
         </div>
-        
+
         <div className="relative">
           <Slider {...settings} className="testimonials-slider">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="px-4 py-2">
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: testimonial.id * 0.1 % 0.5 }}
                   whileHover={{ y: -5 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full"
+                  className="bg-gray-50 border border-l-4 py-4 border-l-[#9F193F] border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition-all rounded-tl-[50px] rounded-br-[50px] duration-300 overflow-hidden h-full"
                 >
-                  <div className="p-8">
+
+                  <div className="p-4">
+                    <div className="flex space-x-1 text-amber-400 mb-5">
+                      {[...Array(5)].map((_, i) => (
+                        <FaStar key={i} />
+                      ))}
+                    </div>
                     <div className="flex items-start mb-6">
-                      <div className="text-[#9F193F] text-2xl mr-4">
+                      {/* <div className="text-[#9F193F] text-2xl mr-4">
                         <FaQuoteLeft />
-                      </div>
+                      </div> */}
                       <p className="text-gray-700 leading-relaxed">&quot;{testimonial.feedback}&quot;</p>
                     </div>
-                    
-                    <div className="flex items-center justify-between pt-6 border-t border-gray-100">
-                      <div>
-                        <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                        <p className="text-sm text-gray-500">{testimonial.role}, {testimonial.company}</p>
+
+                    <div className="flex gap-5 items-center ">
+                      <div className="bg-[#9F193F] rounded-full flex items-center justify-center overflow-hidden w-10 h-10">
+
+                        <img
+                          src={testimonial.logo}
+                          alt={`${testimonial.company} logo`}
+                          className="w-full h-ful object-contain"
+                        />
                       </div>
-                      
-                      <div className="flex space-x-1 text-amber-400">
-                        {[...Array(5)].map((_, i) => (
-                          <FaStar key={i} />
-                        ))}
+
+                      <div className="flex items-center justify-between  border-t border-gray-100">
+                        <div>
+                          <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                          <p className="text-sm text-gray-500">{testimonial.role}, {testimonial.company}</p>
+                        </div>
                       </div>
                     </div>
+
                   </div>
-                  
-                  <div className="bg-gray-50 px-8 py-4 border-t border-gray-100">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-[#9F193F]">{testimonial.project}</span>
-                      <img
-                        src={testimonial.logo}
-                        alt={`${testimonial.company} logo`}
-                        className="w-10 h-10 object-contain"
-                      />
-                    </div>
-                  </div>
+
+
                 </motion.div>
               </div>
             ))}
           </Slider>
-        </div>
-        
-        <div className="mt-12 text-center">
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 bg-[#9F193F] text-white font-medium rounded-lg hover:bg-[#8a1537] transition-colors"
-          >
-            Read More Success Stories
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
-          </motion.a>
-        </div>
+      <div className="flex justify-center mt-10">
+
+      <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link href="/services" className="px-8 py-4 border border-gray-300 text-gray-800 font-medium rounded-lg bg-gray-50 transition-colors duration-300">
+                    Read More Success Stories
+                  </Link>
+                </motion.div>
       </div>
-      
+        </div>
+
+
+
+
+      </div>
+
       <style jsx global>{`
         .testimonials-slider .slick-track {
           display: flex !important;

@@ -7,6 +7,8 @@ import OurStory from '@/components/about/OurStory';
 // import BelieveSection from '@/components/about/BelieveSection';
 import CallToAction from '@/components/home/CallToAction';
 import Hello from '@/components/about/Hello';
+import TechStack from '@/components/about/TechStack';
+import TeamSection from '@/components/about/TeamSection';
 
 // export const metadata = {
 //   title: 'About Us | TechNexus',
@@ -19,8 +21,8 @@ export default function AboutPage() {
       <AboutHero />
       <OurStory/>
       <Hello/>
-  
-      
+      <TeamSection />
+      <TechStack/>
       <WayAreWeUnique />
       <CallToAction/>
       {/* <OurJourney /> */}

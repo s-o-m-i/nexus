@@ -162,7 +162,7 @@ const Portfolio = () => {
     <section className="py-20 md:py-28 min-h-screen px-6 md:px-16 relative overflow-hidden">
       <div className="text-center mb-20">
         <span className="inline-block px-3 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">Our Portfolio</span>
-        <h2 className="text-[32px] sm:text-[42px] font-bold text-[#04213F] mb-6">Featured Projects</h2>
+        <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-6">Featured Projects</h2>
         <p className="text-[16px] text-gray-600 max-w-2xl mx-auto">
           Take a look at our recent work. We pride ourselves on delivering high-quality solutions 
           that exceed our clients&apos; expectations.
@@ -173,7 +173,7 @@ const Portfolio = () => {
       <div className="flex justify-center mb-16">
         <div className="relative bg-gray-50 rounded-full shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-2 max-w-3xl mx-auto">
           <div
-            className="absolute bg-[#9f193f] h-[85%] rounded-full transition-all duration-300 ease-in-out shadow-md z-10"
+            className="absolute bg-[#9f193f] animate-pulse h-[85%] rounded-full transition-all duration-300 ease-in-out shadow-lg z-10"
             style={{
               left: `${sliderPosition.left}px`,
               width: `${sliderPosition.width}px`,
@@ -203,35 +203,40 @@ const Portfolio = () => {
       {/* Carousel Projects */}
       <div className="max-w-5xl mx-auto">
         <Slider {...sliderSettings}>
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <div key={project.id}>
-              <div className="bg-gray-50 rounded-4xl overflow-hidden shadow-lg p-6 md:p-10">
+              <div className="bg-gray-50 rounded-4xl overflow-hidden relative  p-2 md:p-10">
+                {/* <div className="absolute bg-[#2D5C76]/50 animate-spin  rounded-full w-[100px] h-[100px] top-0 left-0"></div> */}
+
+                <div className="absolute bg-[#2D5C76]/50 animate-bounce  rounded-full w-[100px] h-[100px] bottom-0 right-0"></div>
+
+                <div className="bg-[#9f193f] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-full p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                  <div className={`relative rounded-2xl ${index % 2 !== 0 ? "md:order-2" : ""}`}>
+                  <div className={`relative flex justify-center rounded-2xl `}>
                     <div className="absolute inset-0 bg-gradient-to-tr from-[#04213F]/20 to-[#04213F]/20 rounded-2xl rotate-3 scale-[0.97] opacity-70"></div>
-                    <div className="relative border-4 border-white rounded-2xl overflow-hidden h-[300px] shadow-lg">
+                    <div className="relative border-4 border-white rounded-2xl overflow-hidden h-[200px] shadow-lg w-[300px]">
                       <Image
                         src={project.image}
                         alt={project.title}
-                        width={600}
-                        height={400}
+                        width={200}
+                        height={300}
                         className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                       />
                     </div>
                     <div className="absolute w-[30px] h-[30px] rounded-full top-5 -left-4 bg-[#04213F]" />
                   </div>
 
-                  <div className={`${index % 2 !== 0 ? "md:order-1" : ""}`}>
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#04213F] mb-3">{project.title}</h3>
-                    <span className="text-sm font-medium text-[#9f193f] px-3 py-1 bg-[#9f193f]/10 rounded-full inline-block mb-4">
+                  <div className={``}>
+                    <h3 className="text-lg md:text-lg font-bold text-[#fff] mb-3">{project.title}</h3>
+                    <span className="text-sm font-medium text-[#fff] px-3 py-1 bg-[#2D5C76] rounded-full inline-block mb-4 shadow-lg">
                       {categories.find((cat) => cat.id === project.category)?.name}
                     </span>
-                    <p className="text-gray-700 mb-6">{project.description}</p>
+                    <p className="text-white mb-6 text-sm">{project.description}</p>
                     <div className="mb-6">
-                      <h4 className="text-[#04213F] font-semibold mb-2">Key Features:</h4>
+                      <h4 className="text-[#fff] font-semibold mb-2">Key Features:</h4>
                       <ul className="list-disc list-inside space-y-1">
                         {project.features.map((feature, i) => (
-                          <li key={i}>{feature}</li>
+                          <li className="text-white" key={i}>{feature}</li>
                         ))}
                       </ul>
                     </div>
@@ -243,6 +248,7 @@ const Portfolio = () => {
                       <FaArrowRight />
                     </a>
                   </div>
+                </div>
                 </div>
               </div>
             </div>

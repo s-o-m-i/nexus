@@ -27,12 +27,12 @@ const SeoServices = () => {
                             <span className="text-white font-medium uppercase tracking-wider text-sm">Search Engine Optimization</span>
                         </div>
                         
-                        <h1 className="text-[42px] md:text-[52px] leading-[1.1] font-bold text-white mb-6">
+                        <h1 className="text-[32px] sm:text-[42px]  leading-[1.1] font-bold text-white mb-6">
                             <span className="block">Dominate Search Results</span>
                             <span className="block text-[#f8d57e]">Drive Business Growth</span>
                         </h1>
                         
-                        <p className="text-[18px] text-white/90 mb-10 leading-relaxed">
+                        <p className="text-base text-white/90 mb-10 leading-relaxed">
                             Boost your online visibility, drive targeted traffic, and increase conversions with our data-driven SEO strategies. Our comprehensive search engine optimization services help businesses achieve sustainable growth through organic search.
                         </p>
                         

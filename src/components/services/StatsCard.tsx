@@ -16,10 +16,10 @@ const StatsCard = () => {
             key={index}
             className={`w-full p-6 sm:p-8 rounded-2xl bg-[#F9FAFB] border relative group overflow-hidden border-gray-200 shadow transition-shadow hover:shadow-lg`}
           >
-                <div className="absolute -bottom-[80%] w-[50px] h-full bg-[#9F1940] rounded-full left-[50%] translate-x-[-50%]
+            <div className="absolute -bottom-[80%] w-[50px] h-full bg-[#9F1940] rounded-full left-[50%] translate-x-[-50%]
 group-hover:w-full group-hover:bottom-0 transition-all duration-300
 "></div>
-            <div className="text-3xl font-medium relative z-10 group-hover:text-white">{stat.number}</div>
+            <div className="text-3xl text-[#2D5C76] font-medium relative z-10 group-hover:text-white">{stat.number}</div>
             <div className="text-sm opacity-80 mt-2 relative z-10 group-hover:text-white">{stat.label}</div>
           </div>
         ))}

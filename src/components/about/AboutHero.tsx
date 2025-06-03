@@ -53,7 +53,7 @@ const AboutHero = () => {
 
   return (
    <>
-     <div className="relative sm:py-20  overflow-hidden bg-[#fff] ">
+     <div className="relative   overflow-hidden bg-[#fff] ">
         <div className="container mx-auto px-18">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -74,7 +74,7 @@ const AboutHero = () => {
                 </div>
               </div>
               
-              <h1 className="text-5xl text-[32px] sm:text-[42px] font-bold text-gray-900 leading-tight mb-6">
+              <h1 className="text-5xl text-[32px] sm:text-[42px] font-bold text-[#2D5C76] leading-tight mb-6">
               Transforming Visions into Digital Excellence
                 <span className="block">Delivered</span>
               </h1>

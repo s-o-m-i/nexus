@@ -103,7 +103,7 @@ const GenericTestimonialsSlider: React.FC<GenericTestimonialsSliderProps> = ({
         <Slider {...settings}>
           {testimonials.map(({ id, project, role, company, feedback, logo }) => (
             <div key={id} className="px-3">
-              <div className="bg-white min-h-[300px] rounded-lg shadow-lg p-6 border border-[#9F193F] flex flex-col justify-between">
+              <div className="bg-gray-50 min-h-[300px] rounded-lg shadow-lg p-6 border border-gray-300 flex flex-col justify-between">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <p className="text-[#04213F] font-semibold">{project}</p>
@@ -117,7 +117,7 @@ const GenericTestimonialsSlider: React.FC<GenericTestimonialsSliderProps> = ({
                 </div>
                 <p className="text-[#04213F] text-base mb-6">“{feedback}”</p>
                 <div className="flex items-center justify-between">
-                  <div className="flex space-x-1 text-[#9F193F]">
+                  <div className="flex space-x-1 text-orange-300">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} />
                     ))}

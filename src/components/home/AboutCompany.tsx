@@ -50,7 +50,7 @@ const AboutCompany = () => {
     return (
         <div ref={container}>
             <section id="about-company" className="py-20 px-8 md:px-16 bg-white overflow-hidden">
-                <h2 className="text-[32px] sm:text-[42px] font-bold text-[#04213F] text-center">About Company</h2>
+                <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] text-center">About Company</h2>
                 <p className="text-base text-gray-600 mt-5 text-center">
                     At LLC, our values form the foundation of our organization and guide our actions. We believe in upholding the highest standards of integrity, delivering exceptional service, and embracing innovation...
                 </p>

@@ -61,7 +61,7 @@ const CoreValues = () => {
   ];
 
   return (
-    <section className="py-24 px-8 md:px-18 bg-[#f8f8f8] relative overflow-hidden">
+    <section className="py-24 px-8 md:px-18  relative overflow-hidden">
       <div className='container mx-auto '>
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -71,7 +71,7 @@ const CoreValues = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-[42px] font-bold text-[#04213F] mb-6">
+          <h2 className="text-3xl md:text-[42px] font-bold text-[#2D5C76] mb-6">
             Principles That Guide Our Work
           </h2>
           <p className="text-base text-gray-600 ">

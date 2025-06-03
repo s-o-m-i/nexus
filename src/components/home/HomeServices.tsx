@@ -11,7 +11,7 @@ const HomeServices = () => {
     <section className="py-20 px-8 md:px-16 bg-white">
       <div className="text-center mb-20">
         <span className="inline-block px-3 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">OUR EXPERTISE</span>
-        <h2 className="text-[32px] sm:text-[42px] font-bold  text-[#04213F] mb-6">Services We Deliver</h2>
+        <h2 className="text-[32px] sm:text-[42px] font-bold  text-[#2D5C76] mb-6">Services We Deliver</h2>
         {/* <div className="w-24 h-1 bg-[#9f193f] mx-auto mb-6"></div> */}
         <p className="text-[16px] text-gray-600 max-w-2xl mx-auto">
           We provide comprehensive technology solutions tailored to accelerate your business growth

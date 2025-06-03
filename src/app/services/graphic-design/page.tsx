@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import CallToAction from '@/components/home/CallToAction'
 import GraphicDesignServices from '@/components/services/graphic-design/GraphicDesignServices'
 import GraphicDesignWhyChooseUs from '@/components/services/graphic-design/GraphicDesignWhyChooseUs'
 import GraphicDesignOurServices from '@/components/services/graphic-design/GraphicDesignOurServices'
@@ -39,7 +38,7 @@ const Page = () => {
         testimonials={adaptedTestimonials}
       />
       <GraphicDesignFAQS />
-      <CallToAction desc='Ready to transform your visual identity? Partner with us for expert graphic design services!' />
+      {/* <CallToAction desc='Ready to transform your visual identity? Partner with us for expert graphic design services!' /> */}
     </div>
   )
 }

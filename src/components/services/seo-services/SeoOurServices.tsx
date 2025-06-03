@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react'
 import { seoServicesData } from "../../../utils/seo-services"
 import Image from 'next/image'

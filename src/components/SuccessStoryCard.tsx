@@ -19,13 +19,13 @@ const SuccessStoryCard = ({
   }) => {
   return (
 <>
-<div className="transition-all duration-300 cursor-pointer rounded-xl px-5 py-4 border-2 border-gray-200 hover:bg-gray-50 hover:shadow-sm ">
+<div className="transition-all duration-300 cursor-pointer bg-gray-50 overflow-hidden rounded-xl px-5 py-4 border-2 border-gray-300 hover:bg-gray-50 hover:shadow-sm ">
       {/* Header */}
       <div className="flex items-center gap-4 mb-4">
         <div className="bg-[#9F1940] p-3 rounded-full">
           {icon}
         </div>
-        <h3 className="text-xl font-semibold text-black">{title}</h3>
+        <h3 className="text-xl font-semibold text-[#04213F]">{title}</h3>
       </div>
 
       {/* Tags */}
@@ -45,8 +45,8 @@ const SuccessStoryCard = ({
       {/* Challenge */}
       {challenge && (
         <div className="mb-4">
-          <h4 className="text-black text-base font-semibold mb-1">Challenge</h4>
-          <p className="text-sm text-black/80 leading-relaxed">
+          <h4 className="text-[#04213F] text-base font-semibold mb-1">Challenge</h4>
+          <p className="text-sm text-[#04213F] leading-relaxed">
             {challenge}
           </p>
         </div>
