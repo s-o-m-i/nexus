@@ -29,10 +29,10 @@ const Navbar = () => {
         <>
             <div className="hidden sm:flex bg-[#2D5C76] p-1 sm:p-2 justify-center items-center">
                 <div className="">
-                    <a href="tel:+8618618618618" className='w-[200px]  text-[12px] sm:text-sm text-[#F9CF2F] font-bold px-3 border-r-2 border-white'> China <span className='text-[#fff] ml-2'>+86 186 1861 8618</span></a>
-                    <a href="tel:+8618618618618" className='w-[200px]  text-[12px] sm:text-sm text-[#F9CF2F] font-bold px-3 border-r-2 border-white'> Pakistan <span className='text-[#fff] ml-2'>+92 345 1234567</span></a>
-                    <a href="mailto:info@technexus.com" className='w-[200px]  text-[12px] sm:text-sm text-[#F9CF2F] font-bold px-3 border-r-2 border-white'> Email <span className='text-[#fff] ml-2'>info@technexus.com</span></a>
-                    <a href="tel:+03348656129" className='w-[200px]  text-[12px] sm:text-sm text-[#F9CF2F] font-bold px-3'> Whatsapp <span className='text-[#fff] ml-2'>+0334 8656129</span></a>
+                    <a href="tel:+8618618618618" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> China <span className='text-[#fff] ml-2'>+86 186 1861 8618</span></a>
+                    <a href="tel:+8618618618618" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> Pakistan <span className='text-[#fff] ml-2'>+92 345 1234567</span></a>
+                    <a href="mailto:info@technexus.com" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> Email <span className='text-[#fff] ml-2'>info@technexus.com</span></a>
+                    <a href="tel:+03348656129" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3'> Whatsapp <span className='text-[#fff] ml-2'>+0334 8656129</span></a>
                 </div>
             </div>
 
