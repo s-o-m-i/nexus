@@ -39,7 +39,7 @@ const SeoWhyChooseUs = () => {
                             <h3 className="text-2xl font-bold mb-2">Our SEO Success by the Numbers</h3>
                             <p className="text-white/80">Proven results that speak for themselves</p>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="text-center">
                                 <div className="text-4xl font-bold mb-2 text-[#f8d57e]">500+</div>
                                 <div className="text-white/80 text-sm">Happy Clients</div>
