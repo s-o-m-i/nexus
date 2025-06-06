@@ -1,13 +1,21 @@
+'use client'
 import Button from "@/ui/Button/Button";
-import PrimaryButton from "@/ui/PrimaryButton/PrimaryButton";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { PopupButton } from "react-calendly";
 
 const LandingPage = () => {
+  const [rootElem, setRootElem] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setRootElem(document.body);
+  }, []);
+
+  if (!rootElem) return null;
+
   return (
     <div className="bg-[#ffff] min-h-[calc(100vh-100px)] relative">
       {/* Elegant Right Side Design */}
       
-
       {/* Left Side Content */}
       <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20 order-1 sm:order-2">
         <div className="max-w-xl mb-10 md:mb-0">
@@ -16,20 +24,20 @@ const LandingPage = () => {
           </h1>
           <p className="text-[16px] sm:w-[75%] text-gray-700 mb-10">
           Our team of experienced developers has won hundreds of clients throughout our years of practice. From refining your idea and prerequisites to writing code, every step is done in close collaboration with you.
-
-
-
           </p>
           <div className="flex items-center gap-5">
-          <PrimaryButton text={"Get Consultation"}/>
-          <Button />
-          {/* <SecondaryButton/> */}
+            <PopupButton
+              url="https://calendly.com/sulemandevofficial"
+              rootElement={rootElem}
+              text="Get Consultation"
+              className="relative group py-[12px] px-[5px] sm:px-[40px] font-medium text-gray-600 bg-white border border-gray-100 rounded-lg shadow-inner hover:text-white hover:bg-[#9f193f] transition-all duration-300"
+            />
+            <Button />
           </div>
         </div>
       </section>
 
-      <div className=" order-2  sm:absolute top-0 right-0 bg-pattern  w-full h-[500px] sm:w-[40%] sm:h-full z-10 rounded-tl-[100%] rounded-bl-[100%] flex flex-col items-center justify-center gap-6">
-        
+      <div className="order-2 sm:absolute top-0 right-0 bg-pattern w-full h-[500px] sm:w-[40%] sm:h-full z-10 rounded-tl-[100%] rounded-bl-[100%] flex flex-col items-center justify-center gap-6">
         {/* Service Tags with Floating Animation */}
         <div className="relative w-full h-full flex items-center justify-center">
           {[
@@ -45,14 +53,13 @@ const LandingPage = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className={`absolute bg-white px-5 py-2 rounded-full shadow-md flex items-center justify-center cursor-pointer transition-all  duration-300 hover:scale-105 animate-float hover:motion-preset-seesaw text-[${item.color}] ${item.color == "#9f193f"? "hover:bg-[#28536B] hover:text-white":"hover:bg-[#9f193f] hover:text-white"}`}
+              className={`absolute bg-white px-5 py-2 rounded-full shadow-md flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 animate-float hover:motion-preset-seesaw text-[${item.color}] ${item.color == "#9f193f"? "hover:bg-[#28536B] hover:text-white":"hover:bg-[#9f193f] hover:text-white"}`}
               style={{
                 top: item.top,
                 bottom: item.bottom,
                 left: item.left,
                 right: item.right,
                 animationDelay: item.delay,
-                // color: item.color,
               }}
             >
               <h1 className="text-[14px] font-bold ">{item.label}</h1>
