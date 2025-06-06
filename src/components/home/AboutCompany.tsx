@@ -19,7 +19,7 @@ const AboutCompany = () => {
             ease: "power3.out",
             scrollTrigger: {
               trigger: "#about-company",
-              start: "top 0%",
+              start: "top 40%",
               end: "top -50%",
               scrub: 1,
               // markers: true,
@@ -51,11 +51,12 @@ const AboutCompany = () => {
         <div ref={container}>
             <section id="about-company" className="py-20 px-8 md:px-16 bg-white overflow-hidden">
                 <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] text-center">About Company</h2>
-                <p className="text-base text-gray-600 mt-5 text-center">
+
+                <p className="text-base text-gray-600 mt-5 w-full mx-auto  sm:w-[75%] text-center">
                     At LLC, our values form the foundation of our organization and guide our actions. We believe in upholding the highest standards of integrity, delivering exceptional service, and embracing innovation...
                 </p>
                 <div className="list pt-[80px]">
-                    <div className="grid grid-cols-2 gap-5 overflow-hidden">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-hidden">
                         {AboutCompanyData.map((data, index) => (
                             <div
                                 key={index}

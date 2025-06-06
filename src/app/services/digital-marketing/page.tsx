@@ -163,8 +163,8 @@ const page = () => {
   return (
     <div>
       <DigitalMarketingLanding />
-      <DigitalMarketingServices />
       <MarketingWhyChooseUs />
+      <DigitalMarketingServices />
       <MarketingOurServices />
       <SuccessStory data={marketingSuccessStoriesData} />
       <DMProcess />

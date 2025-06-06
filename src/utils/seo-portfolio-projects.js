@@ -2,7 +2,7 @@ export const seoPortfolioProjects = [
     {
         title: "E-commerce Revenue Growth",
         shortDescription: "Increased organic traffic and revenue for a major e-commerce retailer",
-        image: "/ecommerce-seo-case.jpg",
+        image: "/images/portfolio/projectOne.jpg",
         tags: ["E-commerce", "Technical SEO", "Content Strategy"],
         results: {
             trafficGrowth: "+187%",
@@ -13,7 +13,7 @@ export const seoPortfolioProjects = [
     {
         title: "Local Business Expansion",
         shortDescription: "Boosted local visibility and foot traffic for a multi-location retailer",
-        image: "/local-seo-case.jpg",
+        image: "/images/portfolio/projectTwo.jpg",
         tags: ["Local SEO", "Google Business", "Citation Building"],
         results: {
             trafficGrowth: "+156%",
@@ -24,7 +24,7 @@ export const seoPortfolioProjects = [
     {
         title: "SaaS Lead Generation",
         shortDescription: "Increased qualified leads and demo requests for a B2B SaaS company",
-        image: "/saas-seo-case.jpg",
+        image: "/images/portfolio/projectThree.jpg",
         tags: ["B2B", "Content Marketing", "Lead Generation"],
         results: {
             trafficGrowth: "+215%",
@@ -35,7 +35,7 @@ export const seoPortfolioProjects = [
     {
         title: "Healthcare Authority Building",
         shortDescription: "Established industry authority and increased patient inquiries",
-        image: "/healthcare-seo-case.jpg",
+        image: "/images/portfolio/projectOne.jpg",
         tags: ["Healthcare", "E-A-T", "Content Strategy"],
         results: {
             trafficGrowth: "+132%",
@@ -46,7 +46,7 @@ export const seoPortfolioProjects = [
     {
         title: "Real Estate Lead Generation",
         shortDescription: "Dramatically increased property inquiries through organic search",
-        image: "/realestate-seo-case.jpg",
+        image: "/images/portfolio/projectTwo.jpg",
         tags: ["Real Estate", "Local SEO", "Schema Markup"],
         results: {
             trafficGrowth: "+178%",
@@ -57,7 +57,7 @@ export const seoPortfolioProjects = [
     {
         title: "Travel Industry Recovery",
         shortDescription: "Post-pandemic recovery and growth for a travel company",
-        image: "/travel-seo-case.jpg",
+        image: "/images/portfolio/projectOne.jpg",
         tags: ["Travel", "Content Strategy", "Technical SEO"],
         results: {
             trafficGrowth: "+245%",

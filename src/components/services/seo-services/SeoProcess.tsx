@@ -72,15 +72,15 @@ const SeoProcess = () => {
                                 <div className={`md:w-1/2 mt-8 md:mt-0 pl-20 md:pl-0 ${
                                     index % 2 === 0 ? 'md:pl-16' : 'md:pr-16'
                                 }`}>
-                                    <div className="bg-gradient-to-br from-[#f8f9fb] to-white rounded-xl p-5 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
+                                    <div className="bg-gradient-to-br from-[#f8f9fb] to-white rounded-xl p-4 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group w-full"> 
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#9f193f]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        <div className="flex justify-center items-center h-48 relative">
+                                        <div className="flex justify-center items-center h-48 relative w-full">
                                             <Image 
                                                 src={step.image} 
                                                 alt={step.title}
                                                 layout="fill"
-                                                objectFit="contain"
-                                                className="p-6 drop-shadow transform transition-transform group-hover:scale-105 duration-300"
+                                                objectFit="cover"
+                                                className=" drop-shadow transform transition-transform group-hover:scale-105 duration-300"
                                             />
                                         </div>
                                     </div>

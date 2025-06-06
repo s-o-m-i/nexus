@@ -135,7 +135,7 @@ const PortfolioPage = () => {
               {/* <SecondaryButton/> */}
             </div>
           </div>
-          <div className="flex items-center justify-center relative">
+          <div className="hidden sm:flex items-center justify-center relative mt-20 sm:mt-0">
             {/* <h2 className='text-[#9f193f] text-[90px] font-bold absolute top-0 left-0'>PORTFOLIO</h2> */}
             <div className="relative">
               <div className="flex items-center gap-5">

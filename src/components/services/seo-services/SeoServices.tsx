@@ -6,8 +6,8 @@ import { FaSearch, FaChartLine, FaAward } from 'react-icons/fa';
 
 const SeoServices = () => {
     return (
-        <section className='relative min-h-[calc(100vh-100px)] overflow-hidden bg-[#9f193f]'>
-            <div className='container mx-auto px-4'>
+        <section className='bg-[#9f193f] min-h-[calc(100vh-100px)]  relative rounded-md grid grid-cols-1 md:grid-cols-2 px-4 sm:px-8 md:px-16 py-10 sm:py-0'>
+        
             {/* Background with gradient overlay */}
             {/* <div className="absolute inset-0 bg-[#9f193f] opacity-90 z-0"></div> */}
             
@@ -18,7 +18,7 @@ const SeoServices = () => {
                 <div className="absolute bottom-1/3 right-1/3 w-96 h-96 rounded-full bg-[#04213F] opacity-20 blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
             </div>
             
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 px-8 md:px-16 py-16">
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8  py-16">
                 <div className="flex items-center">
                     <div className="max-w-xl">
                         {/* Visual accent */}
@@ -60,15 +60,15 @@ const SeoServices = () => {
                 </div>
                 
                 <div className="flex justify-center items-center">
-                    <div className="glass-morph rounded-lg p-6 w-full max-w-md relative">
-                        <div className="absolute -top-14 -right-20 w-20 h-20 bg-[#f8d57e] rounded-full flex items-center justify-center glass-morph opacity-90 shadow-lg">
-                            <span className=" text-white font-bold p-4 text-sm text-center">Start Today</span>
+                    <div className="glass-morph rounded-lg p-0 sm:p-6 w-full max-w-md relative">
+                        <div className="absolute -top-14 -right-20 w-20 h-20 bg-[#f8d57e] rounded-full sm:flex items-center justify-center glass-morph opacity-90 shadow-lg hidden">
+                            <span className=" text-white font-bold p-0 sm:p-4 text-sm text-center">Start Today</span>
                         </div>
                         <ServicesForm />
                     </div>
                 </div>
             </div>
-            </div>
+           
         </section>
     );
 };

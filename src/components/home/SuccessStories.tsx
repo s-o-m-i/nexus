@@ -23,10 +23,10 @@ const caseStudies = [
 const SuccessStories = () => {
     return (
         <div>
-            <section id="success-stories" className="py-20 px-8 md:px-16 bg-white overflow-hidden">
+            <section id="success-stories" className="py-20 px-4 md:px-16 bg-white overflow-hidden">
             {/* Case Studies with Modern Styling */}
-            <div className="py-24 bg-white">
-                <div className="container mx-auto px-4">
+           
+                <div className="container mx-auto">
                     <div className="max-w-3xl mx-auto text-center mb-16">
                         <div className="inline-block mb-4">
                             <span className="px-4 py-1 bg-[#9F1940]/10 text-[#9F1940] rounded-md text-sm font-medium">Case Studies</span>
@@ -94,7 +94,7 @@ const SuccessStories = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+         
         </section>
         </div>
     )

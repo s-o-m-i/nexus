@@ -4,12 +4,12 @@ import { WPOurServicesData } from '../../../utils/wp-services'
 const WPOurServices = () => {
     return (
         <div>
-            <section className="py-20 px-8 md:px-16 bg-[#2D5C76] relative">
+            <section className="py-20 px-4 sm:px-8 md:px-16 bg-[#2D5C76] relative">
                 
                 <h2 className='text-[32px] sm:text-[42px] font-bold text-[#fff]  text-center'>Our Web Development Services
                 </h2>
                 <div className="flex justify-center">
-                    <p className='text-base text-[#fff] sm:w-[65%]  mt-5 text-center'>From the first spark of an idea to a fully scaled product, we offer everything you need to build exceptional digital experiences.</p>
+                    <p className='text-base text-[#fff] w-full sm:w-[65%]  mt-5 text-center'>From the first spark of an idea to a fully scaled product, we offer everything you need to build exceptional digital experiences.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-20">
                     {WPOurServicesData.length > 0 && WPOurServicesData.map((card, index) => {

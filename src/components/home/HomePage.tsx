@@ -8,22 +8,28 @@ import AboutCompany from './AboutCompany';
 import CallToAction from './CallToAction';
 
 import HomeServices from './HomeServices';
-import SuccessStories from './SuccessStories';
+import SuccessStories from './SuccessStories';  
+import Recognized from './Recognized';
+import TestimonialsSlider from '../about/TestimonialsSlider';
+import HomePortfolio from './HomePortfolio';
 
 const HomePage = () => {
   return (
     <div className="min-h-screen">
       <LandingPage />
+      <Recognized/>
       <AboutCompany/>
       <HomeServices/>
-      <WhyUs />
+      {/* <WhyUs /> */}
       <SuccessStories/>
+      <HomePortfolio/>
       {/* <WayOfBuildingTwo/> */}
       {/* <WayOfBuilding/> */}
       {/* <OurTeam/> */}
       
       <Portfolio />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <TestimonialsSlider/>
       <CallToAction/>
       <CTA />
     </div>

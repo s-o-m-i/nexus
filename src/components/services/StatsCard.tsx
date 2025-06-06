@@ -14,7 +14,7 @@ const StatsCard = () => {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className={`w-full p-6 sm:p-8 rounded-2xl bg-[#F9FAFB] border relative group overflow-hidden border-gray-200 shadow transition-shadow hover:shadow-lg`}
+            className={`w-full p-6 sm:p-8 rounded-2xl bg-[#fff] border relative group overflow-hidden border-gray-300 shadow transition-shadow hover:shadow-lg`}
           >
             <div className="absolute -bottom-[80%] w-[50px] h-full bg-[#9F1940] rounded-full left-[50%] translate-x-[-50%]
 group-hover:w-full group-hover:bottom-0 transition-all duration-300

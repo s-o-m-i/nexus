@@ -5,9 +5,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-[#9f193f] text-white relative">
+    <footer className="bg-[#9f193f] text-white relative ">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-8 md:px-16 pt-16 pb-16">
+      <div className="container mx-auto sm:max-width-[640px] md:max-width-[768px] lg:max-width-[1024px] xl:max-width-[1280px] px-8 md:px-16 pt-16 pb-16">
         <div className="max-w-7xl mx-auto">
           {/* Footer Logo and Slogan */}
           <div className="text-center mb-12">

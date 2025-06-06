@@ -34,7 +34,7 @@ const GraphicDesignPortfolio = () => {
     setSelectedProject(null)
   }
   return (
-    <section className="py-24 px-8 md:px-16 bg-white relative overflow-hidden">
+    <section className="py-24 px-4 sm:px-8 md:px-16 bg-white relative overflow-hidden">
       {/* Minimal decorative elements */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute top-20 right-40 w-72 h-72 rounded-full border border-[#9f193f]/30"></div>
@@ -74,8 +74,8 @@ const GraphicDesignPortfolio = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-gray-50 z-0"></div>
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gray-50 to-transparent z-0"></div>
 
-            <div className="relative z-10 p-6 md:p-8">
-              <div className="relative h-[300px] overflow-hidden">
+            <div className="relative z-10  p-4 sm:p-6 md:p-8">
+              <div className="relative h-[200px] sm:h-[300px] overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -84,7 +84,7 @@ const GraphicDesignPortfolio = () => {
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4 mt-5 sm:mt-0">
                 {project.tags.map((tag, index) => (
                   <span
                     key={index}
@@ -95,7 +95,7 @@ const GraphicDesignPortfolio = () => {
                 ))}
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+              <h3 className="text-[20px] sm:text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
               <p className="text-gray-600 mb-6">{project.description}</p>
 
               <button

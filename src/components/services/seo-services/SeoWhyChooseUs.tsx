@@ -1,5 +1,6 @@
 import React from 'react'
 import { seoWhyChooseUsData } from "../../../utils/seo-whychooseus"
+import FancyCard from '@/ui/FancyCard'
 
 const SeoWhyChooseUs = () => {
     return (
@@ -26,33 +27,14 @@ const SeoWhyChooseUs = () => {
                     </div>
                     
                     {/* Cards with hover effects */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                         {seoWhyChooseUsData.length > 0 && seoWhyChooseUsData.map((card, index) => (
-                            <div 
-                                key={index} 
-                                className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-[#9f193f]/20 group relative overflow-hidden"
-                            >
-                                {/* Background accent gradient circle */}
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#9f193f]/10 to-transparent rounded-full -mr-16 -mt-16 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                
-                                <div className="relative">
-                                    {/* Icon with accent background */}
-                                    <div className="mb-6 bg-[#f8f9fb] w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-[#9f193f]/10 transition-colors duration-300">
-                                        <div className="text-[#9f193f]">{card.icon}</div>
-                                    </div>
-                                    
-                                    <h3 className="text-[#04213F] text-xl font-bold mb-4 group-hover:text-[#9f193f] transition-colors duration-300">{card.title}</h3>
-                                    <p className="text-[#666] leading-relaxed">{card.description}</p>
-                                </div>
-                                
-                                {/* Bottom line accent */}
-                                <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#9f193f] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                            </div>
+                           <FancyCard key={index} title={card.title} desc={card.description} />
                         ))}
                     </div>
                     
                     {/* Stats section */}
-                    <div className="mt-20 bg-[#04213F] rounded-2xl p-10 text-white shadow-xl">
+                    <div className="mt-20 bg-[#2D5C76] rounded-2xl p-10 text-white shadow-xl">
                         <div className="text-center mb-10">
                             <h3 className="text-2xl font-bold mb-2">Our SEO Success by the Numbers</h3>
                             <p className="text-white/80">Proven results that speak for themselves</p>

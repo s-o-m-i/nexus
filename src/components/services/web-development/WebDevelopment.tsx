@@ -5,10 +5,10 @@ import React from 'react';
 
 const WebDevelopment = () => {
     return (
-        <section className='bg-[#9f193f] h-[calc(100vh-100px)]  relative rounded-md grid grid-cols-1 md:grid-cols-2 px-8 md:px-16'>
+        <section className='bg-[#9f193f] min-h-[calc(100vh-100px)]  relative rounded-md grid grid-cols-1 md:grid-cols-2 px-4 sm:px-8 md:px-16 py-10 sm:py-0'>
             <div className="flex items-center">
                 <div className="">
-                    <h1 className="text-[42px] leading-[1.3] font-bold text-[#fff]  mb-6">
+                    <h1 className="text-[32px] sm:text-[42px] leading-[1.3] font-bold text-[#fff]  mb-6">
                         Web Development Services For
                         
                         Online Success
@@ -22,8 +22,8 @@ const WebDevelopment = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center items-center">
-                <div className="glass-morph rounded-lg p-4 w-full max-w-md relative">
+            <div className="flex justify-center items-center mt-10 sm:mt-0">
+                <div className="glass-morph rounded-lg p-0 sm:p-4 w-full max-w-md relative">
 
                     <ServicesForm />
                 </div>

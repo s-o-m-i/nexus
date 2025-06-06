@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 
 interface TeamMember {
   id: number
@@ -14,6 +15,7 @@ interface TeamMember {
   image: string
   linkedin?: string
   twitter?: string
+  description?: string
 }
 
 
@@ -26,7 +28,8 @@ const TeamSection = () => {
       position: "Full Stack Developer",
       image: "/images/somi.png",
       linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com"
+      twitter: "https://twitter.com",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
     },
     {
       id: 2,
@@ -34,7 +37,8 @@ const TeamSection = () => {
       position: "CEO",
       image: "/images/dawood.png",
       linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com"
+      twitter: "https://twitter.com",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
     },
     {
       id: 3,
@@ -42,7 +46,8 @@ const TeamSection = () => {
       position: "CTO",
       image: "/images/somi.png",
       linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com"
+      twitter: "https://twitter.com",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
     },
     {
       id: 4,
@@ -50,7 +55,8 @@ const TeamSection = () => {
       position: "COO",
       image: "/images/somi.png",
       linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com"
+      twitter: "https://twitter.com",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
     },
     {
       id: 5,
@@ -58,7 +64,8 @@ const TeamSection = () => {
       position: "Senior Designer",
       image: "/images/somi.png",
       linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com"
+      twitter: "https://twitter.com",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
     }
   ]
 
@@ -177,12 +184,12 @@ const TeamSection = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="px-4"
+                className="px-4 mb-8"
               >
                 <div
                 //  className=" rounded-xl overflow-hidden group  border border-gray-300"
-                 >
-                  <div className="relative h-[400px] overflow-hidden ">
+                >
+                  <div className="relative h-[450px] group overflow-hidden bg-white border border-gray-300 rounded-md">
                     <Image
                       src={member.image}
                       alt={member.name}
@@ -190,8 +197,8 @@ const TeamSection = () => {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {/* <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-3">
-                        {member.linkedin && (
+                      <div className="absolute bottom-4 left-0 right-0  space-x-3">
+                        {/* {member.linkedin && (
                           <a
                             href={member.linkedin}
                             target="_blank"
@@ -210,16 +217,18 @@ const TeamSection = () => {
                           >
                             <FaTwitter size={20} />
                           </a>
-                        )}
-                      </div> */}
+                        )} */}
+                        <div className="p-2">
+                          <h3 className="text-xl font-semibold text-[#fff] mb-1">
+                            {member.name}
+                          </h3>
+                          <p className="text-[#fff]">{member.position}</p>
+                          <p className='text-[#fff] text-sm mt-1'>{member.description}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="p-6 ">
-                    <h3 className="text-xl font-semibold text-[#04213F] mb-1">
-                      {member.name}
-                    </h3>
-                    <p className="text-[#9F1940]">{member.position}</p>
-                  </div>
+
                 </div>
               </motion.div>
             ))}

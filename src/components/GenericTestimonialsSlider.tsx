@@ -97,12 +97,12 @@ const GenericTestimonialsSlider: React.FC<GenericTestimonialsSliderProps> = ({
   return (
     <section className="w-full bg-white py-16">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-[#04213F] mb-10">
+        <h2 className="text-[32px] sm:text-[42px] font-bold text-center text-[#04213F] mb-10">
           {title}
         </h2>
         <Slider {...settings}>
           {testimonials.map(({ id, project, role, company, feedback, logo }) => (
-            <div key={id} className="px-3">
+            <div key={id} className="px-3 mt-10 sm:mt-0">
               <div className="bg-gray-50 min-h-[300px] rounded-lg shadow-lg p-6 border border-gray-300 flex flex-col justify-between">
                 <div className="flex items-start justify-between mb-4">
                   <div>

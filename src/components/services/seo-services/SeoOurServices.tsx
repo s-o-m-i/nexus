@@ -11,7 +11,7 @@ const SeoOurServices = () => {
     return (
         <section className="py-24 relative overflow-hidden">
             {/* Background with subtle pattern */}
-            <div className="absolute inset-0 bg-[#04213F] z-0">
+            <div className="absolute inset-0 bg-[#fff] z-0">
                 <div className="absolute inset-0 opacity-10">
                     <div className="h-full w-full magicpattern"></div>
                 </div>
@@ -24,15 +24,15 @@ const SeoOurServices = () => {
                         <div className="inline-block mb-3">
                             <span className="text-[#f8d57e] font-medium uppercase tracking-wider text-sm px-4 py-1.5 border border-[#f8d57e]/30 rounded-full">Comprehensive Solutions</span>
                         </div>
-                        <h2 className='text-[38px] sm:text-[48px] font-bold text-white mb-6'>Our <span className="text-[#f8d57e]">SEO Services</span></h2>
-                        <p className='text-[18px] text-white/80 text-center max-w-[700px] leading-relaxed'>
+                        <h2 className='text-[38px] sm:text-[48px] font-bold text-[#9f193f] mb-6'>Our <span className="text-[#2D5C76]">SEO Services</span></h2>
+                        <p className='text-[18px] text-black text-center max-w-[700px] leading-relaxed'>
                             We offer a full spectrum of search engine optimization services to improve your online presence and drive targeted traffic to your website.
                         </p>
                     </div>
                     
                     {/* Tab navigation */}
                     <div className="flex justify-center mb-12 overflow-x-auto pb-4">
-                        <div className="flex space-x-2 p-1 bg-white/10 backdrop-blur-sm rounded-full">
+                        <div className="flex space-x-2 p-1 bg-gray-50 border border-gray-300 backdrop-blur-sm rounded-full">
                             {seoServicesData.map((service, index) => (
                                 <button
                                     key={index}
@@ -40,7 +40,7 @@ const SeoOurServices = () => {
                                     className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                                         activeTab === index
                                             ? 'bg-[#9f193f] text-white shadow-lg'
-                                            : 'text-white/80 hover:text-white hover:bg-white/5'
+                                            : 'text-black hover:text-[#9f193f] hover:bg-white/5'
                                     }`}
                                 >
                                     {service.title}
@@ -54,13 +54,13 @@ const SeoOurServices = () => {
                         {/* Left column: Image and title */}
                         <div className="lg:col-span-5 order-2 lg:order-1">
                             <div className="relative">
-                                <div className="w-full h-80 relative rounded-xl overflow-hidden mb-6 bg-gradient-to-br from-[#9f193f]/20 to-[#04213F] p-8 flex items-center justify-center">
-                                    <div className="relative w-48 h-48">
+                                <div className="w-full h-80 relative rounded-xl overflow-hidden mb-6 bg-gradient-to-br from-[#9f193f]/20 to-[#04213F]  flex items-center justify-center">
+                                    <div className="relative w-full h-full">
                                         <Image 
                                             src={seoServicesData[activeTab].img} 
                                             alt={seoServicesData[activeTab].title}
                                             layout="fill"
-                                            objectFit="contain"
+                                            objectFit="cover"
                                             className="drop-shadow-lg" 
                                         />
                                     </div>
@@ -70,7 +70,7 @@ const SeoOurServices = () => {
                                     <div className="absolute bottom-0 left-0 -m-6 w-32 h-32 bg-[#9f193f]/20 rounded-full blur-xl"></div>
                                 </div>
                                 
-                                <h3 className='text-[#f8d57e] text-[32px] font-bold text-center'>
+                                <h3 className='text-[#2D5C76] text-[32px] font-bold text-center'>
                                     {seoServicesData[activeTab].title}
                                 </h3>
                             </div>
@@ -79,11 +79,11 @@ const SeoOurServices = () => {
                         {/* Right column: Description and points */}
                         <div className="lg:col-span-7 order-1 lg:order-2">
                             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10">
-                                <p className='text-white/90 text-lg mb-8 leading-relaxed'>
+                                <p className='text-[#04213F] text-lg mb-8 leading-relaxed'>
                                     {seoServicesData[activeTab].desc}
                                 </p>
                                 
-                                <h4 className="text-white font-semibold mb-4 text-xl">Key Benefits:</h4>
+                                <h4 className="text-[#2D5C76] font-semibold mb-4 text-xl">Key Benefits:</h4>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                                     {seoServicesData[activeTab].points.map((point, i) => (
                                         <motion.div 
@@ -98,7 +98,7 @@ const SeoOurServices = () => {
                                                     {i + 1}
                                                 </div>
                                             </div>
-                                            <p className='text-white/80 group-hover:text-white transition-colors'>
+                                            <p className='text-[#04213F] group-hover:text-[#9f193f] transition-colors'>
                                                 {point}
                                             </p>
                                         </motion.div>
@@ -110,7 +110,7 @@ const SeoOurServices = () => {
                     
                     {/* CTA Section */}
                     <div className="mt-20 text-center">
-                        <p className="text-white/80 mb-6 text-lg">
+                        <p className="text-[#04213F] mb-6 text-lg">
                             Ready to elevate your online presence with our SEO expertise?
                         </p>
                         <button className="inline-block px-8 py-4 bg-[#9f193f] hover:bg-[#b82a4e] text-white font-bold rounded-full transition-colors duration-200 shadow-lg">

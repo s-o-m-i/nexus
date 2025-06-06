@@ -67,10 +67,10 @@ const UXPortfolio = () => {
     ];
 
     return (
-        <section className="py-20 px-8 md:px-16 bg-[#F9FAFB]">
+        <section className="py-20 px-4 sm:px-8 md:px-16 bg-[#F9FAFB]">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-[#2D5C76] mb-4">Featured UI/UX Projects</h2>
+                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-4">Featured UI/UX Projects</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Explore our portfolio of successful UI/UX design projects that have transformed user experiences and driven business growth.
                     </p>
@@ -90,8 +90,8 @@ const UXPortfolio = () => {
                       <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-gray-50 z-0"></div>
                       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gray-50 to-transparent z-0"></div>
       
-                      <div className="relative z-10 p-6 md:p-8">
-                        <div className="relative h-[300px] overflow-hidden">
+                      <div className="relative z-10 p-4 sm:p-6 md:p-8">
+                        <div className="relative h-[200px] sm:h-[300px] overflow-hidden">
                           <Image
                             src={project.image}
                             alt={project.title}
@@ -100,7 +100,7 @@ const UXPortfolio = () => {
                           />
                         </div>
       
-                        <div className="flex flex-wrap gap-2 mb-4">
+                        <div className="flex flex-wrap gap-2 mb-4 mt-5 sm:mt-0">
                           {project.tags.map((tag, index) => (
                             <span
                               key={index}
@@ -111,7 +111,7 @@ const UXPortfolio = () => {
                           ))}
                         </div>
       
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                        <h3 className="text-[20px] sm:text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
                         <p className="text-gray-600 mb-6">{project.description}</p>
       
                         <button

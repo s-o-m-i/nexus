@@ -40,10 +40,10 @@ const MobileWhyChooseUs = () => {
     ];
 
     return (
-        <section className="py-20 px-8 md:px-16 bg-gray-50">
+        <section className="py-20 px-4 sm:px-8 md:px-16 bg-gray-50">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-[#2D5C76] mb-4">Why Choose Us</h2>
+                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-4">Why Choose Us</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Partner with us for innovative mobile solutions that drive business growth and user engagement.
                     </p>

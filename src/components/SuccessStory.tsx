@@ -24,12 +24,12 @@ interface SuccessStory {
 const SuccessStory = ({ data }: { data: SuccessStory[] }) => {
     return (
         <>
-            <section className="py-20 px-8 md:px-16 bg-white relative">
+            <section className="py-20 px-4 sm:px-16 bg-white relative">
 
                 <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] text-center">
                     Success Stories</h2>
                 <div className="flex justify-center">
-                    <p className="text-base text-gray-600 sm:w-[65%] mt-5 text-center">
+                    <p className="text-base text-gray-600 w-full sm:w-[65%] mt-5 text-center">
                         At Nexus, our success is defined by the achievements of our valued clients. We take immense pride in the transformative impact our digital solutions have had on their businesses. Here are some inspiring success stories that highlight the outcomes of our collaborative efforts.                    </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 mt-20 gap-8 ">

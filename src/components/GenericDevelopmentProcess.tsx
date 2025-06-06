@@ -20,7 +20,7 @@ const GenericDevelopmentProcess: React.FC<GenericDevelopmentProcessProps> = ({
   processSteps,
 }) => {
   return (
-    <section className="py-20 px-8 md:px-16 bg-white">
+    <section className="py-20 px-4 sm:px-8 md:px-16 bg-white">
       <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] text-center">{title}</h2>
       <div className="flex justify-center">
         <p className="text-base text-gray-600 sm:w-[65%] mt-5 text-center">{subtitle}</p>

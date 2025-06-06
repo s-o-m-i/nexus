@@ -29,7 +29,7 @@ const GenericTechStack: React.FC<GenericTechStackProps> = ({
   const [selectedTech, setSelectedTech] = useState<keyof typeof interactiveTechs>(techNames[0]);
 
   return (
-    <section className="py-20 px-8 md:px-16 bg-white">
+    <section className="py-20 px-4 sm:px-16 bg-white">
       <div className="flex justify-center">
         <h2 className="text-[32px] leading-[1.2] sm:text-[42px] font-bold text-[#04213F] text-center sm:w-[55%]">
           {title}

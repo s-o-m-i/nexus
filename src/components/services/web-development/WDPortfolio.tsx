@@ -94,21 +94,21 @@ const [isModalOpen, setIsModalOpen] = useState(false)
   }
   return (
     <div>
-      <section className="py-20 px-8 md:px-16">
+      <section className="py-20 px-4 sm:px-18">
         <div className="flex justify-center">
           <h2 className="text-[32px] sm:text-[42px] font-bold text-[#04213F] text-center">
             Web Development Portfolio
           </h2>
         </div>
         <div className="flex justify-center">
-          <p className="text-base text-gray-600 sm:w-[65%] mt-5 text-center">
+          <p className="text-base text-gray-600 w-full sm:w-[65%] mt-5 text-center">
             Check out some of our most recent Web Development projects below.
           </p>
         </div>
 
           {/* Services Section with Hoverable Cards */}
       <div className="py-24 bg-white">
-        <div className="container mx-auto px-4">
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {projects.map((project) => (
@@ -124,7 +124,7 @@ const [isModalOpen, setIsModalOpen] = useState(false)
                 <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-gray-50 z-0"></div>
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gray-50 to-transparent z-0"></div>
 
-                <div className="relative z-10 p-6 md:p-8">
+                <div className="relative z-10 p-4 md:p-8">
                   <div className="relative h-[300px] overflow-hidden">
                     <Image
                       src={project.image}
@@ -134,7 +134,7 @@ const [isModalOpen, setIsModalOpen] = useState(false)
                     />
                   </div>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-4 mt-4 sm:mt-0">
                     {project.tags.map((tag, index) => (
                       <span
                         key={index}
@@ -162,7 +162,7 @@ const [isModalOpen, setIsModalOpen] = useState(false)
               </motion.div>
             ))}
           </div>
-        </div>
+        
       </div>
         <div className="flex justify-center mt-12">
     

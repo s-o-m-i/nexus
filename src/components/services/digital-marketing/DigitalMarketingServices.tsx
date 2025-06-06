@@ -5,8 +5,8 @@ import { SiGoogleads } from 'react-icons/si'
 
 const DigitalMarketingServices = () => {
   return (
-    <div className="w-full bg-white py-20">
-      <div className="container mx-auto px-4">
+    <div className="w-full bg-white py-20 px-4 sm:px-8 md:px-16">
+    
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-[32px] sm:text-[42px] font-bold mb-6 text-[#04213F]">
@@ -128,7 +128,7 @@ const DigitalMarketingServices = () => {
             </div>
           </div>
         </div>
-      </div>
+      
     </div>
   )
 }

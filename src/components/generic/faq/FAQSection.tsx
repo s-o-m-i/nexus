@@ -24,7 +24,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   showContact = true
 }) => {
   return (
-    <section className="py-24 px-8 md:px-16 bg-gray-50 relative overflow-hidden">
+    <section className="py-24 px-4 md:px-16 bg-gray-50 relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute top-40 left-10 w-32 h-32 rotate-45 border border-[#9f193f]/30"></div>

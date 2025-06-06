@@ -2,7 +2,7 @@ export const seoServicesData = [
     {
         title: "Technical SEO",
         desc: "We optimize your website's technical foundation to ensure search engines can crawl, index, and understand your content effectively.",
-        img: "/technical-seo.svg",
+        img: "/images/tech_seo.jpg",
         points: [
             "Comprehensive site audits to identify and fix technical issues",
             "Page speed optimization for faster loading times",
@@ -15,7 +15,7 @@ export const seoServicesData = [
     {
         title: "On-Page SEO",
         desc: "We optimize the content and structure of your individual web pages to improve their search engine visibility and relevance.",
-        img: "/on-page-seo.svg",
+        img: "/images/onpage_seo.jpg",
         points: [
             "Keyword research and strategic implementation",
             "Meta title and description optimization",
@@ -28,7 +28,7 @@ export const seoServicesData = [
     {
         title: "Off-Page SEO",
         desc: "We build your website's authority through high-quality backlinks, brand mentions, and other off-site signals that boost your search rankings.",
-        img: "/off-page-seo.svg",
+        img: "/images/tech_seo.jpg",
         points: [
             "High-quality link building from authoritative websites",
             "Digital PR campaigns to earn brand mentions",
@@ -41,7 +41,7 @@ export const seoServicesData = [
     {
         title: "Content Marketing",
         desc: "We create and promote valuable, relevant content that attracts and engages your target audience while improving your search rankings.",
-        img: "/content-marketing.svg",
+        img: "/images/onpage_seo.jpg",
         points: [
             "Comprehensive content strategy development",
             "SEO-optimized blog posts and articles",
@@ -54,7 +54,7 @@ export const seoServicesData = [
     {
         title: "Local SEO",
         desc: "We optimize your online presence to attract more customers from relevant local searches, perfect for businesses serving specific geographic areas.",
-        img: "/local-seo.svg",
+        img: "/images/onpage_seo.jpg",
         points: [
             "Google Business Profile optimization",
             "Local keyword research and implementation",
@@ -67,7 +67,7 @@ export const seoServicesData = [
     {
         title: "E-commerce SEO",
         desc: "We implement specialized optimization strategies designed specifically for online stores to increase product visibility and drive more sales.",
-        img: "/ecommerce-seo.svg",
+        img: "/images/onpage_seo.jpg",
         points: [
             "Product page optimization for higher conversions",
             "Category page structure and optimization",

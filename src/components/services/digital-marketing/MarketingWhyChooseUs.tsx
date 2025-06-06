@@ -27,10 +27,10 @@ const MarketingWhyChooseUs = () => {
   ]
 
   return (
-    <div className=" py-20">
-      <div className="container mx-auto px-4">
+    <div className=" py-20 px-4 sm:px-8 md:px-16">
+    
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2D5C76] mb-4">
+          <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-4">
             Why Choose Our
             <span className="text-[#9f193f]"> Digital Marketing</span> Services?
           </h2>
@@ -43,21 +43,9 @@ const MarketingWhyChooseUs = () => {
           {benefits.map((benefit,index) => (
             // <div
             //   key={index}
-            //   className="bg-gray-50 border border-gray-300 rounded-lg p-6 text-center hover:shadow-lg transition duration-300"
-            // >
-            //   <div className="flex justify-center mb-4 text-[#04213F]">
-            //     {benefit.icon}
-            //   </div>
-            //   <h3 className="text-xl font-semibold text-[#2D2D2D] mb-3">
-            //     {benefit.title}
-            //   </h3>
-            //   <p className="text-[#4D4D4D]">
-            //     {benefit.description}
-            //   </p>
-            // </div>
+    
              <FancyCard key={index} title={benefit.title} desc={benefit.description} />
           ))}
-        </div>
       </div>
     </div>
   )

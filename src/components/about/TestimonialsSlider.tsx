@@ -30,7 +30,7 @@ function NextArrow({ className, style, onClick }: ArrowProps) {
 function PrevArrow({ className, style, onClick }: ArrowProps) {
   return (
     <div
-      className={`${className} !flex !items-center !justify-center !w-12 !h-12 !bg-white !shadow-lg hover:!shadow-xl !rounded-full !border !border-gray-100 text-[#9F193F] transition-all duration-300 hover:!bg-[#9F193F]/5`}
+      className={`${className} !flex !items-center !justify-center !w-12 !h-12 !bg-white !shadow-lg hover:!shadow-xl !rounded-full !border !border-gray-100 text-[#9F193F] transition-all duration-300 hover:!bg-[#9F193F]/5 `}
       style={{ left: "auto", right: "70px", top: "-70px", zIndex: 10 }}
       onClick={onClick}
     >
@@ -143,7 +143,7 @@ function TestimonialsSlider() {
 
   return (
     <section className="w-full bg-white py-24 overflow-hidden">
-      <div className="container mx-auto px-18">
+      <div className="container mx-auto px-4 sm:px-18">
         <div className="mb-16 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -169,7 +169,7 @@ function TestimonialsSlider() {
         <div className="relative">
           <Slider {...settings} className="testimonials-slider">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="px-4 py-2">
+              <div key={testimonial.id} className="p-0 sm:px-4 py-2">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

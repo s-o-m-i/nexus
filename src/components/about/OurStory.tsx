@@ -12,13 +12,13 @@ const Lottie = dynamic(() => import('lottie-react'), {
 const OurStory = () => {
     return (
         <>
-            <section className="py-20 container mx-auto px-18 bg-white">
+            <section className="py-20 container mx-auto px-4 sm:px-18 bg-white">
                 <h2 className='text-[32px] sm:text-[42px] font-bold text-[#2D5C76]  text-center'>Our Story</h2>
                 {/* <div className="w-24 h-1 mt-3    bg-[#9f193f] mx-auto mb-6"></div> */}
                 {/* <div className="flex justify-center">
                     <p className='text-base text-gray-600  mt-5 text-center sm:w-[75%]'>At LLC, our values form the foundation of our organization and guide our actions. We believe in upholding the highest standards of integrity, delivering exceptional service, and embracing innovation. These values define our culture and shape the way we work together to achieve our goals.</p>
                 </div> */}
-                <div className="grid grid-cols-2 mt-20 gap-8">
+                <div className="grid sm:grid-cols-2 grid-cols-1 mt-20 gap-8">
                     <div className="bg-pattern bg-[#7E1C32] rounded-lg flex items-center justify-center">
                         <div className="w-[500px]">
                             <Lottie 

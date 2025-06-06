@@ -114,6 +114,28 @@ interface ServiceProps {
   index: number;
 }
 
+interface ClientLogo {
+  id: number
+  name: string
+}
+
+const clientLogos: ClientLogo[] = [
+  { id: 1, name: "App Development" },
+  { id: 2, name: "Web Development" },
+  { id: 3, name: "UI/UX Design" },
+  { id: 4, name: "Digital Marketing" },
+  { id: 5, name: "SEO Services" },
+  { id: 6, name: "Content Writing" },
+  { id: 7, name: "Wireframe" },
+  { id: 8, name: "Prototyping" },
+  { id: 9, name: "Branding" },
+  { id: 10, name: "Graphic Design" },
+  { id: 11, name: "Video Production" },
+  { id: 12, name: "Social Media Marketing" },
+  { id: 13, name: "Email Marketing" },
+  { id: 14, name: "Search Engine Optimization" },
+]
+
 // Enhanced Service Bubble Component
 const ServiceBubble = ({ service, index }: ServiceProps) => {
   return (
@@ -207,7 +229,7 @@ const Services = () => {
     <div>
       {/* Hero Section with 3D Elements */}
       <section className="relative overflow-hidden bg-[#ffff] ">
-        <div className="container mx-auto px-18">
+        <div className="container mx-auto px-4 sm:px-18">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -294,9 +316,60 @@ const Services = () => {
         </div>
       </section>
 
+
+
+      {/* Services Section with Enhanced Visuals */}
+      <div className="py-24 bg-[#fff] relative overflow-hidden" ref={servicesRef}>
+        <div className="container mx-auto px-4 sm:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <div className="inline-block mb-4">
+              <div className="px-4 py-1.5 bg-[#9F193F]/10 text-[#9F193F] rounded-full text-sm font-medium">
+                What We Offer
+              </div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2D5C76] mb-6">
+              Our Services
+            </h2>
+            <p className="text-lg text-gray-600">
+              At Nexus, we are committed to providing exceptional digital solutions tailored to suit your unique business needs. Our comprehensive service offerings cover a wide spectrum of digital disciplines.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {services.map((service, index) => (
+              <MainServicesCard key={index} service={service} index={index} />
+            ))}
+          </div>
+
+
+        </div>
+
+        {/* Enhanced background decoration */}
+        <div className="absolute top-0 right-0 w-64 h-64">
+          <svg className="w-full h-full text-[#9F193F]/5" viewBox="0 0 100 100" fill="none">
+            <circle cx="75" cy="25" r="20" stroke="currentColor" strokeWidth="0.5" strokeDasharray="5 5" />
+            <circle cx="75" cy="25" r="15" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3 3" />
+            <circle cx="75" cy="25" r="10" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
+          </svg>
+        </div>
+        <div className="absolute bottom-0 left-0 w-96 h-96">
+          <svg className="w-full h-full text-[#28536B]/5" viewBox="0 0 100 100" fill="none">
+            <rect x="10" y="10" width="80" height="80" rx="8" stroke="currentColor" strokeWidth="0.5" strokeDasharray="8 8" />
+            <rect x="20" y="20" width="60" height="60" rx="6" stroke="currentColor" strokeWidth="0.5" strokeDasharray="6 6" />
+            <rect x="30" y="30" width="40" height="40" rx="4" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />
+          </svg>
+        </div>
+      </div>
+
       {/* Stats Section with Enhanced Styling */}
       <div className="py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-6 md:px-8 relative z-10">
+        <div className="container mx-auto px-4 sm:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -324,57 +397,30 @@ const Services = () => {
         <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-64 h-64 rounded-full bg-[#28536B]/5 blur-3xl"></div>
         <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-[#9F193F]/5 blur-3xl"></div>
       </div>
-
-      {/* Services Section with Enhanced Visuals */}
-      <div className="py-24 bg-[#fff] relative overflow-hidden" ref={servicesRef}>
-        <div className="container mx-auto px-6 md:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <div className="inline-block mb-4">
-              <div className="px-4 py-1.5 bg-[#9F193F]/10 text-[#9F193F] rounded-full text-sm font-medium">
-                What We Offer
-              </div>
+      <div className="overflow-hidden">
+        <div className="flex animate-marquee overflow-hidden rotate-x-[100deg] skew-12 whitespace-nowrap bg-[#9f193f] mt-20 py-4">
+          {[...Array(2)].map((_, repeat) => (
+            <div key={repeat} className="flex space-x-24 pl-24">
+              {clientLogos.map((logo) => (
+                <div key={`${repeat}-${logo.id}`} className="flex items-center justify-center">
+                  <div className="text-white font-bold text-xl">{logo.name}</div>
+                </div>
+              ))}
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2D5C76] mb-6">
-              Our Services
-            </h2>
-            <p className="text-lg text-gray-600">
-              At Nexus, we are committed to providing exceptional digital solutions tailored to suit your unique business needs. Our comprehensive service offerings cover a wide spectrum of digital disciplines.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 gap-6">
-            {services.map((service, index) => (
-              <MainServicesCard key={index} service={service} index={index} />
-            ))}
-          </div>
-
-
+          ))}
         </div>
-
-        {/* Enhanced background decoration */}
-        <div className="absolute top-0 right-0 w-64 h-64">
-          <svg className="w-full h-full text-[#9F193F]/5" viewBox="0 0 100 100" fill="none">
-            <circle cx="75" cy="25" r="20" stroke="currentColor" strokeWidth="0.5" strokeDasharray="5 5" />
-            <circle cx="75" cy="25" r="15" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3 3" />
-            <circle cx="75" cy="25" r="10" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
-          </svg>
-        </div>
-        <div className="absolute bottom-0 left-0 w-96 h-96">
-          <svg className="w-full h-full text-[#28536B]/5" viewBox="0 0 100 100" fill="none">
-            <rect x="10" y="10" width="80" height="80" rx="8" stroke="currentColor" strokeWidth="0.5" strokeDasharray="8 8" />
-            <rect x="20" y="20" width="60" height="60" rx="6" stroke="currentColor" strokeWidth="0.5" strokeDasharray="6 6" />
-            <rect x="30" y="30" width="40" height="40" rx="4" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />
-          </svg>
+        <div className="flex  animate-marquee-reverse overflow-hidden whitespace-nowrap bg-[#2D5C76] py-2">
+          {[...Array(2)].map((_, repeat) => (
+            <div key={repeat} className="flex space-x-24 pl-24">
+              {clientLogos.map((logo) => (
+                <div key={`${repeat}-${logo.id}`} className="flex items-center justify-center">
+                  <div className="text-white font-bold text-xl">{logo.name}</div>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
-
-
 
       {/* Call to Action */}
       <CallToAction />

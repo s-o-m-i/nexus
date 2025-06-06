@@ -44,7 +44,7 @@ const WPProcess = () => {
 
   return (
     <>
-      <section className="py-20 px-8 md:px-16 bg-white">
+      <section className="py-20 px-4 sm:px-16 bg-white">
         <h2 className="text-[32px] sm:text-[42px] font-bold text-[#04213F] text-center">
           Our Development Process
         </h2>
