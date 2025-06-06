@@ -1,11 +1,14 @@
 "use client"
 import Link from 'next/link';
 import React, { useState } from 'react'
+import CalendlyWidget from '../CalendlyWidget';
 
 const Navbar = () => {
     const [isServicesHovered, setIsServicesHovered] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
 
     // Services list for dropdown
     const services = [
@@ -62,7 +65,7 @@ const Navbar = () => {
                     </ul>
 
                     <div className="cta hidden sm:block">
-                        <h3 className='text-sm relative group cursor-pointer font-medium text-[#9f193f] bg-white px-4 py-2 rounded-full flex items-center gap-2 overflow-hidden z-10 hover:text-[#fff] shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] '>Book a Call
+                        <h3 onClick={() => setIsOpen(true)} className='text-sm relative group cursor-pointer font-medium text-[#9f193f] bg-white px-4 py-2 rounded-full flex items-center gap-2 overflow-hidden z-10 hover:text-[#fff] shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] '>Book a Call
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                             </svg>
@@ -215,6 +218,8 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
+
+                <CalendlyWidget isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
         </>
     )

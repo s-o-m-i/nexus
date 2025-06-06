@@ -2,10 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { PopupButton } from 'react-calendly';
-
-const CalendlyWidget = () => {
+import { PopupModal } from 'react-calendly';
+const CalendlyWidget = ({isOpen, setIsOpen}: {isOpen: boolean, setIsOpen: (isOpen: boolean) => void}) => {
   const [rootElem, setRootElem] = useState<HTMLElement | null>(null);
-
   useEffect(() => {
     setRootElem(document.body);
   }, []);
@@ -14,8 +13,16 @@ const CalendlyWidget = () => {
 
   return (
     <div className="space-y-4">
+
+
+         <PopupModal
+        url="https://calendly.com/sulemandevofficial"
+        onModalClose={() => setIsOpen(false)}
+        open={isOpen}
+        rootElement={rootElem}
+      />
       {/* Multiple custom buttons that open Calendly modal */}
-      <PopupButton
+      {/* <PopupButton
         url="https://calendly.com/sulemandevofficial"
         rootElement={rootElem}
         text="Book Session (Style 1)"
@@ -34,7 +41,7 @@ const CalendlyWidget = () => {
         rootElement={rootElem}
         text="Book Session (Style 3)"
         className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700"
-      />
+      /> */}
     </div>
   );
 };
