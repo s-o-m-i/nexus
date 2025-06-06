@@ -117,7 +117,19 @@ const PortfolioPage = () => {
 
   return (
     <div className="min-h-screen bg-[#F9FAFB] overflow-hidden">
-      <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20">
+      <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20 relative">
+        <div className="absolute bg-[#9f193f]/10 top-0 left-0 w-[200px] h-[200px]  rounded-full"></div>
+        <div className="flex absolute top-50 left-0  rotate-2 animate-marquee overflow-hidden whitespace-nowrap bg-[#2D5C76]/10 py-2 -z-0">
+            {[...Array(5)].map((_, repeat) => (
+              <div key={repeat} className="flex space-x-24 pl-24">
+                {clientLogos.map((logo) => (
+                  <div key={`${repeat}-${logo.id}`} className="flex items-center justify-center">
+                    <div className="text-white font-bold text-xl">{logo.name}</div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         <div className="grid grid-cols-1 sm:grid-cols-2">
           <div className="">
             {/* <h1 className=' text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-6'>Crafting Digital Experiences That Drive Results
@@ -140,19 +152,23 @@ const PortfolioPage = () => {
             <div className="relative">
               <div className="flex items-center gap-5">
 
-                <div className="bg-[#9f193f] -mt-14 w-[200px] h-[200px] rounded-md rounded-tl-[50px] overflow-hidden hover:motion-preset-seesaw">
+                <div className="bg-[#9f193f] -mt-14 w-[200px] h-[200px]
+                
+                rounded-md
+                
+                 overflow-hidden hover:motion-preset-seesaw">
                   <img src="/images/portfolio/projectOne.jpg" alt="" className='hover:scale-[1.1] transition-all duration-300' />
                 </div>
-                <div className="bg-[#2D5C76] -mt-8 w-[200px] h-[200px] rounded-md rounded-tr-[50px] overflow-hidden hover:motion-preset-seesaw">
+                <div className="bg-[#2D5C76] -mt-8 w-[200px] h-[200px] rounded-md  overflow-hidden hover:motion-preset-seesaw">
                   <img src="/images/portfolio/projectTwo.jpg" alt="" className='hover:scale-[1.1] transition-all duration-300' />
                 </div>
               </div>
               <div className="flex items-center gap-5">
 
-                <div className="bg-[#9f193f]   w-[200px] h-[200px] rounded-md rounded-bl-[50px] overflow-hidden hover:motion-preset-seesaw">
+                <div className="bg-[#9f193f]   w-[200px] h-[200px] rounded-md  overflow-hidden hover:motion-preset-seesaw">
                   <img src="/images/portfolio/projectThree.jpg" alt="" className='hover:scale-[1.1] transition-all duration-300' />
                 </div>
-                <div className="bg-[#2D5C76] mt-8 w-[200px] h-[200px] rounded-md rounded-br-[50px] overflow-hidden hover:motion-preset-seesaw">
+                <div className="bg-[#2D5C76] mt-8 w-[200px] h-[200px] rounded-md  overflow-hidden hover:motion-preset-seesaw">
                   <img src="/images/portfolio/projectFour.png" alt="" className='hover:scale-[1.1] transition-all duration-300 w-full h-full object-cover' />
                 </div>
               </div>

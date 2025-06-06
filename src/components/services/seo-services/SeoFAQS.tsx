@@ -18,7 +18,7 @@ const SeoFAQS = () => {
     };
 
     return (
-        <section className="py-24 px-8 md:px-16 relative overflow-hidden bg-white">
+        <section className="py-24 px-4 sm:px-8 md:px-16 relative overflow-hidden bg-white">
             {/* Decorative background elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-60 pointer-events-none">
                 <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-[#f8f9fb] rounded-bl-[200px]"></div>

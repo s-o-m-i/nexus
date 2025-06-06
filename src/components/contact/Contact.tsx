@@ -120,7 +120,8 @@ const Contact = () => {
             <div className="my-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-4">
                     <a href="https://wechat.com/03705614842" target="_blank">
-                    <div className="bg-white shadow-lg border border-gray-100 p-6 rounded-xl">
+                    <div className="bg-[#2D5C76]/10 relative shadow-lg border border-gray-100 p-6 rounded-xl group  overflow-hidden">
+                    {/* <div className="absolute -bottom-10 left-50 group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:h-full w-[100px] h-[100px] bg-[#fff] rounded-full group-hover:rounded-none transition-all duration-300"></div> */}
                         <h2 className="text-xl font-bold text-center text-[#9f193f] mb-4">WeChat</h2>
                         <div className="relative aspect-square w-full overflow-hidden rounded-lg flex items-center justify-center">
                             <Image
@@ -134,7 +135,9 @@ const Contact = () => {
                     </div>
                     </a>
                     <a href="https://linkedin.com/in/03705614842" target="_blank">
-                    <div className="bg-white shadow-lg border border-gray-300 p-6 rounded-xl">
+                    <div className="bg-[#2D5C76]/10 relative shadow-lg border border-gray-300 p-6 rounded-xl group overflow-hidden">
+                    {/* <div className="absolute -bottom-10 left-50 group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:h-full w-[100px] h-[100px] bg-[#fff] rounded-full group-hover:rounded-none transition-all duration-300"></div> */}
+                        
                         <h2 className="text-xl font-bold text-center text-[#2D5C76] mb-4">LinkedIn</h2>
                         <div className="relative aspect-square w-full overflow-hidden rounded-lg flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150" height="150" viewBox="0 0 48 48">
@@ -144,7 +147,8 @@ const Contact = () => {
                     </div>
                     </a>
                     <a href="https://instagram.com/03705614842" target="_blank">
-                    <div className="bg-white shadow-lg border border-gray-300 p-6 rounded-xl">
+                    <div className="bg-[#2D5C76]/10 shadow-lg border border-gray-300 p-6 rounded-xl  group relative overflow-hidden">
+                    {/* <div className="absolute -bottom-10 left-50 group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:h-full w-[100px] h-[100px] bg-[#fff] rounded-full group-hover:rounded-none transition-all duration-300"></div> */}
                         <h2 className="text-xl font-bold text-center text-[#9f193f] mb-4">Instagram</h2>
                         <div className="relative aspect-square w-full overflow-hidden rounded-lg flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150" height="150" viewBox="0 0 48 48">
@@ -154,8 +158,9 @@ const Contact = () => {
                     </div>
                     </a>
                     <a href="https://facebook.com/03705614842" target="_blank">
-                    <div className="bg-white shadow-lg border border-gray-300 p-6 rounded-xl">
-                        <h2 className="text-xl font-bold text-center text-[#2D5C76] mb-4">Facebook</h2>
+                    <div className="bg-[#2D5C76]/10 shadow-lg border border-gray-300 p-6 rounded-xl group relative overflow-hidden">
+                    {/* <div className="absolute -bottom-10 left-50 group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:h-full w-[100px] h-[100px] bg-[#9f193f] rounded-full group-hover:rounded-none transition-all duration-300"></div> */}
+                        <h2 className="text-xl font-bold text-center text-[#2D5C76] mb-4 relative group-hover:text-white">Facebook</h2>
                         <div className="relative aspect-square w-full overflow-hidden rounded-lg flex justify-center items-center">
                             {/* <FaFacebook className="text-[#2D5C76] text-[180px]"/> */}
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150" height="150" viewBox="0 0 48 48">
@@ -165,7 +170,8 @@ const Contact = () => {
                     </div>
                     </a>
                     <a href="https://wa.me/03705614842" target="_blank">
-                    <div className="bg-white shadow-lg border border-gray-100 p-6 rounded-xl">
+                    <div className="bg-[#2D5C76]/10 shadow-lg border border-gray-100 p-6 rounded-xl group relative overflow-hidden">
+                    {/* <div className="absolute -bottom-10 left-50 group-hover:bottom-0 group-hover:left-0  group-hover:w-[150px] group-hover:h-[150px] w-[100px] h-[100px] bg-[#9f193f] rounded-full group-hover:rounded-none transition-all duration-300"></div> */}
                         <h2 className="text-xl font-bold text-center text-[#2D5C76] mb-4">WhatsApp</h2>
                         <div className="relative aspect-square w-full overflow-hidden rounded-lg flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150" height="150" viewBox="0 0 48 48">
