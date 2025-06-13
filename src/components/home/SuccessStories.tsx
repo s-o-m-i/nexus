@@ -45,7 +45,7 @@ const SuccessStories = () => {
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 className="relative group"
                             >
-                                <div className="bg-[#2D5C76] rounded-2xl overflow-hidden">
+                                <div className="bg-[#000] rounded-2xl overflow-hidden">
                                     <div className="p-8 md:p-10">
                                         <div className="mb-6">
                                             <div className="inline-block px-3 py-1 bg-white/10 text-white rounded-md text-sm">Case Study #{study.id}</div>
@@ -88,7 +88,7 @@ const SuccessStories = () => {
 
                                     {/* Decorative elements */}
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#9F1940]/20 to-transparent rounded-full blur-3xl -mr-32 -mt-32 opacity-30"></div>
-                                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-[#28536B]/20 to-transparent rounded-full blur-3xl -ml-32 -mb-32 opacity-30"></div>
+                                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-[#000]/20 to-transparent rounded-full blur-3xl -ml-32 -mb-32 opacity-30"></div>
                                 </div>
                             </motion.div>
                         ))}

@@ -13,7 +13,7 @@ const ModernCard: React.FC<ModernCardProps>= ({step,title,desc}) => {
         <h2 className='text-white text-4xl'>{step}</h2>
     </div>
     <div className="">
-        <h3 className='text-lg text-[#28536B] '>{title}</h3>
+        <h3 className='text-lg text-[#000] '>{title}</h3>
         <p className='text-sm text-gray-600  mt-2'>{desc}</p>
     </div>
 </div>

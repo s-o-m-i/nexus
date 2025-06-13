@@ -43,7 +43,7 @@ const MobileWhyChooseUs = () => {
         <section className="py-20 px-4 sm:px-8 md:px-16 bg-gray-50">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-4">Why Choose Us</h2>
+                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#000] mb-4">Why Choose Us</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Partner with us for innovative mobile solutions that drive business growth and user engagement.
                     </p>
@@ -60,7 +60,7 @@ const MobileWhyChooseUs = () => {
                         >
                            <div 
                                 key={index} 
-                                className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-[#9f193f]/20 group relative overflow-hidden"
+                                className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-[#9f193f]/20 group relative overflow-hidden h-[300px]"
                             >
                                 {/* Simple accent line */}
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9f193f]/0 via-[#9f193f] to-[#9f193f]/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>

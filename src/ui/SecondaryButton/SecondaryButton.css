@@ -32,7 +32,7 @@
    
    .sec-button::after {
     right: -10px;
-    background: #28536B;
+    background: #000;
    }
    
    .sec-button:hover::before,

@@ -45,7 +45,7 @@ const IsometricGrid = () => {
         />
 
         <motion.div
-          className="absolute right-[25%] top-[60%] w-14 h-14 bg-gradient-to-br from-[#28536B] to-[#3b7898] rounded-full shadow-xl"
+          className="absolute right-[25%] top-[60%] w-14 h-14 bg-gradient-to-br from-[#000] to-[#3b7898] rounded-full shadow-xl"
           animate={{
             translateZ: [20, 70, 20],
             rotateZ: [5, -5, 5]
@@ -75,7 +75,7 @@ const IsometricGrid = () => {
         />
 
         <motion.div
-          className="absolute left-[35%] top-[45%] w-20 h-20 bg-gradient-to-br from-[#9F193F] to-[#28536B] rounded-lg shadow-xl"
+          className="absolute left-[35%] top-[45%] w-20 h-20 bg-gradient-to-br from-[#9F193F] to-[#000] rounded-lg shadow-xl"
           animate={{
             translateZ: [30, 80, 30],
             rotateZ: [0, 15, 0]
@@ -95,7 +95,7 @@ const IsometricGrid = () => {
         <svg className="absolute top-[-10%] right-[-10%] w-[200px] h-[200px] text-[#9F193F]/10" viewBox="0 0 200 200" fill="none">
           <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="2" strokeDasharray="10 10" />
         </svg>
-        <svg className="absolute bottom-[-5%] left-[-5%] w-[150px] h-[150px] text-[#28536B]/10" viewBox="0 0 150 150">
+        <svg className="absolute bottom-[-5%] left-[-5%] w-[150px] h-[150px] text-[#000]/10" viewBox="0 0 150 150">
           <rect x="25" y="25" width="100" height="100" stroke="currentColor" strokeWidth="2" strokeDasharray="5 5" fill="none" />
         </svg>
       </div>
@@ -151,7 +151,7 @@ const ServiceBubble = ({ service, index }: ServiceProps) => {
       className="service-card w-full h-full bg-white rounded-2xl border border-gray-100 shadow-lg overflow-hidden relative"
     >
       {/* Decorative accent */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9F193F] to-[#28536B]"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9F193F] to-[#000]"></div>
 
       {/* Card pattern background */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -243,7 +243,7 @@ const Services = () => {
                 </div>
               </div>
               <h1 className="text-[32px] sm:text-[42px]  font-bold text-gray-900 mb-6 leading-tight">
-                Comprehensive <br /><span className="bg-gradient-to-r from-[#9F193F] to-[#28536B] bg-clip-text text-transparent">Digital Solutions</span>
+                Comprehensive <br /><span className="bg-gradient-to-r from-[#9F193F] to-[#000] bg-clip-text text-transparent">Digital Solutions</span>
               </h1>
               <p className="text-gray-600 text-base max-w-xl mb-8">
                 At Nexus, we offer a comprehensive suite of digital solutions designed to propel your business to new heights in the digital realm. Our team of skilled professionals combines cutting-edge technologies with innovative strategies.
@@ -286,7 +286,7 @@ const Services = () => {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 style={{ boxShadow: "0 10px 25px -5px rgba(40, 83, 107, 0.2)" }}
               >
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-[#28536B] to-[#3b7898] flex items-center justify-center text-white font-medium">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-[#000] to-[#3b7898] flex items-center justify-center text-white font-medium">
                   App<br />Dev
                 </div>
               </motion.div>
@@ -310,7 +310,7 @@ const Services = () => {
           <svg className="absolute top-0 right-0 h-64 w-64 text-[#9F193F]/5" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor" d="M37.7,-49.2C46.5,-39.2,50.1,-25.5,49.8,-13.4C49.5,-1.3,45.4,9.1,40.2,19.8C35.1,30.5,29,41.6,19.5,46.6C10,51.6,-2.9,50.5,-16.5,47.2C-30.1,43.9,-44.3,38.3,-50.8,27.4C-57.3,16.5,-56.1,0.3,-50.3,-11.8C-44.6,-23.9,-34.4,-31.9,-24,-40.9C-13.7,-49.9,-3.2,-59.9,6.7,-67.6C16.6,-75.4,28.9,-59.2,37.7,-49.2Z" transform="translate(100 100)" />
           </svg>
-          <svg className="absolute bottom-0 left-0 h-80 w-80 text-[#28536B]/5" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute bottom-0 left-0 h-80 w-80 text-[#000]/5" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor" d="M38.5,-47.7C52.5,-39.6,68,-30.1,73.9,-16.3C79.8,-2.6,76,15.3,65.4,25.8C54.9,36.3,37.6,39.4,22.1,45.5C6.6,51.5,-7.1,60.5,-22.3,59.8C-37.5,59.1,-54.2,48.8,-65.5,33.3C-76.8,17.8,-82.8,-2.8,-77.2,-19C-71.6,-35.1,-54.5,-46.7,-38.2,-54.2C-21.9,-61.7,-6.5,-65,-0.6,-64.3C5.4,-63.5,24.5,-55.8,38.5,-47.7Z" transform="translate(100 100)" />
           </svg>
         </div>
@@ -333,7 +333,7 @@ const Services = () => {
                 What We Offer
               </div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2D5C76] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#000] mb-6">
               Our Services
             </h2>
             <p className="text-lg text-gray-600">
@@ -359,7 +359,7 @@ const Services = () => {
           </svg>
         </div>
         <div className="absolute bottom-0 left-0 w-96 h-96">
-          <svg className="w-full h-full text-[#28536B]/5" viewBox="0 0 100 100" fill="none">
+          <svg className="w-full h-full text-[#000]/5" viewBox="0 0 100 100" fill="none">
             <rect x="10" y="10" width="80" height="80" rx="8" stroke="currentColor" strokeWidth="0.5" strokeDasharray="8 8" />
             <rect x="20" y="20" width="60" height="60" rx="6" stroke="currentColor" strokeWidth="0.5" strokeDasharray="6 6" />
             <rect x="30" y="30" width="40" height="40" rx="4" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />
@@ -382,7 +382,7 @@ const Services = () => {
                 Our Impact
               </div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2D5C76] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#000] mb-6">
               Metrics That Speak
             </h2>
             <p className="text-lg text-gray-600">
@@ -394,7 +394,7 @@ const Services = () => {
         </div>
 
         {/* Background decoration */}
-        <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-64 h-64 rounded-full bg-[#28536B]/5 blur-3xl"></div>
+        <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-64 h-64 rounded-full bg-[#000]/5 blur-3xl"></div>
         <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-[#9F193F]/5 blur-3xl"></div>
       </div>
       <div className="overflow-hidden">
@@ -409,7 +409,7 @@ const Services = () => {
             </div>
           ))}
         </div>
-        <div className="flex  animate-marquee-reverse overflow-hidden whitespace-nowrap bg-[#2D5C76] py-2">
+        <div className="flex  animate-marquee-reverse overflow-hidden whitespace-nowrap bg-[#000] py-2">
           {[...Array(2)].map((_, repeat) => (
             <div key={repeat} className="flex space-x-24 pl-24">
               {clientLogos.map((logo) => (

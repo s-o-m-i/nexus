@@ -74,7 +74,7 @@ const MarketingOurServices = () => {
   ]
 
   return (
-    <div className="bg-[#2D5C76] py-20">
+    <div className="bg-[#000] py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

@@ -5,7 +5,7 @@ const ButtonBlue = ({ text = "Hire us!" }: { text?: string }) => {
     <div>
       <button
         type="submit"
-        className="flex hover:motion-preset-seesaw justify-center gap-2 items-center shadow-md text-lg bg-[#28536B] backdrop-blur-md isolation-auto border-gray-50 
+        className="flex hover:motion-preset-seesaw justify-center gap-2 items-center shadow-md text-lg bg-[#000] backdrop-blur-md isolation-auto border-gray-50 
         before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full 
         before:hover:left-0 before:rounded-full before:bg-[#4FD1C5] text-[#fff] hover:text-[#fff] 
         before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 

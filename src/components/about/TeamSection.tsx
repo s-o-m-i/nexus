@@ -6,7 +6,17 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { FaLinkedinIn, FaTwitter } from 'react-icons/fa'
+import {
+  MdWorkOutline,
+  MdHandshake,
+  MdSupportAgent,
+  MdFeedback,
+  MdGroups,
+  MdEmojiPeople,
+  MdHelpOutline,
+  MdRocketLaunch,
+  MdAttachMoney
+} from "react-icons/md";
 
 interface TeamMember {
   id: number
@@ -119,7 +129,7 @@ const TeamSection = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -147,7 +157,7 @@ const TeamSection = () => {
   }
 
   return (
-    <section className="py-20 bg-[#F9FAFB] overflow-hidden">
+    <section className="py-20 bg-[#000] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.span
@@ -162,7 +172,7 @@ const TeamSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-[#2D5C76] mb-6"
+            className="text-4xl md:text-5xl font-bold text-[#fff] mb-6"
           >
             Meet our team
           </motion.h2>
@@ -187,37 +197,52 @@ const TeamSection = () => {
                 className="px-4 mb-8"
               >
                 <div
-                //  className=" rounded-xl overflow-hidden group  border border-gray-300"
+                  className="h-[350px] relative"
                 >
-                  <div className="relative h-[450px] group overflow-hidden bg-white border border-gray-300 rounded-md">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="relative bg-[#9f193f] p-4 w-[70%] h-full rounded-tl-xl rounded-bl-xl rounded-[50px]">
+               
+                          <h3 className="text-xl font-semibold text-[#fff] mb-1">
+                            {member.name}
+                          </h3>
+                          <p className="text-[#fff]">{member.position}</p>
+                          <p className='text-[#fff] text-sm mt-5 w-[70%]'>{member.description}</p>
+                          <div className="mt-8 grid grid-cols-2  gap-4 w-[70%]">
+                            <div
+                                className={`w-full backdrop-blur-xl bg-white/10 border border-white/30 px-2 py-1  gap-2 rounded-lg shadow-md flex items-center justify-center cursor-pointer transition-all  duration-300 hover:scale-105 animate-float hover:motion-preset-seesaw text-[#fff] hover:bg-[#28536B] hover:text-white`}
+                            >
+                                <h1 className="text-[12px] font-bold ">Linkedin</h1>
+                                <MdWorkOutline size={20} />
+                            </div>
+                            <div
+                                className={`w-full sm:w-fit backdrop-blur-xl bg-white/10 border border-white/30 px-2 py-1  gap-2 rounded-lg shadow-md flex items-center justify-center cursor-pointer transition-all  duration-30  gap-2 rounded-lg shadow-md flex items-center justify-center cursor-pointer transition-all  duration-300 hover:scale-105 animate-float hover:motion-preset-seesaw text-[#fff] hover:bg-[#28536B] hover:text-white`}
+                            >
+                                <h1 className="text-[12px] font-bold">WeChat</h1>
+                                <MdWorkOutline size={20} />
+                            </div>
+                            <div
+                                className={`w-full sm:w-fit backdrop-blur-xl bg-white/10 border border-white/30 px-2 py-1  gap-2 rounded-lg shadow-md flex items-center justify-center cursor-pointer transition-all  duration-30  gap-2 rounded-lg shadow-md flex items-center justify-center cursor-pointer transition-all  duration-300 hover:scale-105 animate-float hover:motion-preset-seesaw text-[#fff] hover:bg-[#28536B] hover:text-white`}
+                            >
+                                <h1 className="text-[12px] font-bold ">WhatsApp</h1>
+                                <MdWorkOutline size={20} />
+                            </div>
+                            {/* <div
+                                    className={` backdrop-blur-xl bg-white/10 border border-white/30 px-2 py-1  gap-2 rounded-lg shadow-md flex items-center justify-center cursor-pointer transition-all  duration-30  gap-2 rounded-lg shadow-md flex items-center justify-center cursor-pointer transition-all  duration-300 hover:scale-105 animate-float hover:motion-preset-seesaw text-[#fff] hover:bg-[#28536B] hover:text-white`}
+                                >
+                                    <h1 className="text-[12px] font-bold ">Instagram</h1>
+                                    <MdWorkOutline size={20} />
+                                </div> */}
+                        </div>
+                      
+                  </div>
+                    <div className="h-[80%] top-10 right-0 absolute w-[50%] group overflow-hidden glass-effect border border-gray-300">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-4 left-0 right-0  space-x-3">
-                        {/* {member.linkedin && (
-                          <a
-                            href={member.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-[#9F1940] transition-colors duration-300"
-                          >
-                            <FaLinkedinIn size={20} />
-                          </a>
-                        )}
-                        {member.twitter && (
-                          <a
-                            href={member.twitter}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-[#9F1940] transition-colors duration-300"
-                          >
-                            <FaTwitter size={20} />
-                          </a>
-                        )} */}
                         <div className="p-2">
                           <h3 className="text-xl font-semibold text-[#fff] mb-1">
                             {member.name}
@@ -226,8 +251,8 @@ const TeamSection = () => {
                           <p className='text-[#fff] text-sm mt-1'>{member.description}</p>
                         </div>
                       </div>
+                    </div> */}
                     </div>
-                  </div>
 
                 </div>
               </motion.div>

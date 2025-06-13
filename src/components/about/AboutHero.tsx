@@ -74,7 +74,7 @@ const AboutHero = () => {
                 </div>
               </div>
               
-              <h1 className="text-5xl text-[32px] sm:text-[42px] font-bold text-[#2D5C76] leading-tight mb-6">
+              <h1 className="text-5xl text-[32px] sm:text-[42px] font-bold text-[#000] leading-tight mb-6">
               Transforming Visions into Digital Excellence
                 <span className="block">Delivered</span>
               </h1>
@@ -122,7 +122,7 @@ const AboutHero = () => {
                 />
                 
                 <motion.div 
-                  className="absolute right-[35%] top-[55%] w-12 h-12 bg-[#28536B] rounded-full"
+                  className="absolute right-[35%] top-[55%] w-12 h-12 bg-[#000] rounded-full"
                   animate={{ y: [0, -20, 0] }}
                   transition={{ duration: 2.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: 0.3 }}
                 />
@@ -134,7 +134,7 @@ const AboutHero = () => {
                 />
                 
                 <motion.div 
-                  className="absolute left-[45%] top-[60%] w-16 h-16 bg-gradient-to-br from-[#9F1940] to-[#28536B] rounded-lg transform rotate-12"
+                  className="absolute left-[45%] top-[60%] w-16 h-16 bg-gradient-to-br from-[#9F1940] to-[#000] rounded-lg transform rotate-12"
                   animate={{ y: [0, -25, 0] }}
                   transition={{ duration: 2.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: 0.9 }}
                 />
@@ -147,7 +147,7 @@ const AboutHero = () => {
                 />
                 
                 <motion.div 
-                  className="absolute bottom-[15%] left-[20%] w-8 h-8 bg-[#28536B]/20 rounded-full"
+                  className="absolute bottom-[15%] left-[20%] w-8 h-8 bg-[#000]/20 rounded-full"
                   animate={{ y: [0, 15, 0], rotate: [0, -10, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                 />
@@ -158,7 +158,7 @@ const AboutHero = () => {
         
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#9F1940]/5 to-transparent -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/3 bg-gradient-to-t from-[#28536B]/5 to-transparent -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/3 bg-gradient-to-t from-[#000]/5 to-transparent -z-10"></div>
       </div>
    </>
   );

@@ -114,11 +114,11 @@ const HomePortfolio = () => {
   };
 
   return (  
-    <section className="bg-[#fff] py-20 container mx-auto px-4 sm:px-18 relative">
+    <section className="bg-black py-20 container mx-auto px-4 sm:px-18 relative">
       <div className="">
       <div className="text-center mb-20">
         <span className="inline-block px-3 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">Our Portfolio</span>
-        <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-6">Featured Projects</h2>
+        <h2 className="text-[32px] sm:text-[42px] font-bold text-[#fff] mb-6">Featured Projects</h2>
         <p className="text-[16px] text-gray-600 max-w-2xl mx-auto">
           Take a look at our recent work. We pride ourselves on delivering high-quality solutions 
           that exceed our clients&apos; expectations.
@@ -141,7 +141,7 @@ const HomePortfolio = () => {
             >
               <span
                 className={`text-sm md:text-base font-semibold ${
-                  selectedCategory === category.id ? "text-[#9F193F]" : "text-[#04213F]"
+                  selectedCategory === category.id ? "text-[#9F193F]" : "text-[#fff]"
                 }`}
               >
                 {`0${index + 1}`}{" "}
@@ -153,7 +153,7 @@ const HomePortfolio = () => {
               <div
                 className={`w-6 h-6 border-2 rounded-full mt-2 transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? "border-[#9F193F] bg-[#2D5C76]"
+                    ? "border-[#9F193F] bg-[#000]"
                     : "border-gray-200"
                 }`}
               ></div>
@@ -168,12 +168,12 @@ const HomePortfolio = () => {
             <div key={project.id} className="w-full">
             <div className="step-content relative px-4 py-6 sm:py-8">
               {/* Background box */}
-              <div className="hidden md:block bg-[#F3F7FB] absolute right-0 p-8 w-[60%] h-full rounded-[30px]"></div>
+              <div className="hidden md:block glass-effect absolute right-0 p-8 w-[60%] h-[80%] rounded-[30px] rounded-b-full"></div>
           
               <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6 md:gap-8 relative z-10">
                 {/* Image Section */}
-                <div className="md:col-span-7 mt-0 sm:mt-10 h-[250px] sm:h-[300px] md:h-[400px] w-full rounded-[30px] overflow-hidden border border-[#9F193F]/50 bg-about-pattern p-4 sm:p-6">
-                  <div className="relative w-full h-full rounded-[30px] overflow-hidden">
+                <div className="md:col-span-7 mt-0 sm:mt-10 h-[250px] sm:h-[300px] md:h-[400px] w-full rounded-[30px] overflow-hidden border border-[#9F193F]/50  p-4 sm:p-6 glass-effect">
+                  <div className="relative w-full h-full rounded-[30px] overflow-hidden ">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -185,13 +185,13 @@ const HomePortfolio = () => {
           
                 {/* Text Section */}
                 <div className="md:col-span-5">
-                  <h2 className="text-[#04213F] text-2xl sm:text-3xl font-bold">{project.title}</h2>
-                  <p className="text-sm sm:text-base text-gray-700 mt-4">{project.description}</p>
+                  <h2 className="text-[#fff] text-2xl sm:text-3xl font-bold">{project.title}</h2>
+                  <p className="text-sm sm:text-base text-white mt-4">{project.description}</p>
                   <div className="mt-4 sm:mt-6">
-                    <h4 className="text-[#04213F] font-semibold mb-2">Key Features:</h4>
+                    <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                     <ul className="list-disc list-inside space-y-1">
                       {project.features.map((feature, i) => (
-                        <li className="text-[#04213F]" key={i}>
+                        <li className="text-[#fff]" key={i}>
                           {feature}
                         </li>
                       ))}

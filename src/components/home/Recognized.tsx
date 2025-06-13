@@ -60,7 +60,7 @@ const Recognized = () => {
     return (
         <>
             <div className='p-4 sm:px-16 py-20'>
-                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#2D5C76]'>Recognized by</h2>
+                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#000]'>Recognized by</h2>
                 {/* <div className='w-16 h-1 bg-[#9f193f] mx-auto mt-2'></div> */}
 
 
@@ -101,7 +101,7 @@ const Recognized = () => {
                     {[...Array(1)].map((_, repeat) => (
                         <div key={repeat} className="flex space-x-24 pl-24">
                             {clientLogos.map((logo) => (
-                                <div key={`${repeat}-${logo.id}`} className="flex items-center justify-center bg-[#2D5C76]  border border-gray-300 rounded-full  py-2 px-4 relative group
+                                <div key={`${repeat}-${logo.id}`} className="flex items-center justify-center bg-[#000]  border border-gray-300 rounded-full  py-2 px-4 relative group
                 text-center
                 ">
                                     <div className="text-[#fff] font-medium text-sm  ">{logo.name}
@@ -119,7 +119,7 @@ const Recognized = () => {
 
                 {/* Stats section */}
                 <div className="mt-20 px-4 sm:px-18">
-                    <div className="bg-[#2D5C76] rounded-2xl p-10 text-white shadow-xl">
+                    <div className="bg-[#000] rounded-2xl p-10 text-white shadow-xl">
                         <div className="text-center mb-10">
                             <h3 className="text-2xl font-bold mb-2">Our Impact in Numbers</h3>
                             <p className="text-white/80">Real results from delivering world-class digital solutions</p>

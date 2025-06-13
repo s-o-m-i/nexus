@@ -76,7 +76,7 @@ const WhyUs = () => {
 
         {/* Right Side */}
         <div>
-          <h2 className="text-3xl sm:text-4xl  text-[#2D5C76] font-bold mb-4">Why Choose Us</h2>
+          <h2 className="text-3xl sm:text-4xl  text-[#000] font-bold mb-4">Why Choose Us</h2>
           <p className=" mb-10">
             Take your businesses and organizations to another level by taking our development and design services by adding automatic and easy user experiences to your existing structures and new start-ups.
           </p>
@@ -89,7 +89,7 @@ const WhyUs = () => {
               >
                 <div className="absolute group-hover:w-[100%] transition-all duration-300 ease-in-out group-hover:rounded-[0px] group-hover:h-full w-[50px] rounded-[50%] z-[1px] top-0 right-0 h-[50px] bg-[#9f193f]"></div>
                 <div className="mb-4 relative">{reason.icon}</div>
-                <h4 className="font-semibold text-[#2D5C76]  relative text-lg mb-2 group-hover:text-white">{reason.title}</h4>
+                <h4 className="font-semibold text-[#000]  relative text-lg mb-2 group-hover:text-white">{reason.title}</h4>
                 <p className="text-sm relative group-hover:text-white">{reason.description}</p>
               </div>
             ))}
@@ -111,7 +111,7 @@ const WhyUs = () => {
             </div>
           ))}
         </div>
-        <div className="flex  animate-marquee-reverse overflow-hidden whitespace-nowrap bg-[#2D5C76] py-2">
+        <div className="flex  animate-marquee-reverse overflow-hidden whitespace-nowrap bg-[#000] py-2">
             {[...Array(2)].map((_, repeat) => (
               <div key={repeat} className="flex space-x-24 pl-24">
                 {clientLogos.map((logo) => (

@@ -21,13 +21,13 @@ const HomePage = () => {
       <AboutCompany/>
       <HomeServices/>
       {/* <WhyUs /> */}
-      <SuccessStories/>
       <HomePortfolio/>
+      <SuccessStories/>
       {/* <WayOfBuildingTwo/> */}
       {/* <WayOfBuilding/> */}
       {/* <OurTeam/> */}
       
-      <Portfolio />
+      {/* <Portfolio /> */}
       {/* <Testimonials /> */}
       <TestimonialsSlider/>
       <CallToAction/>

@@ -12,7 +12,7 @@ const mapStyles = [
   },
   {
     elementType: "labels.text.fill",
-    stylers: [{ color: "#2D5C76" }]
+    stylers: [{ color: "#000" }]
   },
   {
     featureType: "administrative",
@@ -27,7 +27,7 @@ const mapStyles = [
   {
     featureType: "road",
     elementType: "geometry",
-    stylers: [{ color: "#2D5C76" }]
+    stylers: [{ color: "#000" }]
   },
   {
     featureType: "road",
@@ -37,7 +37,7 @@ const mapStyles = [
   {
     featureType: "road",
     elementType: "labels.text.fill",
-    stylers: [{ color: "#2D5C76" }]
+    stylers: [{ color: "#000" }]
   },
   {
     featureType: "water",
@@ -47,7 +47,7 @@ const mapStyles = [
   {
     featureType: "water",
     elementType: "labels.text.fill",
-    stylers: [{ color: "#2D5C76" }]
+    stylers: [{ color: "#000" }]
   },
   {
     featureType: "poi",
@@ -57,12 +57,12 @@ const mapStyles = [
   {
     featureType: "poi",
     elementType: "labels.text.fill",
-    stylers: [{ color: "#2D5C76" }]
+    stylers: [{ color: "#000" }]
   },
   {
     featureType: "transit",
     elementType: "geometry",
-    stylers: [{ color: "#2D5C76" }]
+    stylers: [{ color: "#000" }]
   }
 ];
 

@@ -4,7 +4,7 @@ import { WPOurServicesData } from '../../../utils/wp-services'
 const WPOurServices = () => {
     return (
         <div>
-            <section className="py-20 px-4 sm:px-8 md:px-16 bg-[#2D5C76] relative">
+            <section className="py-20 px-4 sm:px-8 md:px-16 bg-[#000] relative">
                 
                 <h2 className='text-[32px] sm:text-[42px] font-bold text-[#fff]  text-center'>Our Web Development Services
                 </h2>

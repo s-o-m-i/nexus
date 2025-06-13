@@ -30,7 +30,7 @@ const MarketingWhyChooseUs = () => {
     <div className=" py-20 px-4 sm:px-8 md:px-16">
     
         <div className="text-center mb-16">
-          <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-4">
+          <h2 className="text-[32px] sm:text-[42px] font-bold text-[#000] mb-4">
             Why Choose Our
             <span className="text-[#9f193f]"> Digital Marketing</span> Services?
           </h2>

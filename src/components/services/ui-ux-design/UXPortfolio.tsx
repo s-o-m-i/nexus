@@ -70,7 +70,7 @@ const UXPortfolio = () => {
         <section className="py-20 px-4 sm:px-8 md:px-16 bg-[#F9FAFB]">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-4">Featured UI/UX Projects</h2>
+                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#000] mb-4">Featured UI/UX Projects</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Explore our portfolio of successful UI/UX design projects that have transformed user experiences and driven business growth.
                     </p>
@@ -104,7 +104,7 @@ const UXPortfolio = () => {
                           {project.tags.map((tag, index) => (
                             <span
                               key={index}
-                              className="px-3 py-1 bg-[#F9FAFB] text-[#2D5C76] text-sm rounded-full"
+                              className="px-3 py-1 bg-[#F9FAFB] text-[#000] text-sm rounded-full"
                             >
                               {tag}
                             </span>

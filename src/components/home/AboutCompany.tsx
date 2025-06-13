@@ -50,7 +50,7 @@ const AboutCompany = () => {
     return (
         <div ref={container}>
             <section id="about-company" className="py-20 px-8 md:px-16 bg-white overflow-hidden">
-                <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] text-center">About Company</h2>
+                <h2 className="text-[32px] sm:text-[42px] font-bold text-[#000] text-center">About Company</h2>
 
                 <p className="text-base text-gray-600 mt-5 w-full mx-auto  sm:w-[75%] text-center">
                     At LLC, our values form the foundation of our organization and guide our actions. We believe in upholding the highest standards of integrity, delivering exceptional service, and embracing innovation...
@@ -63,7 +63,7 @@ const AboutCompany = () => {
                                 className={`card ${index % 2 === 0 ? "card-left" : "card-right"
                                     } bg-gray-50 p-8 rounded-tl-4xl rounded-tr-md rounded-bl-md rounded-br-4xl shadow-sm hover:shadow-md transition-shadow border-[#9F1940] border-l-4`}
                             >
-                                <h3 className="text-[20px] text-[#28536B]">{data.title}</h3>
+                                <h3 className="text-[20px] text-[#000]">{data.title}</h3>
                                 <p className="text-[14px] mt-5 text-gray-600">{data.desc}</p>
                             </div>
                         ))}

@@ -93,7 +93,7 @@ const MobilePortfolio = () => {
         <section className="py-20 px-4 sm:px-8 md:px-16 bg-gray-50">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-4">Our Mobile App Portfolio</h2>
+                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#000] mb-4">Our Mobile App Portfolio</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Explore our collection of innovative mobile applications that showcase our expertise and creativity.
                     </p>
@@ -127,7 +127,7 @@ const MobilePortfolio = () => {
                              {project.tags.map((tag, index) => (
                                <span
                                  key={index}
-                                 className="px-3 py-1 bg-[#F9FAFB] text-[#2D5C76] text-sm rounded-full"
+                                 className="px-3 py-1 bg-[#F9FAFB] text-[#000] text-sm rounded-full"
                                >
                                  {tag}
                                </span>

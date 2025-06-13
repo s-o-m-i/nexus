@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="hidden sm:flex bg-[#2D5C76] p-1 sm:p-2 justify-center items-center">
+            <div className="hidden sm:flex bg-[#000] p-1 sm:p-2 justify-center items-center">
                 <div className="">
                     <a href="tel:+8618618618618" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> China <span className='text-[#fff] ml-2'>+86 186 1861 8618</span></a>
                     <a href="tel:+8618618618618" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> Pakistan <span className='text-[#fff] ml-2'>+92 345 1234567</span></a>
@@ -39,7 +39,7 @@ const Navbar = () => {
             <div className='p-2 sm:p-4 relative bg-[#f8f9ff] h-[100px] container mx-auto sm:max-width-[640px] md:max-width-[768px] lg:max-width-[1024px] xl:max-width-[1280px]'>
                 <nav className="flex items-center rounded-full justify-between py-4 px-4 sm:px-[60px] bg-[#9F1940]  text-[#235789] shadow-md">
                     <div className="text-[24px] font-bold text-[#fff]">
-                        <Link href={"/"}> TechNexus</Link></div>
+                        <Link href={"/"}> DevMola</Link></div>
                     <ul className="hidden md:flex space-x-6 text-[16px] font-medium">
                         <Link href={"/"}>
                             <li className="cursor-pointer transition navbar-items"><span>H</span><span>o</span><span>m</span><span>e</span></li>
@@ -69,7 +69,7 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                             </svg>
-                            <div className="absolute -left-10 top-0 h-10 w-10 bg-[#2D5C76] rounded-full group-hover:left-0 group-hover:w-full group-hover:h-full -z-1  transition-all duration-300 ease-in-out">
+                            <div className="absolute -left-10 top-0 h-10 w-10 bg-[#000] rounded-full group-hover:left-0 group-hover:w-full group-hover:h-full -z-1  transition-all duration-300 ease-in-out">
                             </div>
 
                         </h3>
@@ -160,7 +160,7 @@ const Navbar = () => {
                         </div>
 
                         <div className="mt-8">
-                            <button className="w-full bg-[#9F1940] text-white py-3 rounded-full flex items-center justify-center gap-2 hover:bg-[#2D5C76] transition-colors">
+                            <button className="w-full bg-[#9F1940] text-white py-3 rounded-full flex items-center justify-center gap-2 hover:bg-[#000] transition-colors">
                                 Book a Call
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -187,7 +187,7 @@ const Navbar = () => {
                 >
                     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
                         {/* <div className="text-center mb-6">
-                        <h3 className="text-2xl font-bold text-[#28536B]">Our Services</h3>
+                        <h3 className="text-2xl font-bold text-[#000]">Our Services</h3>
                         <div className="w-16 h-1 bg-[#9f193f] mx-auto mt-2"></div>
                     </div> */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -198,7 +198,7 @@ const Navbar = () => {
                                     className="flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors group"
                                 >
                                     <div className="ml-4">
-                                        <p className="text-base font-medium text-[#9f193f] group-hover:text-[#28536B] transition-colors">
+                                        <p className="text-base font-medium text-[#9f193f] group-hover:text-[#000] transition-colors">
                                             {service.name}
                                         </p>
                                         <p className="mt-1 text-sm text-gray-500">
@@ -208,14 +208,14 @@ const Navbar = () => {
                                 </Link>
                             ))}
                         </div>
-                        <div className="text-center mt-6">
-                            <a href="#" className="inline-flex items-center text-[#9f193f] hover:text-[#28536B] transition-colors">
+                        {/* <div className="text-center mt-6">
+                            <a href="#" className="inline-flex items-center text-[#9f193f] hover:text-[#000] transition-colors">
                                 <span className="font-medium">View all services</span>
                                 <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                 </svg>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

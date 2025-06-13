@@ -15,7 +15,7 @@ const GraphicDesignWhyChooseUs = () => {
                     {/* Section header with minimal design elements */}
                     <div className="text-center mb-16 max-w-3xl mx-auto">
                        
-                        <h2 className='text-[32px] sm:text-[42px] font-bold text-[#2D5C76] mb-6'>Why Choose Us for Design Services?</h2>
+                        <h2 className='text-[32px] sm:text-[42px] font-bold text-[#000] mb-6'>Why Choose Us for Design Services?</h2>
                         <p className="text-[#666] text-lg max-w-2xl mx-auto">Our design team combines creativity with strategic thinking to deliver visual solutions that not only look stunning but also achieve your business objectives.</p>
                     </div>
                     
@@ -43,7 +43,7 @@ const GraphicDesignWhyChooseUs = () => {
                     </div>
                     
                     {/* Stats section with minimalistic design */}
-                    <div className="mt-20 bg-[#2D5C76] rounded-2xl p-4 py-8 sm:py-10 sm:p-10 text-white shadow-xl">
+                    <div className="mt-20 bg-[#000] rounded-2xl p-4 py-8 sm:py-10 sm:p-10 text-white shadow-xl">
                         <div className="text-center mb-10">
                             <h3 className="text-2xl font-bold mb-2">Our Design Excellence by the Numbers</h3>
                             <p className="text-white/80">Results that demonstrate our commitment to quality</p>
