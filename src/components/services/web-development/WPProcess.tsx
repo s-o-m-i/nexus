@@ -1,45 +1,44 @@
+"use client";
 import FancyCard from '@/ui/FancyCard';
 import React from 'react'
+import { motion } from 'framer-motion';
 
 const WPProcess = () => {
 
-  const processSteps = [
-    {
-      title: "1. Discovery & Requirements Gathering",
-      description:
-        "Our process begins with an in-depth exploration of your business, objectives, and target audience. Through collaborative workshops and discussions, we ensure that all project requirements are meticulously defined, establishing a solid foundation for successful project execution."
-    },
-    {
-      title: "2. Strategic Planning & Roadmap Creation",
-      description:
-        "We develop a comprehensive strategic plan that outlines key milestones, deliverables, and timelines. By carefully selecting the most suitable technology stack, we align each technical decision with your long-term business goals to foster sustainable growth and operational efficiency."
-    },
-    {
-      title: "3. UI/UX Design & Interactive Prototyping",
-      description:
-        "Our design experts focus on creating intuitive and visually engaging user experiences that resonate with your audience. We translate insights into high-fidelity wireframes and interactive prototypes, ensuring seamless usability and compelling visual design."
-    },
-    {
-      title: "4. Frontend & Backend Development",
-      description:
-        "Our developers build robust and scalable solutions using the latest frontend technologies, ensuring responsive, user-friendly interfaces. On the backend, we implement secure, high-performance systems tailored to meet the specific demands of your business."
-    },
-    {
-      title: "5. Quality Assurance & Rigorous Testing",
-      description:
-        "We employ a comprehensive quality assurance strategy, utilizing both manual and automated testing methodologies. This ensures that your product is thoroughly vetted for security, functionality, and cross-platform compatibility, providing a flawless user experience."
-    },
-    {
-      title: "6. Deployment & Seamless Launch",
-      description:
-        "We facilitate a seamless deployment process using continuous integration and delivery (CI/CD) pipelines. With meticulous server configurations and monitoring tools in place, we ensure a smooth and efficient launch, ensuring your application is production-ready."
-    },
-    // {
-    //   title: "7. Post-Launch Support & Continuous Maintenance",
-    //   description:
-    //     "After the successful launch, we offer ongoing support and maintenance services, ensuring that your application evolves with market trends and technological advancements. Our team is dedicated to optimizing your product’s performance, ensuring scalability, and maintaining a competitive edge."
-    // }
+  const processes = 
+  [
+      {
+          step: "01",
+          title: "Discovery & Planning",
+          description: "We start by understanding your goals, target audience, and technical requirements to craft a detailed project roadmap.",
+          color: "bg-[#000]"
+      },
+      {
+          step: "02",
+          title: "Wireframing & UI/UX Design",
+          description: "Designing wireframes and high-fidelity prototypes to ensure a user-centric and visually appealing interface.",
+          color: "bg-[#9f193f]"
+      },
+      {
+          step: "03",
+          title: "Frontend & Backend Development",
+          description: "Transforming designs into responsive interfaces and building powerful backend systems using modern frameworks.",
+          color: "bg-[#000]"
+      },
+      {
+          step: "04",
+          title: "Testing & Optimization",
+          description: "Comprehensive testing for functionality, compatibility, performance, and SEO to ensure the best user experience.",
+          color: "bg-[#9f193f]"
+      },
+      {
+          step: "05",
+          title: "Deployment & Maintenance",
+          description: "Launching the website to your preferred hosting platform and providing ongoing support and updates.",
+          color: "bg-[#000]"
+      }
   ];
+  
 
 
   return (
@@ -54,14 +53,28 @@ const WPProcess = () => {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-10 sm:grid-cols-12">
-          {processSteps.map((step, index) => (
-            <div className={`${index + 1 === processSteps.length ? "col-span-6" : "col-span-6"}`}>
-
-              <FancyCard key={index} title={step.title} desc={step.description} />
-            </div>
-          ))}
-        </div>
+        <div className="space-y-8 overflow-hidden mt-8">
+                    {processes.map((process, index) => (
+                        <motion.div
+                            key={process.step}
+                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? '' : 'md:flex-row-reverse'} gap-8`}
+                        >
+                            <div className='h-[200px] sm:h-[300px] w-full border border-gray-200 bg-[#F9FAFB] group/card overflow-hidden relative rounded-lg p-4'>
+                                <div className={`absolute -bottom-[80%] w-[50%] h-full ${index % 2 !== 0 ? 'bg-[#000]' : 'bg-[#9f193f]'} group-hover/card:bg-[#9F1940] rounded-full left-[50%] translate-x-[-50%] group-hover/card:-bottom-[70%] transition-all duration-300`}></div>
+                                <h3 className='text-[32px] sm:text-[42px] text-[#04213F]'>{process.title}</h3>
+                                <p className='text-gray-500 mt-5 sm:w-[75%] text-base'>{process.description}</p>
+                            </div>
+                            <div className="w-full flex justify-center">
+                                <div className="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center">
+                                    <span className="text-2xl font-bold text-[#000]">{process.step}</span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
       </section>
 
     </>

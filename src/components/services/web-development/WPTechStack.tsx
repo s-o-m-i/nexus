@@ -85,11 +85,11 @@ const WPTechStack = () => {
 
                 {/* Tech Stack Section */}
                 <h2 className="text-[32px] leading-[1.2] sm:text-[42px] font-bold text-[#04213F] text-center mt-20">
-                    Tech Stack We Use
+                    Tech Stack We Uses
                 </h2>
                 <div className="grid grid-cols-4 mt-20 gap-8">
                     {/* Frontend */}
-                    <div className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="group bg-[#f2f2f2] border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
                         <h2 className="text-center text-xl font-semibold text-[#04213F] mb-4 pb-2 border-b-2 border-[#9F1940]">
                             Frontend
                         </h2>

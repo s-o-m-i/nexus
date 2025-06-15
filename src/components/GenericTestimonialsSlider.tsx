@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import { FaStar } from 'react-icons/fa';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import {motion} from "framer-motion";
 type Testimonial = {
   id: number;
   project: string;
@@ -102,32 +102,52 @@ const GenericTestimonialsSlider: React.FC<GenericTestimonialsSliderProps> = ({
         </h2>
         <Slider {...settings}>
           {testimonials.map(({ id, project, role, company, feedback, logo }) => (
-            <div key={id} className="px-3 mt-10 sm:mt-0">
-              <div className="bg-gray-50 min-h-[300px] rounded-lg shadow-lg p-6 border border-gray-300 flex flex-col justify-between">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <p className="text-[#04213F] font-semibold">{project}</p>
-                    <p className="text-sm text-gray-500">{role}</p>
-                  </div>
-                  <img
-                    src={logo}
-                    alt={`${company} logo`}
-                    className="w-12 h-12 object-contain"
-                  />
-                </div>
-                <p className="text-[#04213F] text-base mb-6">“{feedback}”</p>
-                <div className="flex items-center justify-between">
-                  <div className="flex space-x-1 text-orange-300">
-                    {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} />
-                    ))}
-                  </div>
-                  <div className="text-[#9F193F] font-semibold text-sm text-right">
-                    {company}
-                  </div>
-                </div>
-              </div>
-            </div>
+        < div key={id} className="p-0 sm:px-4 py-2">
+         <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.5, delay: id * 0.1 % 0.5 }}
+           whileHover={{ y: -5 }}
+           className="bg-gray-50 border border-l-4 py-4 border-l-[#9F193F] border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition-all rounded-tl-[50px] rounded-br-[50px] duration-300 overflow-hidden h-[300px]"
+         >
+
+           <div className="p-4">
+             <div className="flex space-x-1 text-amber-400 mb-5">
+               {[...Array(5)].map((_, i) => (
+                 <FaStar key={i} />
+               ))}
+             </div>
+             <div className="flex items-start mb-6">
+               {/* <div className="text-[#9F193F] text-2xl mr-4">
+                 <FaQuoteLeft />
+               </div> */}
+               <p className="text-gray-700 leading-relaxed">&quot;{feedback}&quot;</p>
+             </div>
+
+             <div className="flex gap-5 items-center ">
+               <div className="bg-[#9F193F] rounded-full flex items-center justify-center overflow-hidden w-10 h-10">
+
+                 <img
+                   src={logo}
+                   alt={`${company} logo`}
+                   className="w-full h-ful object-contain"
+                 />
+               </div>
+
+               <div className="flex items-center justify-between  border-t border-gray-100">
+                 <div>
+                   <p className="font-semibold text-gray-900">{project}</p>
+                   <p className="text-sm text-gray-500">{role}, {company}</p>
+                 </div>
+               </div>
+             </div>
+
+           </div>
+
+
+         </motion.div>
+       </div>
           ))}
         </Slider>
       </div>

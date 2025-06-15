@@ -32,6 +32,7 @@ interface ClientLogo {
 const PortfolioPage = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [activeCategory, setActiveCategory] = useState<string>('All');
 
   const handleOpenModal = (project: Project) => {
     setSelectedProject(project)
@@ -41,6 +42,10 @@ const PortfolioPage = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false)
     setSelectedProject(null)
+  }
+
+  const filter = (category: string) => {
+  let filteredProjects =  projects.filter((pro) => pro.category === category)
   }
 
   // Sample portfolio projects
@@ -99,7 +104,11 @@ const PortfolioPage = () => {
     }
   ]
 
-  
+  const categories = ['All', ...new Set(projects.map(project => project.category))]
+  const filteredProjects = activeCategory === 'All'
+  ? projects
+  : projects.filter(project => project.category === activeCategory)
+
 
 
   // Sample client logos
@@ -215,10 +224,27 @@ const PortfolioPage = () => {
 
       {/* Services Section with Hoverable Cards */}
       <div className="py-24 bg-white">
+      <div className="w-full overflow-x-auto mb-12">
+  <div className="flex gap-4 w-fit px-4 py-2 bg-white border border-gray-100 rounded-full shadow-md mx-auto">
+    {categories.map((category, index) => (
+      <button
+        key={index}
+        onClick={() => setActiveCategory(category)}
+        className={`px-6 py-2 rounded-full whitespace-nowrap text-sm font-medium transition-colors duration-300
+          ${activeCategory === category
+            ? 'bg-[#9f193f] text-white shadow'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+      >
+        {category}
+      </button>
+    ))}
+  </div>
+</div>
+
         <div className="container mx-auto px-4">
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 30 }}

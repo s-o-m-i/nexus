@@ -36,8 +36,8 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className='p-2 sm:p-4 relative bg-[#f8f9ff] h-[100px] container mx-auto sm:max-width-[640px] md:max-width-[768px] lg:max-width-[1024px] xl:max-width-[1280px]'>
-                <nav className="flex items-center rounded-full justify-between py-4 px-4 sm:px-[60px] bg-[#9F1940]  text-[#235789] shadow-md">
+            <div className='container mx-auto p-4  relative bg-[#f8f9ff] h-[100px]  '>
+                <nav className="flex items-center rounded-full justify-between py-4 px-4 sm:px-[30px] 2xl:px-[50px] bg-[#9F1940]  text-[#235789] shadow-md">
                     <div className="text-[24px] font-bold text-[#fff]">
                         <Link href={"/"}> DevMola</Link></div>
                     <ul className="hidden md:flex space-x-6 text-[16px] font-medium">
