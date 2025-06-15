@@ -23,6 +23,7 @@ const SeoServices = () => {
                 </div>
             </div>
         </div>
+        {/* dot */}
         <div className="flex justify-end items-center mt-10 sm:mt-0">
             <div className="sm:glass-morph rounded-lg p-0 sm:p-4 w-full max-w-md relative">
                 <ServicesForm />
