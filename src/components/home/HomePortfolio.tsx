@@ -114,8 +114,8 @@ const HomePortfolio = () => {
   };
 
   return (  
-    <section className="bg-black py-20 container mx-auto px-4 sm:px-18 relative">
-      <div className="">
+    <section className="bg-black py-20   px-4 sm:px-18 relative">
+      <div className="container mx-auto">
       <div className="text-center mb-20">
         <span className="inline-block px-3 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">Our Portfolio</span>
         <h2 className="text-[32px] sm:text-[42px] font-bold text-[#fff] mb-6">Featured Projects</h2>
