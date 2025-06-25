@@ -29,9 +29,9 @@ const Navbar = () => {
         <>
             <div className="hidden sm:flex bg-[#000] p-1 sm:p-2 justify-center items-center">
                 <div className="">
-                    <a href="tel:+8618399690230" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> China <span className='text-[#fff] ml-2'>+86 183 9969 0230</span></a>
-                    <a href="tel:+8618618618618" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> Pakistan <span className='text-[#fff] ml-2'>+92 345 1234567</span></a>
-                    <a href="mailto:info@technexus.com" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> Email <span className='text-[#fff] ml-2'>info@technexus.com</span></a>
+                   
+                    <a href="tel:+8618618618618" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> Pakistan <span className='text-[#fff] ml-2'>+92 370 5614842</span></a>
+                    <a href="mailto:info@devmola.com" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3 border-r-2 border-white'> Email <span className='text-[#fff] ml-2'>info@devmola.com</span></a>
                     <a href="https://wa.me/923705614842" className='w-[200px]  text-[12px] sm:text-sm text-[#f8d57e] font-bold px-3'> Whatsapp <span className='text-[#fff] ml-2'>+92 370 5614842</span></a>
                 </div>
             </div>

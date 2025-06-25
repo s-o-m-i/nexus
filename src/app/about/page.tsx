@@ -11,8 +11,8 @@ import TechStack from '@/components/about/TechStack';
 import TeamSection from '@/components/about/TeamSection';
 
 // export const metadata = {
-//   title: 'About Us | TechNexus',
-//   description: 'Learn about TechNexus - our story, mission, values and the team behind our innovative IT solutions.',
+//   title: 'About Us | DevMola',
+//   description: 'Learn about DevMola - our story, mission, values and the team behind our innovative IT solutions.',
 // };
 
 export default function AboutPage() {

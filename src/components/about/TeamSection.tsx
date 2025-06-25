@@ -45,7 +45,7 @@ const TeamSection = () => {
       id: 2,
       name: "M.Dawood",
       position: "CEO",
-      image: "/images/dawood.png",
+      image: "/images/dawoodCEO.jpg",
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."

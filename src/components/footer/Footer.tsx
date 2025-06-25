@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Footer Logo and Slogan */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 inline-block relative">
-              TechNexus
+              DevMola
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#9f193f]"></span>
             </h2>
             <p className="text-gray-200 max-w-xl mx-auto mt-6">
@@ -91,7 +91,7 @@ const Footer = () => {
               <svg className="w-5 h-5 mr-2 text-[#9f193f]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
-              <span className="text-gray-200">info@technexus.com</span>
+              <span className="text-gray-200">info@devmola.com</span>
             </div>
             <div className="flex items-start mt-2">
               <svg className="w-5 h-5 mr-2 text-[#9f193f] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -136,12 +136,12 @@ const Footer = () => {
                   Portfolio
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/blog" className="text-gray-200 hover:text-white hover:underline transition-colors duration-300 flex items-center">
                   <span className="text-[#9f193f] mr-2">›</span>
                   Blog
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="text-gray-200 hover:text-white hover:underline transition-colors duration-300 flex items-center">
                   <span className="text-[#9f193f] mr-2">›</span>
@@ -165,7 +165,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/services/mobile-apps" className="text-gray-200 hover:text-white hover:underline transition-colors duration-300 flex items-center">
+                <Link href="/services/mobile-app-development" className="text-gray-200 hover:text-white hover:underline transition-colors duration-300 flex items-center">
                   <span className="text-[#9f193f] mr-2">›</span>
                   Mobile App Development
                 </Link>
@@ -225,7 +225,7 @@ const Footer = () => {
       <div className="bg-[#9f193f] py-6">
         <div className="container mx-auto px-8 md:px-16 flex flex-col md:flex-row justify-between items-center">
           <div className="text-white text-sm mb-4 md:mb-0">
-            © {currentYear} <span className="text-white font-medium">TechNexus</span>. All rights reserved.
+            © {currentYear} <span className="text-white font-medium">DevMola</span>. All rights reserved.
           </div>
           <div className="flex space-x-8">
             <Link href="/privacy-policy" className="text-white hover:text-white text-sm transition-colors duration-300">

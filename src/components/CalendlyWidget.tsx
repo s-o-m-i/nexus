@@ -16,7 +16,7 @@ const CalendlyWidget = ({isOpen, setIsOpen}: {isOpen: boolean, setIsOpen: (isOpe
 
 
          <PopupModal
-        url="https://calendly.com/sulemandevofficial"
+        url="https://calendly.com/devmola-info"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={rootElem}

@@ -75,7 +75,7 @@ const CoreValues = () => {
             Principles That Guide Our Work
           </h2>
           <p className="text-base text-gray-600 ">
-            At TechNexus, our values define who we are and how we approach every project. They are the foundation of our company culture and drive our commitment to excellence.
+            At DevMola, our values define who we are and how we approach every project. They are the foundation of our company culture and drive our commitment to excellence.
           </p>
         </div>
         
