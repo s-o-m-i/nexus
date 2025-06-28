@@ -13,7 +13,7 @@ const RegularCard: React.FC<RegularCardProps> = ({ title, desc,icon }) => {
                 <div className="w-16 h-16 bg-[#9f193f] rounded-full flex items-center justify-center mb-6 text-white">
                     {icon}
                 </div>
-                <h3 className="text-xl  text-[#000] ">{title}</h3>
+                <h3 className="text-xl  text-[#111111] ">{title}</h3>
                 <p className="text-gray-600 text-sm mt-5">
                     {desc}
                 </p>

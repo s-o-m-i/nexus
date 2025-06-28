@@ -9,7 +9,7 @@ const UXProcess = () => {
             step: "01",
             title: "Discovery & Research",
             description: "We start by understanding your business goals, target audience, and conducting thorough user research.",
-            color: "bg-[#000]"
+            color: "bg-[#111111]"
         },
         {
             step: "02",
@@ -21,7 +21,7 @@ const UXProcess = () => {
             step: "03",
             title: "Design & Prototyping",
             description: "Create wireframes, visual designs, and interactive prototypes for testing and validation.",
-            color: "bg-[#000]"
+            color: "bg-[#111111]"
         },
         {
             step: "04",
@@ -33,7 +33,7 @@ const UXProcess = () => {
             step: "05",
             title: "Implementation",
             description: "Work closely with development teams to ensure pixel-perfect implementation of designs.",
-            color: "bg-[#000]"
+            color: "bg-[#111111]"
         }
     ];
 
@@ -41,7 +41,7 @@ const UXProcess = () => {
         <section className="py-20 px-4 sm:px-8 md:px-16 bg-white">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#000] mb-4">Our Design Process</h2>
+                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#111111] mb-4">Our Design Process</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         A systematic approach to creating user-centered designs that deliver measurable results.
                     </p>

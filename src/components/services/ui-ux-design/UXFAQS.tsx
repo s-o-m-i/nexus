@@ -33,7 +33,7 @@ const UXFAQS = () => {
         <section className="py-20 px-8 md:px-16 bg-white">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-[#000] mb-4">Frequently Asked Questions</h2>
+                    <h2 className="text-4xl font-bold text-[#111111] mb-4">Frequently Asked Questions</h2>
                     <p className="text-gray-600">
                         Get answers to common questions about our UI/UX design services.
                     </p>
@@ -52,7 +52,7 @@ const UXFAQS = () => {
                                 className="w-full px-6 py-4 text-left bg-white hover:bg-gray-50 flex items-center justify-between"
                                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                             >
-                                <span className="font-semibold text-[#000]">{faq.question}</span>
+                                <span className="font-semibold text-[#111111]">{faq.question}</span>
                                 <svg
                                     className={`w-6 h-6 transform transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}
                                     fill="none"

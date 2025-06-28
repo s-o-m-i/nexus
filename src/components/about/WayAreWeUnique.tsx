@@ -6,7 +6,7 @@ const WayAreWeUnique = () => {
   return (
     <section className="py-20  bg-[#fff]">
       <div className='container mx-auto px-4 sm:px-18'>
-      <h2 className='text-[32px] sm:text-[42px] font-bold text-[#000]  text-center'>Way Are We Unique?</h2>
+      <h2 className='text-[32px] sm:text-[42px] font-bold text-[#111111]  text-center'>Way Are We Unique?</h2>
       {/* <div className="w-24 h-1 mt-6 bg-[#9f193f] mx-auto mb-6"></div> */}
       <div className="flex justify-center">
 

@@ -24,7 +24,7 @@ const SeoOurServices = () => {
                         <div className="inline-block mb-3">
                             <span className="text-[#f8d57e] font-medium uppercase tracking-wider text-sm px-4 py-1.5 border border-[#f8d57e]/30 rounded-full">Comprehensive Solutions</span>
                         </div>
-                        <h2 className='text-[38px] sm:text-[48px] font-bold text-[#9f193f] mb-6'>Our <span className="text-[#000]">SEO Services</span></h2>
+                        <h2 className='text-[38px] sm:text-[48px] font-bold text-[#9f193f] mb-6'>Our <span className="text-[#111111]">SEO Services</span></h2>
                         <p className='text-[18px] text-black text-center max-w-[700px] leading-relaxed'>
                             We offer a full spectrum of search engine optimization services to improve your online presence and drive targeted traffic to your website.
                         </p>
@@ -70,7 +70,7 @@ const SeoOurServices = () => {
                                     <div className="absolute bottom-0 left-0 -m-6 w-32 h-32 bg-[#9f193f]/20 rounded-full blur-xl"></div>
                                 </div>
                                 
-                                <h3 className='text-[#000] text-[32px] font-bold text-center'>
+                                <h3 className='text-[#111111] text-[32px] font-bold text-center'>
                                     {seoServicesData[activeTab].title}
                                 </h3>
                             </div>
@@ -83,7 +83,7 @@ const SeoOurServices = () => {
                                     {seoServicesData[activeTab].desc}
                                 </p>
                                 
-                                <h4 className="text-[#000] font-semibold mb-4 text-xl">Key Benefits:</h4>
+                                <h4 className="text-[#111111] font-semibold mb-4 text-xl">Key Benefits:</h4>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                                     {seoServicesData[activeTab].points.map((point, i) => (
                                         <motion.div 

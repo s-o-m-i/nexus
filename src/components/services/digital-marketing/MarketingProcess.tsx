@@ -33,7 +33,7 @@ const MarketingProcess = () => {
     <div className="bg-gray-50 py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#000] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#111111] mb-4">
             Our Digital Marketing
             <span className="text-[#9f193f]"> Process</span>
           </h2>
@@ -48,7 +48,7 @@ const MarketingProcess = () => {
               key={index}
               className="bg-white shadow-lg border-gray-300 border rounded-lg p-6 relative hover:shadow-lg transition duration-300"
             >
-              <div className="absolute top-4 right-4 text-4xl font-bold text-[#000] opacity-50">
+              <div className="absolute top-4 right-4 text-4xl font-bold text-[#111111] opacity-50">
                 {step.number}
               </div>
               <div className="flex justify-center mb-4 text-[#9f193f]">
@@ -62,7 +62,7 @@ const MarketingProcess = () => {
               </p>
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <div className="w-8 h-0.5 bg-[#000]"></div>
+                  <div className="w-8 h-0.5 bg-[#111111]"></div>
                 </div>
               )}
             </div>

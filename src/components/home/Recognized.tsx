@@ -35,6 +35,8 @@ const Recognized = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
+        autoplay: true,
+        autoPlaySpeed:1000,
         responsive: [
             {
                 breakpoint: 1280, // for screens smaller than 1280px
@@ -60,7 +62,7 @@ const Recognized = () => {
     return (
         <>
             <div className='p-4 sm:px-16 py-20'>
-                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#000]'>Recognized by</h2>
+                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#111111]'>Recognized by</h2>
                 {/* <div className='w-16 h-1 bg-[#9f193f] mx-auto mt-2'></div> */}
 
 
@@ -68,15 +70,24 @@ const Recognized = () => {
 
                     <Slider {...settings}>
                         {[
-                            '/images/recognized/LexisNexis-4.svg',
-                            '/images/recognized/inspired-entertainment-inc-logo-vector-1.svg',
-                            '/images/recognized/TradeStars-logo-black.svg',
-                            '/images/recognized/LexisNexis-4.svg',
-                            '/images/recognized/inspired-entertainment-inc-logo-vector-1.svg',
-                            '/images/recognized/LexisNexis-4.svg',
+                            '/images/RecoganizedBy/baseval.webp',
+                            '/images/RecoganizedBy/bontac_logo.jpeg',
+                            '/images/RecoganizedBy/boyiprinting.png',
+                            '/images/RecoganizedBy/changency.jpeg',
+                            '/images/RecoganizedBy/Eidcarosse.webp',
+                            '/images/RecoganizedBy/senotay.webp',
+                            '/images/RecoganizedBy/jiancloud.png',
+                            '/images/RecoganizedBy/nicecloud.png',
+                            '/images/RecoganizedBy/pb-patch.webp',
+                            '/images/RecoganizedBy/qitcoin.png',
+                            '/images/RecoganizedBy/saasbyt.png',
+                            '/images/RecoganizedBy/sapphirering.png',
+                            '/images/RecoganizedBy/siholamoon.webp',
+                            '/images/RecoganizedBy/startem.io.jpg',
+                            '/images/RecoganizedBy/startupbyt.svg',
                         ].map((src, index) => (
                             <div key={index} className="p-2 mx-1">
-                                <div className="h-[60px] flex items-center justify-center rounded-md border border-gray-300 bg-white shadow-md px-4">
+                                <div className="h-[60px] flex items-center justify-center rounded-md border border-gray-300 bg-white py-4 shadow-md px-4 overflow-hidden">
                                     <div className="relative w-[100px] h-[100px]">
                                         <Image
                                             src={src}
@@ -101,7 +112,7 @@ const Recognized = () => {
                     {[...Array(1)].map((_, repeat) => (
                         <div key={repeat} className="flex space-x-24 pl-24">
                             {clientLogos.map((logo) => (
-                                <div key={`${repeat}-${logo.id}`} className="flex items-center justify-center bg-[#000]  border border-gray-300 rounded-full  py-2 px-4 relative group
+                                <div key={`${repeat}-${logo.id}`} className="flex items-center justify-center bg-[#111111]  border border-gray-300 rounded-full  py-2 px-4 relative group
                 text-center
                 ">
                                     <div className="text-[#fff] font-medium text-sm  ">{logo.name}
@@ -119,26 +130,26 @@ const Recognized = () => {
 
                 {/* Stats section */}
                 <div className="mt-20 px-4 sm:px-18">
-                    <div className="bg-[#000] rounded-2xl p-10 text-white shadow-xl">
+                    <div className="bg-[#111111] rounded-2xl p-10 text-white shadow-xl">
                         <div className="text-center mb-10">
                             <h3 className="text-2xl font-bold mb-2">Our Impact in Numbers</h3>
                             <p className="text-white/80">Real results from delivering world-class digital solutions</p>
                         </div>
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="text-center">
-                                <div className="text-4xl font-bold mb-2 text-[#f8d57e]">120+</div>
+                                <div className="text-4xl font-bold mb-2 text-[#9F193F]">120+</div>
                                 <div className="text-white/80 text-sm">Projects Delivered</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-4xl font-bold mb-2 text-[#f8d57e]">98%</div>
+                                <div className="text-4xl font-bold mb-2 text-[#9F193F]">98%</div>
                                 <div className="text-white/80 text-sm">Client Satisfaction Rate</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-4xl font-bold mb-2 text-[#f8d57e]">50+</div>
+                                <div className="text-4xl font-bold mb-2 text-[#9F193F]">50+</div>
                                 <div className="text-white/80 text-sm">Tech Experts on Team</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-4xl font-bold mb-2 text-[#f8d57e]">200%</div>
+                                <div className="text-4xl font-bold mb-2 text-[#9F193F]">200%</div>
                                 <div className="text-white/80 text-sm">Avg. Growth in Client ROI</div>
                             </div>
                         </div>

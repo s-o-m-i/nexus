@@ -159,12 +159,12 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="max-w-6x bg-black mx-auto px-4 sm:px-6 md:px-10">
+    <div className="max-w-6x bg-[#111111] mx-auto px-4 sm:px-6 md:px-10">
     <Slider {...sliderSettings}>
       {filteredProjects.map((project) => (
         <div key={project.id}>
           <div className="rounded-4xl overflow-hidden relative p-4 md:p-10">
-            <div className="absolute bg-[#000]/50 animate-bounce rounded-full w-16 h-16 bottom-4 right-4" />
+            <div className="absolute bg-[#111111]/50 animate-bounce rounded-full w-16 h-16 bottom-4 right-4" />
   
             <div className="bg-[#9f193f] rounded-3xl p-6 shadow-lg">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
@@ -186,7 +186,7 @@ const Portfolio = () => {
                   <h3 className="text-white text-xl sm:text-2xl font-bold mb-3">
                     {project.title}
                   </h3>
-                  <span className="text-sm font-medium text-white bg-[#000] px-3 py-1 rounded-full inline-block mb-4">
+                  <span className="text-sm font-medium text-white bg-[#111111] px-3 py-1 rounded-full inline-block mb-4">
                     {categories.find((cat) => cat.id === project.category)?.name}
                   </span>
                   <p className="text-white mb-4 text-sm">{project.description}</p>

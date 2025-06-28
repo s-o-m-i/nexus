@@ -9,7 +9,7 @@ const WayOfBuildingTwo = () => {
           <div className="text-center mb-16">
         <span className="inline-block px-3 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">Way of building</span>
           {/* <p className="text-[#9f193f] font-medium mb-2">Way of building</p> */}
-          <h2 className="text-3xl md:text-4xl font-bold text-[#000] mb-4">Great Software</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#111111] mb-4">Great Software</h2>
         </div>
         <div className="grid grid-cols-2">
             <div className="flex gap-5">

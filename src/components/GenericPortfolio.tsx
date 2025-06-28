@@ -40,7 +40,7 @@ const GenericPortfolio: React.FC<GenericPortfolioProps> = ({
               alt={item.title}
               className="object-cover w-full h-full transform group-hover:scale-105 transition duration-500"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-5 transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+            <div className="absolute bottom-0 left-0 right-0 bg-[#111111]/50 text-white p-5 transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
               <p className="text-sm">{item.description}</p>
             </div>

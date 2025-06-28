@@ -33,7 +33,7 @@ const HomeServices = () => {
     <section className="py-20 px-8 md:px-16 bg-white">
       <div className="text-center mb-20">
         <span className="inline-block px-3 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">OUR EXPERTISE</span>
-        <h2 className="text-[32px] sm:text-[42px] font-bold  text-[#000] mb-6">Services We Deliver</h2>
+        <h2 className="text-[32px] sm:text-[42px] font-bold  text-[#111111] mb-6">Services We Deliver</h2>
         {/* <div className="w-24 h-1 bg-[#9f193f] mx-auto mb-6"></div> */}
         <p className="text-[16px] text-gray-600 max-w-2xl mx-auto">
           We provide comprehensive technology solutions tailored to accelerate your business growth
@@ -48,7 +48,7 @@ const HomeServices = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3 className="text-xl  text-[#000] mb-2">Web Development</h3>
+          <h3 className="text-xl  text-[#111111] mb-2">Web Development</h3>
           <p className="text-gray-600">
             Custom, responsive websites and web applications built using the latest technologies.
           </p>
@@ -61,7 +61,7 @@ const HomeServices = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3 className="text-xl  text-[#000] mb-2">Mobile App Development</h3>
+          <h3 className="text-xl  text-[#111111] mb-2">Mobile App Development</h3>
           <p className="text-gray-600">
             Cross-platform mobile applications for iOS and Android to reach your customers wherever they are.
           </p>
@@ -74,7 +74,7 @@ const HomeServices = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
             </svg>
           </div>
-          <h3 className="text-xl  text-[#000] mb-2">Custom Software Development</h3>
+          <h3 className="text-xl  text-[#111111] mb-2">Custom Software Development</h3>
           <p className="text-gray-600">
             Tailored software solutions designed to address your specific business challenges.
           </p>
@@ -87,7 +87,7 @@ const HomeServices = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
             </svg>
           </div>
-          <h3 className="text-xl  text-[#000] mb-2">UI/UX Design</h3>
+          <h3 className="text-xl  text-[#111111] mb-2">UI/UX Design</h3>
           <p className="text-gray-600">
             Beautiful, intuitive interfaces that enhance user experience and drive engagement.
           </p>
@@ -100,7 +100,7 @@ const HomeServices = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
             </svg>
           </div>
-          <h3 className="text-xl  text-[#000] mb-2">Cloud Solutions</h3>
+          <h3 className="text-xl  text-[#111111] mb-2">Cloud Solutions</h3>
           <p className="text-gray-600">
             Scalable cloud infrastructure and migration services for optimal performance and reliability.
           </p>
@@ -113,7 +113,7 @@ const HomeServices = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
             </svg>
           </div>
-          <h3 className="text-xl  text-[#000] mb-2">Digital Marketing</h3>
+          <h3 className="text-xl  text-[#111111] mb-2">Digital Marketing</h3>
           <p className="text-gray-600">
             Strategic digital marketing campaigns to boost your online presence and drive conversions.
           </p>
@@ -141,7 +141,7 @@ const HomeServices = () => {
             </div>
           ))}
         </div>
-        <div className="flex  animate-marquee-reverse overflow-hidden whitespace-nowrap bg-[#000] py-2">
+        <div className="flex  animate-marquee-reverse overflow-hidden whitespace-nowrap bg-[#111111] py-2">
           {[...Array(2)].map((_, repeat) => (
             <div key={repeat} className="flex space-x-24 pl-24">
               {clientLogos.map((logo) => (

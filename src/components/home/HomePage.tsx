@@ -12,6 +12,8 @@ import SuccessStories from './SuccessStories';
 import Recognized from './Recognized';
 import TestimonialsSlider from '../about/TestimonialsSlider';
 import HomePortfolio from './HomePortfolio';
+import FAQSection from '../generic/faq/FAQSection';
+import { HomeFaqs } from '@/utils/home-page-faqs';
 
 const HomePage = () => {
   return (
@@ -30,6 +32,13 @@ const HomePage = () => {
       {/* <Portfolio /> */}
       {/* <Testimonials /> */}
       <TestimonialsSlider/>
+      <FAQSection
+        title="Questions & Answers"
+        subtitle="Frequently Asked"
+        headingHighlight="Questions"
+        faqs={HomeFaqs}
+        showContact={true}
+      />
       <CallToAction/>
       <CTA />
     </div>

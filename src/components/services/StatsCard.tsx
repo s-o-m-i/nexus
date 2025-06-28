@@ -19,7 +19,7 @@ const StatsCard = () => {
             <div className="absolute -bottom-[80%] w-[50px] h-full bg-[#9F1940] rounded-full left-[50%] translate-x-[-50%]
 group-hover:w-full group-hover:bottom-0 transition-all duration-300
 "></div>
-            <div className="text-3xl text-[#000] font-medium relative z-10 group-hover:text-white">{stat.number}</div>
+            <div className="text-3xl text-[#111111] font-medium relative z-10 group-hover:text-white">{stat.number}</div>
             <div className="text-sm opacity-80 mt-2 relative z-10 group-hover:text-white">{stat.label}</div>
           </div>
         ))}

@@ -153,7 +153,7 @@ function TestimonialsSlider() {
             className="flex flex-col items-center text-center max-w-3xl mx-auto"
           >
             <span className="text-sm font-medium px-4 py-1.5 bg-[#9F193F]/10 text-[#9F193F] rounded-full mb-4">Testimonials</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#000] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#111111] mb-6">
               What Our Clients Say
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl">
@@ -163,7 +163,7 @@ function TestimonialsSlider() {
 
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-40 h-40 bg-[#9F193F]/5 rounded-full -z-10 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#000]/5 rounded-full -z-10 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#111111]/5 rounded-full -z-10 blur-3xl"></div>
         </div>
 
         <div className="relative">

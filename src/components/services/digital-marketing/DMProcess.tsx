@@ -36,7 +36,7 @@ const DMProcess = () => {
         <section className="py-20 px-4 sm:px-8 md:px-16 bg-white">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#000] mb-4">
+                    <h2 className="text-[32px] sm:text-[42px] font-bold text-[#111111] mb-4">
                         Our Digital Marketing
                         <span className="text-[#9f193f]"> Process</span>
                     </h2>

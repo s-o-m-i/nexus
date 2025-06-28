@@ -129,7 +129,7 @@ const TechStack = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-[#000] mb-6"
+            className="text-4xl md:text-5xl font-bold text-[#111111] mb-6"
           >
             Technologies We Master
           </motion.h2>
@@ -155,7 +155,7 @@ const TechStack = () => {
               className={`px-6 py-3 rounded-full border border-gray-300 shadow-lg group overflow-hidden transition-all duration-300 relative ${
                 activeCategory === category
                   ? 'bg-[#9F1940] text-white shadow-lg'
-                  : 'bg-white text-[#000] hover:bg-[#000] hover:text-white'
+                  : 'bg-white text-[#111111] hover:bg-[#111111] hover:text-white'
               }`}
             >
               <h3 className='relative z-50'>{category}</h3>
@@ -179,12 +179,12 @@ const TechStack = () => {
                     {tech.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#000] mb-1">{tech.name}</h3>
+                  <h3 className="text-lg font-semibold text-[#111111] mb-1">{tech.name}</h3>
                   <p className="text-sm text-gray-600">{tech.description}</p>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-gray-50 ">
-                <span className="inline-block px-3 py-1 bg-[#F9FAFB] border border-gray-300 text-[#000] text-sm rounded-full">
+                <span className="inline-block px-3 py-1 bg-[#F9FAFB] border border-gray-300 text-[#111111] text-sm rounded-full">
                   {tech.category}
                 </span>
               </div>
@@ -194,7 +194,7 @@ const TechStack = () => {
 
         {/* Background Decorations */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-[#9F1940]/5 rounded-full blur-3xl -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#000]/5 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#111111]/5 rounded-full blur-3xl -z-10"></div>
       </div>
     </section>
   )

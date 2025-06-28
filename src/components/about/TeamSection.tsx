@@ -157,7 +157,7 @@ const TeamSection = () => {
   }
 
   return (
-    <section className="py-20 bg-[#000] overflow-hidden">
+    <section className="py-20 bg-[#111111] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.span

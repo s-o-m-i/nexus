@@ -24,7 +24,7 @@ interface SuccessStory {
 const SuccessStory = ({ data }: { data: SuccessStory[] }) => {
     return (
         <>
-            <section className="py-20 px-4 sm:px-16 bg-black relative">
+            <section className="py-20 px-4 sm:px-16 bg-[#111111] relative">
 
                 <h2 className="text-[32px] sm:text-[42px] font-bold text-[#fff] text-center">
                     Success Stories</h2>

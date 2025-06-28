@@ -128,7 +128,7 @@ const PortfolioPage = () => {
     <div className="min-h-screen bg-[#F9FAFB] overflow-hidden">
       <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20 relative">
         <div className="absolute bg-[#9f193f]/10 top-0 left-0 w-[200px] h-[200px]  rounded-full"></div>
-        <div className="flex absolute top-50 left-0  rotate-2 animate-marquee overflow-hidden whitespace-nowrap bg-[#000]/10 py-2 -z-0">
+        <div className="flex absolute top-50 left-0  rotate-2 animate-marquee overflow-hidden whitespace-nowrap bg-[#111111]/10 py-2 -z-0">
             {[...Array(5)].map((_, repeat) => (
               <div key={repeat} className="flex space-x-24 pl-24">
                 {clientLogos.map((logo) => (
@@ -141,10 +141,10 @@ const PortfolioPage = () => {
           </div>
         <div className="grid grid-cols-1 sm:grid-cols-2">
           <div className="">
-            {/* <h1 className=' text-[32px] sm:text-[42px] font-bold text-[#000] mb-6'>Crafting Digital Experiences That Drive Results
+            {/* <h1 className=' text-[32px] sm:text-[42px] font-bold text-[#111111] mb-6'>Crafting Digital Experiences That Drive Results
 
             </h1> */}
-            <h1 className=' text-[32px] sm:text-[90px] font-bold text-[#000] mb-6 '>PROJECTS
+            <h1 className=' text-[32px] sm:text-[90px] font-bold text-[#111111] mb-6 '>PROJECTS
 
             </h1>
             <p className="text-[16px] sm:w-[75%] text-gray-700 mb-10">
@@ -168,7 +168,7 @@ const PortfolioPage = () => {
                  overflow-hidden hover:motion-preset-seesaw">
                   <img src="/images/portfolio/projectOne.jpg" alt="" className='hover:scale-[1.1] transition-all duration-300' />
                 </div>
-                <div className="bg-[#000] -mt-8 w-[200px] h-[200px] rounded-md  overflow-hidden hover:motion-preset-seesaw">
+                <div className="bg-[#111111] -mt-8 w-[200px] h-[200px] rounded-md  overflow-hidden hover:motion-preset-seesaw">
                   <img src="/images/portfolio/projectTwo.jpg" alt="" className='hover:scale-[1.1] transition-all duration-300' />
                 </div>
               </div>
@@ -177,7 +177,7 @@ const PortfolioPage = () => {
                 <div className="bg-[#9f193f]   w-[200px] h-[200px] rounded-md  overflow-hidden hover:motion-preset-seesaw">
                   <img src="/images/portfolio/projectThree.jpg" alt="" className='hover:scale-[1.1] transition-all duration-300' />
                 </div>
-                <div className="bg-[#000] mt-8 w-[200px] h-[200px] rounded-md  overflow-hidden hover:motion-preset-seesaw">
+                <div className="bg-[#111111] mt-8 w-[200px] h-[200px] rounded-md  overflow-hidden hover:motion-preset-seesaw">
                   <img src="/images/portfolio/projectFour.png" alt="" className='hover:scale-[1.1] transition-all duration-300 w-full h-full object-cover' />
                 </div>
               </div>
@@ -197,7 +197,7 @@ const PortfolioPage = () => {
           <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-[#f8f9ff] to-transparent z-10"></div>
           <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-[#f8f9ff] to-transparent z-10"></div>
 
-          <div className="flex animate-marquee overflow-hidden whitespace-nowrap bg-[#000] py-2">
+          <div className="flex animate-marquee overflow-hidden whitespace-nowrap bg-[#111111] py-2">
             {[...Array(5)].map((_, repeat) => (
               <div key={repeat} className="flex space-x-24 pl-24">
                 {clientLogos.map((logo) => (
@@ -271,7 +271,7 @@ const PortfolioPage = () => {
                     {project.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-[#F9FAFB] text-[#000] text-sm rounded-full"
+                        className="px-3 py-1 bg-[#F9FAFB] text-[#111111] text-sm rounded-full"
                       >
                         {tag}
                       </span>
@@ -321,7 +321,7 @@ const PortfolioPage = () => {
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#9F1940]/10 rounded-full blur-3xl"></div>
-          <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#000]/10 rounded-full blur-3xl"></div>
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#111111]/10 rounded-full blur-3xl"></div>
         </div>
       </div>
 

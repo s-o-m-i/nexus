@@ -88,7 +88,7 @@ const GraphicDesignPortfolio = () => {
                 {project.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-[#F9FAFB] text-[#000] text-sm rounded-full"
+                    className="px-3 py-1 bg-[#F9FAFB] text-[#111111] text-sm rounded-full"
                   >
                     {tag}
                   </span>

@@ -72,7 +72,7 @@ const BelieveSection = () => {
         <p className="uppercase text-[#9F193F] font-semibold tracking-wide mb-1 text-sm sm:text-base">
           The values we share
         </p>
-        <h2 className="text-[28px] sm:text-[32px] lg:text-[42px] font-bold text-[#000] mb-10">
+        <h2 className="text-[28px] sm:text-[32px] lg:text-[42px] font-bold text-[#111111] mb-10">
           What we believe in
         </h2>
 
@@ -98,7 +98,7 @@ const BelieveSection = () => {
               <div
                 className={`w-4 h-4 sm:w-5 sm:h-5 border-2 rounded-full mt-2 transition-all duration-300 ${
                   activeIndex === index
-                    ? "border-[#9F193F] bg-[#000]"
+                    ? "border-[#9F193F] bg-[#111111]"
                     : "border-gray-200"
                 }`}
               ></div>
@@ -111,7 +111,7 @@ const BelieveSection = () => {
           {values.map((value, index) => (
             <div key={index}>
               <div className="step-content relative h-auto lg:h-[500px] px-2 sm:px-4">
-                <div className="bg-[#000] absolute right-0 hidden lg:block p-8 w-[60%] h-full rounded-[30px]"></div>
+                <div className="bg-[#111111] absolute right-0 hidden lg:block p-8 w-[60%] h-full rounded-[30px]"></div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center h-full">
                   <div className="lg:col-span-7 relative z-50 bg-about-pattern border-4 border-[#9F193F] h-[200px] sm:h-[300px] lg:h-[400px] w-full rounded-[20px] lg:rounded-[30px] flex items-center justify-center overflow-hidden">

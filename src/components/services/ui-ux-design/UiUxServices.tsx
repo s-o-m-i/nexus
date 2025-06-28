@@ -9,7 +9,7 @@ const UiUxServices = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-[50px] xl:px-[50px] 2xl:px-[80px] grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="flex items-center">
                 <div className="">
-                    <h1 className="text-[32px] sm:text-[42px] leading-[1.3] font-bold text-[#000] mb-6">
+                    <h1 className="text-[32px] sm:text-[42px] leading-[1.3] font-bold text-[#111111] mb-6">
                         UI/UX Design Services For
                         Exceptional User Experience
                     </h1>

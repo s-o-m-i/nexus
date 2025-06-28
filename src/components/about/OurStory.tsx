@@ -13,7 +13,7 @@ const OurStory = () => {
     return (
         <>
             <section className="py-20 container mx-auto px-4 sm:px-18 bg-white">
-                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#000]  text-center'>Our Story</h2>
+                <h2 className='text-[32px] sm:text-[42px] font-bold text-[#111111]  text-center'>Our Story</h2>
                 {/* <div className="w-24 h-1 mt-3    bg-[#9f193f] mx-auto mb-6"></div> */}
                 {/* <div className="flex justify-center">
                     <p className='text-base text-gray-600  mt-5 text-center sm:w-[75%]'>At LLC, our values form the foundation of our organization and guide our actions. We believe in upholding the highest standards of integrity, delivering exceptional service, and embracing innovation. These values define our culture and shape the way we work together to achieve our goals.</p>
@@ -28,7 +28,7 @@ const OurStory = () => {
                         </div>
                     </div>
                     <div className="">
-                        <h2 className='text-[32px] font-bold text-[#000]'>Every line of code started with a dream.</h2>
+                        <h2 className='text-[32px] font-bold text-[#111111]'>Every line of code started with a dream.</h2>
                         <p className='text-gray-700 mt-5'>Founded in 2021, our software house began in a small apartment with a whiteboard full of ideas and a team of three friends who believed that technology should do more than work — it should inspire. With nothing but laptops, long nights, and an unshakable drive, we built our first custom app for a local business, and from that moment on, there was no looking back.</p>
                         <p className='text-gray-700 mt-5'>Over the next few years, we evolved from a passion project into a full-fledged digital partner, delivering solutions across e-commerce, SaaS, and enterprise tools. With each project, we refined our craft, expanded our team, and earned trust through transparency, reliability, and results.</p>
                         <p className='text-gray-700 mt-5'>Now, we&apos;re on a mission to help startups and businesses unlock their full potential through intuitive, scalable, and beautifully engineered software. And while the tools and technologies may change, our purpose remains the same: to create with care, code with purpose, and build with heart.</p>

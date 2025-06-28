@@ -114,7 +114,7 @@ const HomePortfolio = () => {
   };
 
   return (  
-    <section className="bg-black py-20   px-4 sm:px-18 relative">
+    <section className="bg-[#111111] py-20   px-4 sm:px-18 relative">
       <div className="container mx-auto">
       <div className="text-center mb-20">
         <span className="inline-block px-3 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">Our Portfolio</span>
@@ -153,7 +153,7 @@ const HomePortfolio = () => {
               <div
                 className={`w-6 h-6 border-2 rounded-full mt-2 transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? "border-[#9F193F] bg-[#000]"
+                    ? "border-[#9F193F] bg-[#111111]"
                     : "border-gray-200"
                 }`}
               ></div>

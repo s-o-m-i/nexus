@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 // Custom Arrow Components
 const PrevArrow = ({ onClick }: any) => (
   <button
-    className="absolute left-5 top-1/2 transform -translate-y-1/2 z-10 bg-[#9f193f] border text-white border-gray-300 p-2 w-[40px] h-[40px] flex items-center justify-center rounded-full shadow hover:bg-[#000]"
+    className="absolute left-5 top-1/2 transform -translate-y-1/2 z-10 bg-[#9f193f] border text-white border-gray-300 p-2 w-[40px] h-[40px] flex items-center justify-center rounded-full shadow hover:bg-[#111111]"
     onClick={onClick}
   >
     ←
@@ -16,7 +16,7 @@ const PrevArrow = ({ onClick }: any) => (
 
 const NextArrow = ({ onClick }: any) => (
   <button
-    className="absolute right-5 top-1/2 transform -translate-y-1/2 z-10 bg-[#9f193f] text-white border border-gray-300 p-2 w-[40px]  flex items-center justify-center h-[40px] rounded-full shadow hover:bg-[#000]"
+    className="absolute right-5 top-1/2 transform -translate-y-1/2 z-10 bg-[#9f193f] text-white border border-gray-300 p-2 w-[40px]  flex items-center justify-center h-[40px] rounded-full shadow hover:bg-[#111111]"
     onClick={onClick}
   >
     →
@@ -94,7 +94,7 @@ const Testimonials = () => {
           <span className="inline-block px-4 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">
             Testimonials
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#000] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#111111] mb-4">
             What Our Clients Say
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">

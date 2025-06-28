@@ -120,11 +120,11 @@ const GlassCard = () => {
 
       {/* 🎉 Success Popup */}
       {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/70 z-50 transition">
+        <div className="fixed inset-0 flex items-center justify-center bg-[#111111]/70 z-50 transition">
           <div className="bg-white text-black p-8 rounded-2xl shadow-2xl text-center max-w-md w-full">
             <h2 className="text-2xl font-bold mb-4">🎉 Message Sent!</h2>
             <p className="mb-6">Thanks for contacting us. We’ll get back to you soon.</p>
-            <button onClick={closePopup} className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">Close</button>
+            <button onClick={closePopup} className="bg-[#111111] text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">Close</button>
           </div>
         </div>
       )}
