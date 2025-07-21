@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="hidden sm:flex bg-[#111111] p-1 sm:p-2 justify-center items-center">
+            <div className="hidden sm:flex bg-gradient-to-br from-[#111111] via-[#1a1a1a] to-[#111111] p-1 sm:p-2 justify-center items-center">
                 <div className="">
                    
                 

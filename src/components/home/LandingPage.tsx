@@ -1,7 +1,6 @@
 'use client'
 import Button from "@/ui/Button/Button";
 import React, { useEffect, useState } from "react";
-import { PopupButton } from "react-calendly";
 import CalendlyWidget from "../CalendlyWidget";
 import PrimaryButton from "@/ui/PrimaryButton/PrimaryButton";
 
@@ -22,10 +21,10 @@ const LandingPage = () => {
       <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20 order-1 sm:order-2">
         <div className="max-w-xl mb-10 md:mb-0">
           <h1 className="text-[42px] leading-[1.3] font-bold text-[#111111] mb-6">
-            We offer Advanced IT Solutions to Businesses and Industries around the Globe
+          Digital Marketing Agency in Islamabad – Grow Your Business Online
           </h1>
           <p className="text-[16px] sm:w-[75%] text-gray-700 mb-10">
-            Our team of experienced developers has won hundreds of clients throughout our years of practice. From refining your idea and prerequisites to writing code, every step is done in close collaboration with you.
+          DevMola delivers results-driven SEO, SEM, web, and app development services to boost your brand’s visibility, traffic, and revenue in Islamabad, Pakistan & globally.
           </p>
           <div className="flex items-center gap-5">
             <div className="" onClick={() => setIsOpen(true)}>

@@ -114,7 +114,10 @@ const HomePortfolio = () => {
   };
 
   return (  
-    <section className="bg-[#111111] py-20   px-4 sm:px-18 relative">
+    <section className="bg-gradient-to-br from-[#111111] via-[#1a1a1a] to-[#111111] py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#9F193F]/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#9F193F]/10 to-transparent rounded-full blur-3xl"></div>
       <div className="container mx-auto">
       <div className="text-center mb-20">
         <span className="inline-block px-3 py-1 bg-[#9f193f]/10 text-[#9f193f] rounded-full text-sm font-medium mb-4">Our Portfolio</span>
