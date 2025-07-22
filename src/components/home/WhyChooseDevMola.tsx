@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const WhyChooseDevMola = () => {
   const container = useRef(null);
-  const [hoveredFeature, setHoveredFeature] = useState(null);
+  const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);  
  
 
@@ -51,7 +51,7 @@ const WhyChooseDevMola = () => {
     }
   ];
 
-  const handleFeatureHover = (featureId) => {
+  const handleFeatureHover = (featureId: number) => {
     setHoveredFeature(featureId);
   };
 
@@ -116,7 +116,7 @@ const WhyChooseDevMola = () => {
                   What Sets DevMola Apart?
                 </h3>
                 <div className="space-y-4 relative z-10">
-                  {features.map((feature, index) => (
+                  {features.map((feature) => (
                     <div key={feature.id} className="flex sm:flex-row flex-col items-start gap-3">
                       <div className="checkmark flex-shrink-0 w-6 h-6 bg-white rounded-full flex items-center justify-center">
                         <svg className="w-3 h-3 text-[#9f193f]" fill="currentColor" viewBox="0 0 20 20">
@@ -146,7 +146,7 @@ const WhyChooseDevMola = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => (
+              {features.map((feature) => (
                 <div
                   key={feature.id}
                   className="feature-item group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-[#9f193f]/30 relative overflow-hidden cursor-pointer"

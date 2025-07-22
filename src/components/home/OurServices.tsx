@@ -1,6 +1,5 @@
 'use client'
 import React, { useRef, useState, useEffect } from 'react';
-import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -11,10 +10,10 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 const OurServices = () => {
   const container = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
@@ -127,7 +126,7 @@ const OurServices = () => {
     }
   ];
 
-  const handleCardHover = (cardId) => {
+  const handleCardHover = (cardId: number) => {
     setHoveredCard(cardId);
   };
 
@@ -172,7 +171,7 @@ const OurServices = () => {
 
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3  gap-6 mb-20">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <div
                 key={service.id}
                 className="service-card group relative bg-white p-6 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#9f193f]/30 overflow-hidden cursor-pointer"
