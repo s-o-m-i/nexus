@@ -33,6 +33,200 @@ input {
   font-family: 'General Sans', sans-serif !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8f8f8;
+  color: #0f172a;
+}
+
+.article-shell .article-content {
+  max-width: none;
+  color: #0f172a;
+}
+
+.article-shell .article-content > * + * {
+  margin-top: 1.4rem;
+}
+
+.article-shell .article-content p,
+.article-shell .article-content li,
+.article-shell .article-content td,
+.article-shell .article-content th {
+  line-height: 1.9;
+  font-size: 1.03rem;
+}
+
+.article-shell .article-content .article-paragraph {
+  margin: 1.2rem 0 1.35rem;
+}
+
+.article-shell .article-content .article-heading {
+  margin-top: 2.4rem;
+  margin-bottom: 0.9rem;
+  scroll-margin-top: 6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.article-shell .article-content .article-heading-h2 {
+  font-size: 1.8rem;
+}
+
+.article-shell .article-content .article-heading-h3 {
+  font-size: 1.45rem;
+}
+
+.article-shell .article-content .article-heading-h4 {
+  font-size: 1.2rem;
+}
+
+.article-shell .article-content .article-heading-h5 {
+  font-size: 1.06rem;
+}
+
+.article-shell .article-content .article-heading-h6 {
+  font-size: 1rem;
+}
+
+.article-shell .article-content .article-link {
+  color: #9f193f;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.18em;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.article-shell .article-content .article-link:hover {
+  color: #111111;
+  text-decoration-color: #111111;
+}
+
+.article-shell .article-content .article-inline-code {
+  display: inline-block;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  background: #fff8fa;
+  padding: 0.13rem 0.45rem;
+  font-family: 'Geist Mono', 'SFMono-Regular', monospace;
+  font-size: 0.95em;
+  color: #9f193f;
+}
+
+.article-shell .article-content .article-blockquote {
+  border-left: 4px solid #9f193f;
+  background: linear-gradient(90deg, #fff8fa 0%, #ffffff 100%);
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.1rem;
+  margin: 1.5rem 0;
+  color: #334155;
+}
+
+.article-shell .article-content .article-blockquote p {
+  margin: 0;
+}
+
+.article-shell .article-content .article-list {
+  margin: 1.2rem 0 1.4rem 1.25rem;
+  padding-left: 1.1rem;
+}
+
+.article-shell .article-content .article-list-item {
+  margin: 0.5rem 0;
+  padding-left: 0.2rem;
+}
+
+.article-shell .article-content .article-list-bullets {
+  list-style: disc;
+}
+
+.article-shell .article-content .article-list-numbers {
+  list-style: decimal;
+}
+
+.article-shell .article-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+.article-shell .article-content thead {
+  background: #f8fafc;
+}
+
+.article-shell .article-content tbody tr:nth-child(even) {
+  background: #fcfdff;
+}
+
+.article-shell .article-content th,
+.article-shell .article-content td {
+  padding: 0.95rem 1rem;
+  vertical-align: top;
+}
+
+.article-shell .article-content .article-caption {
+  margin: 0.6rem 0 0;
+  text-align: center;
+}
+
+.article-shell .article-content .article-caption-text {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-top: 0.6rem;
+}
+
+.article-shell .article-content pre {
+  margin: 1.5rem 0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.article-shell .article-content hr {
+  margin: 2.4rem 0;
+  border-color: #e2e8f0;
+}
+
+.article-shell .article-content figure {
+  margin: 2rem 0;
+}
+
+.article-shell .article-content iframe,
+.article-shell .article-content video {
+  width: 100%;
+  border-radius: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .article-shell .article-content .article-heading-h2 {
+    font-size: 1.45rem;
+  }
+
+  .article-shell .article-content .article-heading-h3 {
+    font-size: 1.25rem;
+  }
+
+  .article-shell .article-content p,
+  .article-shell .article-content li,
+  .article-shell .article-content td,
+  .article-shell .article-content th {
+    font-size: 0.98rem;
+  }
+
+  .article-shell .article-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
 .cus-gra {
   /* background: linear-gradient(135deg, #9B1B30 0%, #B22240 100%); */
   /* background: linear-gradient(135deg, #9f193f 0%, #c42155 100%); */

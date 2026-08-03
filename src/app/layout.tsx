@@ -16,9 +16,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DevMola",
+  metadataBase: new URL("https://devmola.com"),
+  title: {
+    default: "DevMola | Software Development & Digital Growth",
+    template: "%s | DevMola",
+  },
   description: "DevMola is a software development company that provides a wide range of services to businesses and individuals.",
-};  
+  keywords: ["software development", "web development", "mobile app development", "digital marketing", "SEO"],
+  alternates: {
+    canonical: "https://devmola.com/",
+  },
+  openGraph: {
+    title: "DevMola | Software Development & Digital Growth",
+    description: "DevMola is a software development company that provides a wide range of services to businesses and individuals.",
+    type: "website",
+    url: "https://devmola.com",
+    siteName: "DevMola",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DevMola | Software Development & Digital Growth",
+    description: "DevMola is a software development company that provides a wide range of services to businesses and individuals.",
+  },
+};
 
 export default function RootLayout({
   children,

@@ -59,6 +59,9 @@ const Navbar = () => {
                         <Link href={"/portfolio"}>
                             <li className="cursor-pointer transition navbar-items"><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></li>
                         </Link>
+                        <Link href={"/blog"}>
+                            <li className="cursor-pointer transition navbar-items"><span>B</span><span>l</span><span>o</span><span>g</span></li>
+                        </Link>
                         <Link href={"/contact"}>
                             <li className="cursor-pointer transition navbar-items"><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></li>
                         </Link>
@@ -153,6 +156,9 @@ const Navbar = () => {
                             </div>
                             <Link href="/portfolio" onClick={toggleMobileMenu}>
                                 <div className="text-[#9F1940] font-medium py-3 border-b border-gray-200">Portfolio</div>
+                            </Link>
+                            <Link href="/blog" onClick={toggleMobileMenu}>
+                                <div className="text-[#9F1940] font-medium py-3 border-b border-gray-200">Blog</div>
                             </Link>
                             <Link href="/contact" onClick={toggleMobileMenu}>
                                 <div className="text-[#9F1940] font-medium py-3 border-b border-gray-200">Contact</div>
