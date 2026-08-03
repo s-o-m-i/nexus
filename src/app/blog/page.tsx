@@ -30,9 +30,10 @@ export default async function BlogPage({
   const page = Number(resolvedSearchParams?.page ?? 1);
   const query = resolvedSearchParams?.search ?? "";
 
-  const [postsResponse, categories] = await Promise.all([
+  const [postsResponse, categories, latestArticles] = await Promise.all([
     getPosts({ page, perPage: 8, search: query || undefined }),
     getCategories(),
+    getPosts({ page: 1, perPage: 5 }),
   ]);
 
   if (page > postsResponse.totalPages && postsResponse.totalPages > 0) {
@@ -67,7 +68,7 @@ export default async function BlogPage({
           <SearchBar initialQuery={query} />
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[1.4fr_0.8fr]">
+        <div className="grid gap-8 lg:grid-cols-[1.4fr_0.8fr]" id="search-results">
           <div className="space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               {postsResponse.posts.map((post) => (
@@ -131,7 +132,7 @@ export default async function BlogPage({
             <div className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-sm w-full">
               <h3 className="text-lg font-semibold text-slate-900">Latest articles</h3>
               <div className="mt-4 space-y-4">
-                {postsResponse.posts.slice(0, 5).map((post) => (
+                {latestArticles.posts.map((post) => (
                   <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}

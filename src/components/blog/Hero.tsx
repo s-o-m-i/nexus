@@ -17,28 +17,31 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 sm:max-w-xl">
-            <div className="relative flex items-center overflow-hidden rounded-full border border-white/10 bg-white/10 px-4 py-3 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.45)] backdrop-blur-xl">
-              <span className="mr-3 text-slate-300">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
-                  <circle cx="11" cy="11" r="6" />
-                  <path d="M21 21l-4.35-4.35" />
-                </svg>
-              </span>
-              <input
-                type="search"
-                placeholder="Search articles, guides & insights..."
-                className="w-full border-none bg-transparent pr-28 text-sm text-white placeholder:text-slate-400 focus:outline-none"
-              />
-              <button
-                type="button"
-                className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#d63356] to-[#eb4b8b] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-[#d63356]/25 transition hover:brightness-110"
-              >
-                Search
-              </button>
-            </div>
+            <form action="/blog#search-results" method="get">
+              <div className="relative flex items-center overflow-hidden rounded-full border border-white/10 bg-white/10 px-4 py-3 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+                <span className="mr-3 text-slate-300">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+                    <circle cx="11" cy="11" r="6" />
+                    <path d="M21 21l-4.35-4.35" />
+                  </svg>
+                </span>
+                <input
+                  name="search"
+                  type="search"
+                  placeholder="Search articles, guides & insights..."
+                  className="w-full border-none bg-transparent pr-28 text-sm text-white placeholder:text-slate-400 focus:outline-none"
+                />
+                <button
+                  type="submit"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#d63356] to-[#eb4b8b] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-[#d63356]/25 transition duration-300  hover:shadow-[#d63356]/40 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#ff7ab4]/50"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-4">
+          <div className="mt-12 grid  sm:grid-cols-4">
             <div className="">
               <div className=" flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ff4a84]/15 text-[#ff4a84]">
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
