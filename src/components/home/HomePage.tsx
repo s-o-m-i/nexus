@@ -9,6 +9,7 @@ import InfiniteSliders from './InfiniteSliders';
 import GlobalDigitalMarketing from './GlobalDigitalMarketing';
 import WhatDrivesUs from './WhatDrivesUs';
 import OurServices from './OurServices';
+import HomeBlogs from './HomeBlogs';
 import WhyChooseDevMola from './WhyChooseDevMola';
 import HowWePlan from './HowWePlan';
 import ProjectsStats from './ProjectsStats';
@@ -56,6 +57,7 @@ const HomePage = () => {
       <GlobalDigitalMarketing/>
       <WhatDrivesUs/>
       <OurServices/>
+      <HomeBlogs />
       <WhyChooseDevMola/>
       <HowWePlan/>
       <ProjectsStats/>
