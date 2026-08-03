@@ -128,13 +128,38 @@ export default async function BlogPage({
               </div>
             </div>
 
-            <div className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-sm w-full">
               <h3 className="text-lg font-semibold text-slate-900">Latest articles</h3>
               <div className="mt-4 space-y-4">
                 {postsResponse.posts.slice(0, 5).map((post) => (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className="block rounded-2xl border border-slate-100 p-4 transition hover:border-[#9f193f] hover:bg-[#fff8fa]">
-                    <h4 className="font-semibold text-slate-900">{post.title.rendered}</h4>
-                    <p className="mt-2 text-sm text-slate-500">{formatDate(post.date)}</p>
+                  <Link
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group block rounded-2xl border border-slate-100 p-3 transition hover:border-[#9f193f] hover:bg-[#fff8fa]"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="relative h-16 w-24 overflow-hidden rounded-2xl bg-slate-100 flex-shrink-0">
+                        {getImage(post) ? (
+                          <Image
+                            src={getImage(post) as string}
+                            alt={post.title.rendered}
+                            fill
+                            sizes="96px"
+                            className="object-cover"
+                          />
+                        ) : (
+                          <div className="flex h-full items-center justify-center text-xs text-slate-500">
+                            No image
+                          </div>
+                        )}
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="break-words text-sm font-semibold text-slate-900 transition group-hover:text-[#9f193f]">
+                          {decodeHtmlEntities(post.title.rendered)}
+                        </h4>
+                        <p className="mt-1 text-xs text-slate-500">{formatDate(post.date)}</p>
+                      </div>
+                    </div>
                   </Link>
                 ))}
               </div>
