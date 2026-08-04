@@ -5,22 +5,21 @@ import { PopupButton } from 'react-calendly';
 import { PopupModal } from 'react-calendly';
 const CalendlyWidget = ({isOpen, setIsOpen}: {isOpen: boolean, setIsOpen: (isOpen: boolean) => void}) => {
   const [rootElem, setRootElem] = useState<HTMLElement | null>(null);
+
   useEffect(() => {
     setRootElem(document.body);
   }, []);
 
-  if (!rootElem) return null;
-
   return (
     <div className="space-y-4">
-
-
-         <PopupModal
-        url="https://calendly.com/devmola-info"
-        onModalClose={() => setIsOpen(false)}
-        open={isOpen}
-        rootElement={rootElem}
-      />
+      {rootElem ? (
+        <PopupModal
+          url="https://calendly.com/devmola-info"
+          onModalClose={() => setIsOpen(false)}
+          open={isOpen}
+          rootElement={rootElem}
+        />
+      ) : null}
       {/* Multiple custom buttons that open Calendly modal */}
       {/* <PopupButton
         url="https://calendly.com/sulemandevofficial"

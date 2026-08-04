@@ -7,11 +7,10 @@ import PrimaryButton from "@/ui/PrimaryButton/PrimaryButton";
 const LandingPage = () => {
   const [rootElem, setRootElem] = useState<HTMLElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     setRootElem(document.body);
   }, []);
-
-  if (!rootElem) return null;
 
   return (
     <div className="bg-[#ffff] min-h-[calc(100vh-100px)] relative">
