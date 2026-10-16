@@ -174,7 +174,7 @@ export default function PageLoader() {
   return (
     <div
       ref={root}
-      className="page-loader fixed inset-0 z-[10000] flex items-center justify-center overflow-hidden bg-[var(--ink)] text-white"
+      className="page-loader fixed inset-0 z-[10000] flex items-center justify-center touch-none bg-[var(--ink)] text-white"
       aria-hidden={!visible}
       aria-live="polite"
     >
@@ -188,10 +188,13 @@ export default function PageLoader() {
         aria-hidden="true"
       />
 
-      <div data-loader-panel className="perspective-3d preserve-3d relative z-10 flex flex-col items-center px-6">
+      <div
+        data-loader-panel
+        className="perspective-3d preserve-3d relative z-10 flex w-full flex-col items-center px-4 sm:px-6"
+      >
         <div
           data-loader-orbit
-          className="preserve-3d relative mb-10 h-28 w-28 sm:h-32 sm:w-32"
+          className="preserve-3d relative mb-6 h-24 w-24 sm:mb-10 sm:h-32 sm:w-32"
           aria-hidden="true"
         >
           {[0, 1, 2, 3, 4, 5].map((i) => (
@@ -199,25 +202,23 @@ export default function PageLoader() {
               key={i}
               data-loader-orbit-item
               className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center"
-              style={{
-                transform: `rotate(${i * 60}deg) translateY(-46px) rotate(-${i * 60}deg)`,
-              }}
+              style={{ ["--orbit-deg" as string]: `${i * 60}deg` }}
             >
               <Diamond
-                className={`h-3 w-3 ${i % 2 === 0 ? "text-[var(--brand-soft)]" : "text-white/35"} drop-shadow-[0_0_12px_rgba(196,33,85,0.35)]`}
+                className={`h-2.5 w-2.5 sm:h-3 sm:w-3 ${i % 2 === 0 ? "text-[var(--brand-soft)]" : "text-white/35"} drop-shadow-[0_0_12px_rgba(196,33,85,0.35)]`}
               />
             </div>
           ))}
-          <div className="absolute inset-4 rounded-full border border-white/10" />
+          <div className="absolute inset-3 rounded-full border border-white/10 sm:inset-4" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <Diamond className="h-6 w-6 text-[var(--brand)]" />
+            <Diamond className="h-5 w-5 sm:h-6 sm:w-6 text-[var(--brand)]" />
           </div>
         </div>
 
-        <div className="overflow-hidden">
-          <h1 className="flex font-display text-[clamp(2.75rem,11vw,4.75rem)] leading-none tracking-[-0.06em]">
+        <div className="w-full max-w-full overflow-hidden text-center">
+          <h1 className="flex max-w-full justify-center font-display text-[clamp(1.85rem,8.8vw,4.75rem)] leading-[0.95] tracking-[-0.04em] sm:text-[clamp(2.75rem,11vw,4.75rem)] sm:tracking-[-0.06em]">
             {chars.map((char, index) => (
-              <span key={`${char}-${index}`} className="inline-block overflow-hidden px-[0.02em]">
+              <span key={`${char}-${index}`} className="inline-block overflow-hidden px-[0.015em] sm:px-[0.02em]">
                 <span
                   data-loader-char
                   className={`inline-block will-change-transform ${
@@ -233,12 +234,12 @@ export default function PageLoader() {
 
         <div
           data-loader-accent
-          className="mt-5 h-px w-24 origin-left bg-gradient-to-r from-[var(--brand)] via-[var(--brand-soft)] to-transparent"
+          className="mt-4 h-px w-[min(6rem,42vw)] origin-center bg-gradient-to-r from-transparent via-[var(--brand-soft)] to-transparent sm:mt-5 sm:w-24 sm:origin-left sm:from-[var(--brand)] sm:via-[var(--brand-soft)] sm:to-transparent"
         />
 
         <p
           data-loader-tagline
-          className="mt-5 text-[11px] font-semibold uppercase tracking-[0.32em] text-white/50"
+          className="mt-4 px-1 text-center text-[10px] font-semibold uppercase leading-relaxed tracking-[0.2em] text-white/50 sm:mt-5 sm:text-[11px] sm:tracking-[0.32em]"
         >
           Design · Build · Grow
         </p>
