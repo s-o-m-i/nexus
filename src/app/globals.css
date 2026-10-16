@@ -57,6 +57,14 @@ body {
   overflow-x: hidden;
 }
 
+body.page-loader-active {
+  overflow: hidden;
+}
+
+.page-loader {
+  will-change: transform, opacity;
+}
+
 #contact,
 #services,
 #work,

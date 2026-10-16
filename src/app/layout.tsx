@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import Script from "next/script";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import PageLoader from "@/components/loaders/PageLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -79,6 +80,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} antialiased flex flex-col min-h-screen`}
       >
         <SmoothScrollProvider>
+          <PageLoader />
           <Navbar/>
           <main className="flex-grow">
             {children}
