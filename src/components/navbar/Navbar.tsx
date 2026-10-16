@@ -98,6 +98,11 @@ const Navbar = () => {
     return pathname.startsWith(href.replace(/\/$/, ""));
   };
 
+  const navLinkClass = (href: string) =>
+    `inline-flex h-10 items-center whitespace-nowrap font-display text-[13px] font-medium leading-none tracking-[-0.01em] transition-colors ${
+      isActive(href) ? "text-[var(--brand)]" : "text-[var(--ink)] hover:text-[var(--brand)]"
+    }`;
+
   return (
     <>
       <header
@@ -116,54 +121,47 @@ const Navbar = () => {
             Dev<span className="text-[var(--brand)]">Mola</span>
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
-            {navLinks.map((link) =>
-              link.label === "Services" ? (
-                <div
-                  key={link.href}
-                  className="relative"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                >
-                  <Link
-                    href={link.href}
-                    className={`text-[13px] font-medium tracking-[-0.01em] transition-colors ${
-                      isActive(link.href) ? "text-[var(--brand)]" : "text-[var(--ink)] hover:text-[var(--brand)]"
-                    }`}
+          <nav className="hidden lg:flex" aria-label="Main">
+            <ul className="flex items-center gap-8">
+              {navLinks.map((link) =>
+                link.label === "Services" ? (
+                  <li
+                    key={link.href}
+                    className="relative flex items-center"
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
                   >
-                    {link.label}
-                  </Link>
-                  <div
-                    className={`absolute left-1/2 top-full z-40 w-[560px] -translate-x-1/2 pt-5 transition-all duration-300 ${
-                      servicesOpen ? "visible opacity-100" : "invisible opacity-0"
-                    }`}
-                  >
-                    <div className="grid grid-cols-2 gap-2 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-[0_20px_60px_rgba(17,17,17,0.12)]">
-                      {serviceLinks.map((service) => (
-                        <Link
-                          key={service.path}
-                          href={service.path}
-                          className="rounded-xl px-4 py-3 transition-colors hover:bg-[var(--bg)]"
-                        >
-                          <p className="text-sm font-semibold text-[var(--ink)]">{service.name}</p>
-                          <p className="mt-1 text-xs leading-5 text-[var(--text-muted)]">{service.description}</p>
-                        </Link>
-                      ))}
+                    <Link href={link.href} className={navLinkClass(link.href)}>
+                      {link.label}
+                    </Link>
+                    <div
+                      className={`absolute left-1/2 top-full z-40 w-[560px] -translate-x-1/2 pt-5 transition-all duration-300 ${
+                        servicesOpen ? "visible opacity-100" : "invisible opacity-0"
+                      }`}
+                    >
+                      <div className="grid grid-cols-2 gap-2 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-[0_20px_60px_rgba(17,17,17,0.12)]">
+                        {serviceLinks.map((service) => (
+                          <Link
+                            key={service.path}
+                            href={service.path}
+                            className="rounded-xl px-4 py-3 transition-colors hover:bg-[var(--bg)]"
+                          >
+                            <p className="text-sm font-semibold text-[var(--ink)]">{service.name}</p>
+                            <p className="mt-1 text-xs leading-5 text-[var(--text-muted)]">{service.description}</p>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-[13px] font-medium tracking-[-0.01em] transition-colors ${
-                    isActive(link.href) ? "text-[var(--brand)]" : "text-[var(--ink)] hover:text-[var(--brand)]"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+                  </li>
+                ) : (
+                  <li key={link.href} className="flex items-center">
+                    <Link href={link.href} className={navLinkClass(link.href)}>
+                      {link.label}
+                    </Link>
+                  </li>
+                )
+              )}
+            </ul>
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
