@@ -55,6 +55,12 @@ export const contactOrbitCards = [
   },
 ];
 
+export const contactFarewell = {
+  word: "Bye",
+  line: "For now — talk soon.",
+  subline: "We’re glad you reached out. When you’re ready, we’ll be here to build what’s next with you.",
+};
+
 export const contactPageForm = {
   title: "Tell us about your project",
   description: "A short note is enough. We typically respond within one business day.",
