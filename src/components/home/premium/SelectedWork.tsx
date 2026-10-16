@@ -109,7 +109,7 @@ export default function SelectedWork() {
             Projects, up close.
           </h2>
         </div>
-        <Link href="/portfolio/" className="group hidden items-center gap-2 text-sm font-semibold text-white sm:inline-flex">
+        <Link href="/works/" className="group hidden items-center gap-2 text-sm font-semibold text-white sm:inline-flex">
           All projects
           <ArrowIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
@@ -147,7 +147,7 @@ export default function SelectedWork() {
       </div>
 
       <div className="mt-8 px-5 sm:hidden">
-        <Link href="/portfolio/" className="inline-flex items-center gap-2 text-sm font-semibold">
+        <Link href="/works/" className="inline-flex items-center gap-2 text-sm font-semibold">
           All projects
           <ArrowIcon className="h-4 w-4" />
         </Link>

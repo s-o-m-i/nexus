@@ -269,9 +269,9 @@ const OurServices = () => {
                 <button className="bg-gradient-to-r from-[#9f193f] to-[#c42155] text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
                   Get Started Today
                 </button></a>
-                <Link href="/portfolio">
+                <Link href="/works/">
                 <button className="bg-white/10 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
-                  View Our Portfolio
+                  View our works
                 </button>
                 </Link>
               </div>

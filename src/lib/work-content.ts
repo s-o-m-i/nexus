@@ -1,7 +1,7 @@
 export type WorkFilterType = "All" | "Web" | "Mobile" | "E-commerce";
 
 export const workPageCopy = {
-  eyebrow: "DevMola portfolio",
+  eyebrow: "DevMola works",
   title: "Our work",
   description:
     "A focused look at websites and products we have designed and built — clear layouts, fast performance, and experiences that help clients win trust at first glance.",

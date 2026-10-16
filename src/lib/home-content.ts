@@ -3,7 +3,7 @@ export const navLinks = [
   { href: "/about/", label: "About" },
   { href: "/team/", label: "Team" },
   { href: "/services/", label: "Services" },
-  { href: "/portfolio/", label: "Portfolio" },
+  { href: "/works/", label: "Works" },
   { href: "/blog/", label: "Blog" },
   { href: "/contact/", label: "Contact" },
 ];
@@ -246,5 +246,5 @@ export const contactQuickLinks = [
   { label: "WhatsApp", href: "https://wa.me/923705614842", external: true },
   { label: "Email us", href: "mailto:info@devmola.com", external: false },
   { label: "Book a meeting", href: "#", action: "calendly" as const },
-  { label: "View portfolio", href: "/portfolio/", external: false },
+  { label: "View works", href: "/works/", external: false },
 ];

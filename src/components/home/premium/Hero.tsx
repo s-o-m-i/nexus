@@ -57,7 +57,7 @@ export default function Hero() {
               <AgencyButton href="#contact">Start a Project</AgencyButton>
             </span>
             <span data-hero-cta>
-              <AgencyButton href="/portfolio/" variant="secondary">
+              <AgencyButton href="/works/" variant="secondary">
                 Explore Our Work
               </AgencyButton>
             </span>

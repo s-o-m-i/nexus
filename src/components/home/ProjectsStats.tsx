@@ -520,7 +520,7 @@ const ProjectsStats = () => {
             transition={{ duration: 0.5, delay: 1.4 }}
             className="text-center mt-12"
           >
-            <Link href="/portfolio">
+            <Link href="/works/">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
