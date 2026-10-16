@@ -68,13 +68,16 @@ const mapStyles = [
 
 interface MapProps {
   height?: string;
+  center?: { lat: number; lng: number };
+  markerLabel?: string;
 }
 
-const Map: React.FC<MapProps> = ({ height }) => {
-  const officeLocation = {
-    lat: 23.1291,  // Guangzhou latitude
-    lng: 113.2644  // Guangzhou longitude
-  };
+const Map: React.FC<MapProps> = ({
+  height,
+  center = { lat: 33.6844, lng: 73.0479 },
+  markerLabel = "DevMola — Islamabad",
+}) => {
+  const officeLocation = center;
 
   const containerStyle = {
     width: "100%",
@@ -108,7 +111,7 @@ const Map: React.FC<MapProps> = ({ height }) => {
       >
         <Marker
           label={{
-            text: "Our Office - Guangzhou",
+            text: markerLabel,
             color: "#9f193f",
             className: "watertowertext",
             fontWeight: "bold",
