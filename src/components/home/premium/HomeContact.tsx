@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import Image from "next/image";
+import LeadershipContactPanel from "@/components/contact/LeadershipContactPanel";
 import { contactQuickLinks, formServices } from "@/lib/home-content";
 import { contactPageDetails, contactPageForm, contactPageSocial } from "@/lib/contact-page-content";
 import { DiagonalArrowIcon, SectionIntro } from "./PremiumUI";
@@ -172,6 +173,7 @@ export default function HomeContact({ variant = "strip", sectionId = "contact" }
                     className="max-w-md"
                   />
                 </div>
+                <LeadershipContactPanel markForSideAnimation />
                 <ul data-contact-side className="space-y-3">
                   {contactPageDetails.map((item) => (
                     <li key={item.label}>
@@ -223,6 +225,9 @@ export default function HomeContact({ variant = "strip", sectionId = "contact" }
                   />
                 </div>
               </>
+            ) : null}
+            {variant === "strip" ? (
+              <LeadershipContactPanel markForSideAnimation />
             ) : null}
             <div className="grid grid-cols-2 gap-4">{contactQuickLinks.map(renderQuickLink)}</div>
           </div>

@@ -1,3 +1,5 @@
+import { ctoContact } from "@/lib/contact-leadership";
+
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about/", label: "About" },
@@ -243,8 +245,8 @@ export const contact = {
 };
 
 export const contactQuickLinks = [
-  { label: "WhatsApp", href: "https://wa.me/923705614842", external: true },
-  { label: "Email us", href: "mailto:info@devmola.com", external: false },
+  { label: "WhatsApp (CTO)", href: ctoContact.whatsappHref, external: true },
+  { label: "Email CTO", href: `mailto:${ctoContact.email}`, external: false },
   { label: "Book a meeting", href: "#", action: "calendly" as const },
   { label: "View works", href: "/works/", external: false },
 ];

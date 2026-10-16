@@ -10,6 +10,7 @@ import Process from "./premium/Process";
 import Principles from "./premium/Principles";
 import HomeContact from "./premium/HomeContact";
 import FarewellByeSection from "@/components/motion/FarewellByeSection";
+import { ceoContact, ctoContact } from "@/lib/contact-leadership";
 import { homeFarewell } from "@/lib/home-content";
 
 const schemaData = {
@@ -19,13 +20,24 @@ const schemaData = {
   alternateName: "devmola",
   url: "https://devmola.com",
   logo: "https://devmola.com/logo.png",
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+92-370-5614842",
-    contactType: "Customer Support",
-    areaServed: "PK",
-    availableLanguage: ["English", "Urdu"],
-  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+92-319-9828336",
+      email: ctoContact.email,
+      contactType: "technical support",
+      areaServed: "PK",
+      availableLanguage: ["English", "Urdu"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+92-370-5614842",
+      email: ceoContact.email,
+      contactType: "customer support",
+      areaServed: "PK",
+      availableLanguage: ["English", "Urdu"],
+    },
+  ],
 };
 
 const websiteSchema = {

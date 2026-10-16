@@ -1,10 +1,11 @@
 import { contact } from "@/lib/home-content";
+import { ceoContact, contactLeadershipNote, ctoContact } from "@/lib/contact-leadership";
 
 export const contactPageHero = {
   eyebrow: "Contact DevMola",
   title: "Let's build what's next.",
   description:
-    "Share a brief, book a call, or reach out directly — we will point you to the right next step, whether that is strategy, design, engineering, or growth.",
+    "Share a brief or book a call. For new builds, start with our CTO (Suleman) so we nail scope and stack early — then we'll loop in CEO Dawood when it's time to align on partnership and delivery.",
   primaryCta: { label: "Send a message", href: "#contact-form" },
   secondaryCta: { label: "View our work", href: "/works/" },
 };
@@ -20,23 +21,23 @@ export const contactOrbitCards = [
   },
   {
     number: "02",
-    title: "Book a discovery call",
-    tag: "Align on scope",
-    href: "#contact-form",
-    external: false,
+    title: "Talk to our CTO",
+    tag: "Technical scope first",
+    href: ctoContact.whatsappHref,
+    external: true,
   },
   {
     number: "03",
-    title: "Email the team",
-    tag: contact.email,
-    href: `mailto:${contact.email}`,
+    title: "Email our CTO",
+    tag: ctoContact.email,
+    href: `mailto:${ctoContact.email}`,
     external: true,
   },
   {
     number: "04",
-    title: "Message on WhatsApp",
-    tag: "Quick questions",
-    href: contact.whatsappHref,
+    title: "Reach our CEO",
+    tag: ceoContact.name,
+    href: ceoContact.whatsappHref,
     external: true,
   },
   {
@@ -63,18 +64,17 @@ export const contactFarewell = {
 
 export const contactPageForm = {
   title: "Tell us about your project",
-  description: "A short note is enough. We typically respond within one business day.",
+  description: `${contactLeadershipNote} A short note is enough — we typically respond within one business day.`,
 };
 
 export const contactPageDetails = [
-  { label: "Email", value: contact.email, href: `mailto:${contact.email}` },
-  { label: "WhatsApp", value: contact.whatsapp, href: contact.whatsappHref },
   { label: "Location", value: contact.location, href: undefined as string | undefined },
 ];
 
 export const contactPageSocial = [
+  { label: "WhatsApp (CTO)", href: ctoContact.whatsappHref },
+  { label: "WhatsApp (CEO)", href: ceoContact.whatsappHref },
   { label: "LinkedIn", href: "https://www.linkedin.com/" },
   { label: "Instagram", href: "https://www.instagram.com/" },
   { label: "Facebook", href: "https://www.facebook.com/" },
-  { label: "WhatsApp", href: contact.whatsappHref },
 ];

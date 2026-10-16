@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import PrimaryButton from '@/ui/PrimaryButton/PrimaryButton';
 import RedesignedFAQ from './RedesignedFAQ';
+import { ceoContact, ctoContact } from '@/lib/contact-leadership';
 
 const BusinessNextLevel = () => {
   const benefits = [
@@ -36,24 +37,31 @@ const BusinessNextLevel = () => {
   const contactMethods = [
     {
       icon: Phone,
-      title: "Call Us",
-      value: "923705614842",
+      title: "Call CTO (first)",
+      value: ctoContact.phone,
       action: "Call Now",
-      href: "tel:923705614842"
+      href: ctoContact.telHref
     },
     {
       icon: Mail,
-      title: "Email Us",
-      value: "info@devmola.com",
+      title: "Email CTO",
+      value: ctoContact.email,
       action: "Send Email",
-      href: "mailto:info@devmola.com"
+      href: `mailto:${ctoContact.email}`
     },
     {
       icon: MessageCircle,
-      title: "WhatsApp",
-      value: "923705614842",
+      title: "WhatsApp CTO",
+      value: ctoContact.phone,
       action: "Chat Now",
-      href: "https://wa.me/923705614842"
+      href: ctoContact.whatsappHref
+    },
+    {
+      icon: Phone,
+      title: "CEO — Dawood",
+      value: ceoContact.phone,
+      action: "Call CEO",
+      href: ceoContact.telHref
     }
   ];
 

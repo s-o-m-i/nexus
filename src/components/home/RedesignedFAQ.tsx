@@ -10,6 +10,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
+import { ceoContact, ctoContact } from '@/lib/contact-leadership';
 
 const RedesignedFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -43,31 +44,38 @@ const RedesignedFAQ = () => {
     {
       id: 6,
       question: "How do I get started with Devmola?",
-      answer: "It's easy! Just contact us through our website or book a free consultation. We'll discuss your goals, assess your needs, and suggest a strategy tailored specifically to your business."
+      answer: "It's easy! Message our CTO first for a technical walkthrough of your idea, then we'll bring in our CEO when you're ready to move forward. You can also use the contact form or book a free consultation."
     }
   ];
 
   const contactMethods = [
     {
       icon: Phone,
-      title: "Call Us",
-      value: "03305870851",
+      title: "Call CTO (first)",
+      value: ctoContact.phone,
       action: "Call Now",
-      href: "tel:03305870851"
+      href: ctoContact.telHref
     },
     {
       icon: Mail,
-      title: "Email Us",
-      value: "info@devmola.com",
+      title: "Email CTO",
+      value: ctoContact.email,
       action: "Send Email",
-      href: "mailto:info@devmola.com"
+      href: `mailto:${ctoContact.email}`
     },
     {
       icon: MessageCircle,
-      title: "WhatsApp",
-      value: "03305870851",
+      title: "WhatsApp CTO",
+      value: ctoContact.phone,
       action: "Chat Now",
-      href: "https://wa.me/03305870851"
+      href: ctoContact.whatsappHref
+    },
+    {
+      icon: Phone,
+      title: "CEO — Dawood",
+      value: ceoContact.phone,
+      action: "Call CEO",
+      href: ceoContact.telHref
     }
   ];
 

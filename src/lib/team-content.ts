@@ -3,6 +3,8 @@
  * Set `isPlaceholder: false` and replace sample copy when adding real members.
  */
 
+import { ceoContact, ctoContact } from "@/lib/contact-leadership";
+
 export type TeamMember = {
   id: string;
   name: string;
@@ -12,6 +14,14 @@ export type TeamMember = {
   skills: string[];
   featured?: boolean;
   isPlaceholder?: boolean;
+  /** Direct line for leadership profiles */
+  contact?: {
+    email: string;
+    phone: string;
+    telHref: string;
+    whatsappHref: string;
+    contactFirst?: boolean;
+  };
   social?: {
     linkedin?: string;
     github?: string;
@@ -54,14 +64,28 @@ export const teamMembers: TeamMember[] = [
     bio: "Leads DevMola’s direction, client partnerships, and delivery standards — keeping every project aligned with business outcomes and long-term growth.",
     skills: ["Leadership", "Strategy", "Client partnerships", "Product direction"],
     featured: true,
+    contact: {
+      email: ceoContact.email,
+      phone: ceoContact.phone,
+      telHref: ceoContact.telHref,
+      whatsappHref: ceoContact.whatsappHref,
+    },
   },
   {
     id: "suleman",
     name: "M. Suleman",
-    role: "Full Stack Developer",
+    role: "CTO & Full Stack Developer",
     image: "/images/somi.png",
-    bio: "Builds performant web applications and integrations, translating design systems into maintainable code that scales with the product.",
-    skills: ["Next.js", "React", "Node.js", "API design", "Performance"],
+    bio: "Leads engineering at DevMola and builds performant web applications end to end — the first point of contact for technical scope, stack choices, and feasibility.",
+    skills: ["Next.js", "React", "Node.js", "Architecture", "Performance"],
+    featured: true,
+    contact: {
+      email: ctoContact.email,
+      phone: ctoContact.phone,
+      telHref: ctoContact.telHref,
+      whatsappHref: ctoContact.whatsappHref,
+      contactFirst: true,
+    },
   },
   {
     id: "design-slot",

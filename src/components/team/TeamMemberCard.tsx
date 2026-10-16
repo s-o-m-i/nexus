@@ -30,6 +30,21 @@ export default function TeamMemberCard({ member }: { member: TeamMember }) {
           {member.name}
         </h3>
         <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/65">{member.role}</p>
+        {member.contact ? (
+          <div className="mt-4 space-y-1.5 border-t border-white/15 pt-3 text-xs text-white/75">
+            {member.contact.contactFirst ? (
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--brand-soft)]">
+                Contact first for new projects
+              </p>
+            ) : null}
+            <a href={member.contact.telHref} className="block transition hover:text-white">
+              {member.contact.phone}
+            </a>
+            <a href={`mailto:${member.contact.email}`} className="block break-all transition hover:text-white">
+              {member.contact.email}
+            </a>
+          </div>
+        ) : null}
         <p className="sr-only">{member.bio}</p>
       </div>
     </article>
