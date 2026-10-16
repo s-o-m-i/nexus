@@ -8,7 +8,6 @@ import SelectedWork from "./premium/SelectedWork";
 import ProblemSolution from "./premium/ProblemSolution";
 import Process from "./premium/Process";
 import Principles from "./premium/Principles";
-import ContactCTA from "./premium/ContactCTA";
 import HomeContact from "./premium/HomeContact";
 
 const schemaData = {
@@ -54,7 +53,6 @@ const HomePage = ({ children }: { children?: React.ReactNode }) => {
         <Process />
         <Principles />
         {children}
-        <ContactCTA />
         <HomeContact />
       </div>
     </>

@@ -130,6 +130,23 @@ body {
   z-index: -1;
 }
 
+.premium-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-card);
+}
+
 .work-swiper .swiper {
   overflow: visible;
   padding-bottom: 3.25rem;
@@ -527,9 +544,19 @@ body {
   --ink: #111111;
   --bg: #f6f1eb;
   --bg-alt: #efe8e0;
+  --bg-section: #f3f1ed;
   --surface: #ffffff;
+  --surface-muted: #faf9f7;
+  --surface-dark: #0a0a0a;
+  --surface-dark-elevated: #141414;
+  --surface-dark-field: #1f1f1f;
   --text-muted: #5a524c;
+  --text-subtle: #8a837c;
+  --eyebrow-muted: #6f6762;
   --border: rgba(17, 17, 17, 0.1);
+  --border-strong: rgba(17, 17, 17, 0.14);
+  --shadow-soft: 0 18px 44px rgba(17, 17, 17, 0.06);
+  --shadow-card: 0 22px 50px rgba(17, 17, 17, 0.08);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

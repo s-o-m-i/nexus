@@ -5,26 +5,25 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { principles } from "@/lib/home-content";
-import { Eyebrow } from "./PremiumUI";
+import { SectionIntro } from "./PremiumUI";
 import { useCardTilt } from "@/hooks/useCardTilt";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 function PrincipleCard({ item }: { item: (typeof principles)[number] }) {
-  const tilt = useCardTilt(10);
+  const tilt = useCardTilt(6);
 
   return (
-    <div className="perspective-3d" data-principle-card>
+    <div data-principle-card className="h-full">
       <div
         ref={tilt.ref}
         onPointerMove={tilt.onPointerMove}
         onPointerLeave={tilt.onPointerLeave}
-        className="slab-3d relative h-full overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.05] p-7 will-change-transform"
+        className="relative h-full overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] p-7 will-change-transform transition-colors duration-300 hover:border-white/16 hover:bg-white/[0.06]"
       >
-        <div className="pointer-events-none absolute -right-8 -top-10 h-32 w-32 rounded-full bg-[var(--brand)]/20 blur-3xl" />
-        <p className="font-display text-2xl tracking-[-0.04em]">{item.title}</p>
-        <p className="mt-4 text-sm leading-7 text-white/60">{item.description}</p>
+        <p className="font-display text-2xl tracking-[-0.04em] text-white">{item.title}</p>
+        <p className="mt-4 text-sm leading-7 text-white/58">{item.description}</p>
       </div>
     </div>
   );
@@ -39,13 +38,11 @@ export default function Principles() {
       if (!root.current || reduced) return;
       gsap.fromTo(
         "[data-principle-card]",
-        { opacity: 0, y: 40, rotateX: 20, rotateY: -8 },
+        { opacity: 0, y: 32 },
         {
           opacity: 1,
           y: 0,
-          rotateX: 0,
-          rotateY: 0,
-          duration: 0.95,
+          duration: 0.85,
           stagger: 0.1,
           ease: "power3.out",
           scrollTrigger: { trigger: root.current, start: "top 78%", once: true },
@@ -62,12 +59,7 @@ export default function Principles() {
       className="relative overflow-x-hidden bg-[var(--ink)] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28"
     >
       <div className="mx-auto max-w-[1200px]">
-        <div className="mb-12 max-w-xl">
-          <Eyebrow light>How we work with you</Eyebrow>
-          <h2 className="mt-4 font-display text-[clamp(2rem,4.2vw,3.4rem)] leading-[1.05] tracking-[-0.04em]">
-            Standards, not slogans.
-          </h2>
-        </div>
+        <SectionIntro eyebrow="How we work with you" title="Standards, not slogans." light className="mb-12" />
         <div className="grid gap-5 sm:grid-cols-2">
           {principles.map((item) => (
             <PrincipleCard key={item.title} item={item} />

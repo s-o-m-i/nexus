@@ -240,3 +240,10 @@ export const contact = {
   whatsappHref: "https://wa.me/923705614842",
   location: "Islamabad, Pakistan",
 };
+
+export const contactQuickLinks = [
+  { label: "WhatsApp", href: "https://wa.me/923705614842", external: true },
+  { label: "Email us", href: "mailto:info@devmola.com", external: false },
+  { label: "Book a meeting", href: "#", action: "calendly" as const },
+  { label: "View portfolio", href: "/portfolio/", external: false },
+];

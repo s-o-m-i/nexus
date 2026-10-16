@@ -12,6 +12,58 @@ export function Eyebrow({ children, light = false }: { children: React.ReactNode
   );
 }
 
+export function DiagonalArrowIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path
+        d="M4 12L12 4M12 4H6M12 4V10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function SectionIntro({
+  eyebrow,
+  title,
+  description,
+  light = false,
+  className = "",
+}: {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  light?: boolean;
+  className?: string;
+}) {
+  return (
+    <div className={`max-w-xl ${className}`}>
+      <p
+        className={`text-[11px] font-semibold uppercase tracking-[0.28em] ${
+          light ? "text-white/55" : "text-[var(--eyebrow-muted)]"
+        }`}
+      >
+        {eyebrow}
+      </p>
+      <h2
+        className={`mt-4 font-display text-[clamp(2rem,4.2vw,3.4rem)] leading-[1.05] tracking-[-0.04em] ${
+          light ? "text-white" : "text-[var(--ink)]"
+        }`}
+      >
+        {title}
+      </h2>
+      {description ? (
+        <p className={`mt-4 text-[15px] leading-7 ${light ? "text-white/65" : "text-[var(--text-muted)]"}`}>
+          {description}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 export function ArrowIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 16 16" fill="none" aria-hidden="true">
