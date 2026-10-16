@@ -59,7 +59,7 @@ export default function WorkGrid() {
 
   return (
     <section id="work-index" ref={root} className="bg-[var(--bg-section)] pb-16 pt-6 sm:pb-20 sm:pt-8 lg:pb-24">
-      <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto w-full max-w-[1520px] px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-2xl text-center">
           <p
             data-work-header
@@ -119,7 +119,7 @@ export default function WorkGrid() {
           </div>
         </header>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-14 sm:grid-cols-2 sm:gap-8 lg:mt-16 lg:gap-10">
+        <div className="mt-12 grid grid-cols-1 gap-3 sm:mt-14 sm:grid-cols-2 sm:gap-3 md:gap-4 lg:mt-16">
           {filtered.map((project) => (
             <WorkProjectCard key={project.id} project={project} />
           ))}

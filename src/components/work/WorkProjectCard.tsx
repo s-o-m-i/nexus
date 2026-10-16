@@ -14,22 +14,22 @@ export default function WorkProjectCard({ project }: { project: WorkProject }) {
         className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand)]"
         aria-label={`Open ${project.title} live preview`}
       >
-        <div className="relative aspect-square overflow-hidden rounded-[22px] bg-[var(--ink)]">
+        <div className="relative aspect-square min-h-[min(88vw,720px)] overflow-hidden rounded-lg bg-[var(--ink)] sm:min-h-0">
           <Image
             src={project.image}
             alt={`${project.title} project preview`}
             fill
-            sizes="(max-width: 640px) 100vw, 50vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1520px) 50vw, 720px"
             className="object-cover object-top transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
           />
           <div className="absolute inset-0 bg-[var(--ink)]/10 transition-colors duration-500 group-hover:bg-[var(--ink)]/25" />
 
-          <div className="absolute inset-0 flex items-center justify-center p-6">
-            <div className="w-full max-w-[220px] rounded-2xl border border-white/20 bg-white/12 px-5 py-6 text-center shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-md transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-1 group-hover:bg-white/18 sm:max-w-[240px] sm:px-6 sm:py-7">
+          <div className="absolute inset-0 flex items-center justify-center p-8 sm:p-10">
+            <div className="w-full max-w-[240px] rounded-md border border-white/20 bg-white/12 px-6 py-7 text-center shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-md transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-1 group-hover:bg-white/18 sm:max-w-[280px] sm:px-8 sm:py-8 lg:max-w-[300px]">
               <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70">
                 {project.type}
               </p>
-              <h2 className="mt-2 font-display text-xl leading-tight tracking-[-0.03em] text-white sm:text-2xl">
+              <h2 className="mt-2 font-display text-xl leading-tight tracking-[-0.03em] text-white sm:text-2xl lg:text-[1.65rem]">
                 {project.title}
               </h2>
             </div>
