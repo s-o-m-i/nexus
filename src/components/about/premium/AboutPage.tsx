@@ -7,7 +7,7 @@ import AboutDifferentiators from "./AboutDifferentiators";
 import AboutValues from "./AboutValues";
 import AboutTechStack from "./AboutTechStack";
 import AboutTeamPreview from "./AboutTeamPreview";
-import AboutClosingCTA from "./AboutClosingCTA";
+import HomeContact from "@/components/home/premium/HomeContact";
 
 export default function AboutPage() {
   return (
@@ -19,7 +19,7 @@ export default function AboutPage() {
       <AboutValues />
       <AboutTechStack />
       <AboutTeamPreview />
-      <AboutClosingCTA />
+      <HomeContact />
     </div>
   );
 }
