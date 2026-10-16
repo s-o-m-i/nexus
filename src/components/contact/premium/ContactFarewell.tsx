@@ -87,11 +87,13 @@ export default function ContactFarewell() {
   return (
     <section
       ref={root}
-      className="contact-farewell relative overflow-hidden bg-[var(--ink)] px-5 py-24 text-white sm:px-8 sm:py-28 lg:px-12 lg:py-32"
+      className="contact-farewell relative overflow-visible bg-[var(--ink)] px-5 py-24 text-white sm:px-8 sm:py-28 lg:px-12 lg:py-32"
       aria-label="Farewell message"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(159,25,63,0.2),transparent_62%)]" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[min(80vw,420px)] w-[min(80vw,420px)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.04]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(159,25,63,0.2),transparent_62%)]" />
+        <div className="absolute left-1/2 top-1/2 h-[min(88vw,480px)] w-[min(88vw,480px)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.04]" />
+      </div>
 
       <div className="relative mx-auto flex max-w-[900px] flex-col items-center text-center">
         <div data-bye-extra className="mb-4 flex items-center gap-2 text-[var(--brand-soft)]">
@@ -102,20 +104,22 @@ export default function ContactFarewell() {
         </div>
 
         <div
-          className="contact-bye-3d perspective-3d flex items-center justify-center gap-1 sm:gap-2"
+          className="contact-bye-3d perspective-3d flex w-full items-end justify-center overflow-visible px-4 sm:px-8"
           style={{ perspective: "900px" }}
         >
           {letters.map((char, index) => (
             <span
               key={`${char}-${index}`}
               data-bye-letter
-              className="inline-block origin-bottom font-display text-[clamp(4.5rem,22vw,10.5rem)] leading-none tracking-[-0.06em]"
+              className="inline-block origin-bottom overflow-visible px-[0.07em] font-display text-[clamp(5rem,28vw,12.5rem)] leading-[0.92] tracking-[-0.03em] last:pr-[0.14em]"
               style={{
                 transformStyle: "preserve-3d",
                 background: "linear-gradient(180deg, #ffffff 0%, #f0e8ec 45%, #c42155 100%)",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 color: "transparent",
+                WebkitBoxDecorationBreak: "clone",
+                boxDecorationBreak: "clone",
               }}
             >
               {char}

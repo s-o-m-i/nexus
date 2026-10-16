@@ -116,6 +116,13 @@ html.devmola-loader-animating #devmola-first-paint-veil {
 
 .contact-farewell [data-bye-letter] {
   filter: drop-shadow(0 20px 36px rgba(159, 25, 63, 0.32));
+  -webkit-text-stroke: 0 transparent;
+  paint-order: stroke fill;
+}
+
+.contact-bye-3d {
+  overflow: visible;
+  padding-bottom: 0.15em;
 }
 
 .contact-orbit.perspective-3d {
