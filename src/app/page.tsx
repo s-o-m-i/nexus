@@ -1,5 +1,5 @@
-
 import HomePage from '@/components/home/HomePage'
+import HomeBlogs from '@/components/home/HomeBlogs'
 import React from 'react'
 
 export const metadata = {
@@ -10,14 +10,11 @@ export const metadata = {
   },
 };
 
-
-
 const Page = () => {
   return (
-    <div className=''>
-       
-      <HomePage />
-    </div>
+    <HomePage>
+      <HomeBlogs />
+    </HomePage>
   )
 }
 

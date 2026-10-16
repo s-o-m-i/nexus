@@ -1,234 +1,303 @@
-"use client"
-import Link from 'next/link';
-import React, { useState } from 'react'
-import CalendlyWidget from '../CalendlyWidget';
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import CalendlyWidget from "../CalendlyWidget";
+import { navLinks, serviceLinks } from "@/lib/home-content";
+import { AgencyButton, ArrowIcon } from "@/components/home/premium/PremiumUI";
+import { duration, easeOut, stagger } from "@/lib/motion";
+
+gsap.registerPlugin(useGSAP);
 
 const Navbar = () => {
-    const [isServicesHovered, setIsServicesHovered] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const linkRefs = useRef<HTMLAnchorElement[]>([]);
+  const menuReady = useRef(false);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-    // Services list for dropdown
-    const services = [
-        { name: "Web Development", description: "Custom, responsive websites and applications", path: "/services/web-development" },
-        { name: "Mobile App Development", description: "iOS and Android applications", path: "/services/mobile-app-development" },
-        { name: "UI/UX Design", description: "Intuitive, user-centered interfaces", path: "/services/ui-ux" },
-        { name: "Graphic Designing", description: "Intuitive, user-centered interfaces", path: "/services/graphic-design" },
-        { name: "Digital Marketing", description: "Strategic online marketing campaigns", path: "/services/digital-marketing" },
-        { name: "SEO", description: "Search engine visibility enhancement", path: "/services/seo-services" },
-    ];
+  useEffect(() => {
+    setMobileOpen(false);
+    setServicesOpen(false);
+    setMobileServicesOpen(false);
+  }, [pathname]);
 
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-        if (isMobileServicesOpen) setIsMobileServicesOpen(false);
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
     };
+  }, [mobileOpen]);
 
-    return (
-        <>
-            <div className="hidden sm:flex bg-gradient-to-br from-[#111111] via-[#1a1a1a] to-[#111111] p-1 sm:p-2 justify-center items-center">
-                <div className="">
-                   
-                
-                    <a href="mailto:info@devmola.com" className='w-[200px]  text-[12px] sm:text-sm text-[#9F193F] font-bold px-3 border-r-2 border-white'> Email <span className='text-[#fff] ml-2'>info@devmola.com</span></a>
-                    <a href="https://wa.me/923705614842" className='w-[200px]  text-[12px] sm:text-sm text-[#9F193F] font-bold px-3'> Whatsapp <span className='text-[#fff] ml-2'>+92 370 5614842</span></a>
-                </div>
-            </div>
+  useGSAP(
+    () => {
+      if (!headerRef.current) return;
+      gsap.fromTo(
+        headerRef.current,
+        { y: -24, opacity: 0 },
+        { y: 0, opacity: 1, duration: duration.entrance, ease: easeOut, delay: 0.08 }
+      );
+    },
+    { scope: headerRef }
+  );
 
-            <div className='container mx-auto p-4  h-[100px] sticky top-0 z-50'>
-                <nav className="flex items-center rounded-full justify-between py-4 px-4 sm:px-[30px] 2xl:px-[50px] bg-[#9f193f] text-[#235789] shadow-md">
-                    <div className="text-[24px] font-bold text-[#fff]">
-                        <Link href={"/"}> DevMola</Link></div>
-                    <ul className="hidden md:flex space-x-6 text-[16px] font-medium">
-                        <Link href={"/"}>
-                            <li className="cursor-pointer transition navbar-items"><span>H</span><span>o</span><span>m</span><span>e</span></li>
-                        </Link>
-                        <Link href={"/about"}>
-                            <li className="cursor-pointer transition navbar-items"><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span></li>
-                        </Link>
-                        <Link href={"/services"}>
-                            <li
-                                className="cursor-pointer transition navbar-items relative"
-                                onMouseEnter={() => setIsServicesHovered(true)}
-                                onMouseLeave={() => setIsServicesHovered(false)}
-                            >
-                                <span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span>
-                            </li>
-                        </Link>
-                        <Link href={"/portfolio"}>
-                            <li className="cursor-pointer transition navbar-items"><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></li>
-                        </Link>
-                        <Link href={"/blog"}>
-                            <li className="cursor-pointer transition navbar-items"><span>B</span><span>l</span><span>o</span><span>g</span></li>
-                        </Link>
-                        <Link href={"/contact"}>
-                            <li className="cursor-pointer transition navbar-items"><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></li>
-                        </Link>
-                    </ul>
+  useGSAP(
+    () => {
+      if (!overlayRef.current || !panelRef.current) return;
+      if (!menuReady.current) {
+        menuReady.current = true;
+        return;
+      }
+      if (mobileOpen) {
+        const tl = gsap.timeline();
+        tl.set(overlayRef.current, { display: "block" })
+          .fromTo(overlayRef.current, { opacity: 0 }, { opacity: 1, duration: 0.3 })
+          .fromTo(
+            panelRef.current,
+            { xPercent: 100 },
+            { xPercent: 0, duration: duration.menu, ease: easeOut },
+            "<"
+          )
+          .fromTo(
+            linkRefs.current,
+            { y: 24, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.55, stagger: stagger.tight, ease: easeOut },
+            "-=0.35"
+          );
+      } else {
+        gsap.to(overlayRef.current, {
+          opacity: 0,
+          duration: 0.25,
+          onComplete: () => {
+            if (overlayRef.current) overlayRef.current.style.display = "none";
+          },
+        });
+      }
+    },
+    { dependencies: [mobileOpen] }
+  );
 
-                    <div className="cta hidden sm:block">
-                        <h3 onClick={() => setIsOpen(true)} className='text-sm relative group cursor-pointer font-medium text-[#9f193f] bg-white px-4 py-2 rounded-full flex items-center gap-2 overflow-hidden z-10 hover:text-[#fff] shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] '>Book a Call
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                            </svg>
-                            <div className="absolute -left-10 top-0 h-10 w-10 bg-[#111111] rounded-full group-hover:left-0 group-hover:w-full group-hover:h-full -z-1  transition-all duration-300 ease-in-out">
-                            </div>
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href.replace(/\/$/, ""));
+  };
 
-                        </h3>
-                    </div>
+  return (
+    <>
+      <header
+        ref={headerRef}
+        className={`sticky top-0 z-50 transition-all duration-500 ${
+          scrolled
+            ? "border-b border-[var(--border)] bg-[rgba(246,241,235,0.92)] backdrop-blur-xl"
+            : "border-b border-transparent bg-[rgba(246,241,235,0.72)] backdrop-blur-md"
+        }`}
+      >
+        <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between px-5 sm:px-8 lg:px-12">
+          <Link
+            href="/"
+            className="font-display text-[22px] font-semibold tracking-[-0.04em] text-[var(--ink)]"
+          >
+            Dev<span className="text-[var(--brand)]">Mola</span>
+          </Link>
 
-                    <div className="md:hidden">
-                        <button onClick={toggleMobileMenu} className="text-white">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                {isMobileMenuOpen ? (
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                ) : (
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M4 6h16M4 12h16M4 18h16"
-                                    />
-                                )}
-                            </svg>
-                        </button>
-                    </div>
-                </nav>
-
-                {/* Mobile Menu Slider */}
-                <div className={`fixed top-0 right-0 h-full w-[80%] bg-white transform transition-transform duration-300 ease-in-out z-50 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                    <div className="p-6">
-                        <div className="flex justify-end">
-                            <button onClick={toggleMobileMenu} className="text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <div className="mt-8">
-                            <Link href="/" onClick={toggleMobileMenu}>
-                                <div className="text-[#9F1940] font-medium py-3 border-b border-gray-200">Home</div>
-                            </Link>
-                            <Link href="/about" onClick={toggleMobileMenu}>
-                                <div className="text-[#9F1940] font-medium py-3 border-b border-gray-200">About</div>
-                            </Link>
-                            <div 
-                                className="text-[#9F1940] font-medium py-3 border-b border-gray-200 cursor-pointer"
-                                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                            >
-                                <div className="flex justify-between items-center">
-                                    <span>Services</span>
-                                    <svg 
-                                        className={`w-4 h-4 transform transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`}
-                                        xmlns="http://www.w3.org/2000/svg" 
-                                        viewBox="0 0 20 20" 
-                                        fill="currentColor"
-                                    >
-                                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                                    </svg>
-                                </div>
-                                <div className={`mt-2 space-y-2 ${isMobileServicesOpen ? 'block' : 'hidden'}`}>
-                                    {services.map((service, index) => (
-                                        <Link 
-                                            key={index} 
-                                            href={service.path}
-                                            onClick={toggleMobileMenu}
-                                        >
-                                            <div className="pl-4 py-2 text-sm text-gray-600 hover:text-[#9F1940]">
-                                                {service.name}
-                                            </div>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                            <Link href="/portfolio" onClick={toggleMobileMenu}>
-                                <div className="text-[#9F1940] font-medium py-3 border-b border-gray-200">Portfolio</div>
-                            </Link>
-                            <Link href="/blog" onClick={toggleMobileMenu}>
-                                <div className="text-[#9F1940] font-medium py-3 border-b border-gray-200">Blog</div>
-                            </Link>
-                            <Link href="/contact" onClick={toggleMobileMenu}>
-                                <div className="text-[#9F1940] font-medium py-3 border-b border-gray-200">Contact</div>
-                            </Link>
-                        </div>
-
-                        <div className="mt-8">
-                            <button className="w-full bg-[#9F1940] text-white py-3 rounded-full flex items-center justify-center gap-2 hover:bg-[#111111] transition-colors">
-                                Book a Call
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Overlay when mobile menu is open */}
-                {isMobileMenuOpen && (
-                    <div 
-                        className="fixed inset-0 [#111111] bg-opacity-50 z-40"
-                        onClick={toggleMobileMenu}
-                    ></div>
-                )}
-
-                {/* Full-width Services Dropdown */}
+          <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
+            {navLinks.map((link) =>
+              link.label === "Services" ? (
                 <div
-                    className={`absolute left-0 w-full bg-white shadow-lg transition-all duration-300 ease-in-out transform origin-top ${isServicesHovered ? 'opacity-100 max-h-[350px]' : 'opacity-0 max-h-0 overflow-hidden'}`}
-                    onMouseEnter={() => setIsServicesHovered(true)}
-                    onMouseLeave={() => setIsServicesHovered(false)}
-                    style={{ top: '88px', zIndex: 50 }}
+                  key={link.href}
+                  className="relative"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
                 >
-                    <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-                        {/* <div className="text-center mb-6">
-                        <h3 className="text-2xl font-bold text-[#111111]">Our Services</h3>
-                        <div className="w-16 h-1 bg-[#9f193f] mx-auto mt-2"></div>
-                    </div> */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {services.map((service, index) => (
-                                <Link
-                                    key={index}
-                                    href={service.path}
-                                    className="flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors group"
-                                >
-                                    <div className="ml-4">
-                                        <p className="text-base font-medium text-[#9f193f] group-hover:text-[#111111] transition-colors">
-                                            {service.name}
-                                        </p>
-                                        <p className="mt-1 text-sm text-gray-500">
-                                            {service.description}
-                                        </p>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                        {/* <div className="text-center mt-6">
-                            <a href="#" className="inline-flex items-center text-[#9f193f] hover:text-[#111111] transition-colors">
-                                <span className="font-medium">View all services</span>
-                                <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                </svg>
-                            </a>
-                        </div> */}
+                  <Link
+                    href={link.href}
+                    className={`text-[13px] font-medium tracking-[-0.01em] transition-colors ${
+                      isActive(link.href) ? "text-[var(--brand)]" : "text-[var(--ink)] hover:text-[var(--brand)]"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                  <div
+                    className={`absolute left-1/2 top-full z-40 w-[560px] -translate-x-1/2 pt-5 transition-all duration-300 ${
+                      servicesOpen ? "visible opacity-100" : "invisible opacity-0"
+                    }`}
+                  >
+                    <div className="grid grid-cols-2 gap-2 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-[0_20px_60px_rgba(17,17,17,0.12)]">
+                      {serviceLinks.map((service) => (
+                        <Link
+                          key={service.path}
+                          href={service.path}
+                          className="rounded-xl px-4 py-3 transition-colors hover:bg-[var(--bg)]"
+                        >
+                          <p className="text-sm font-semibold text-[var(--ink)]">{service.name}</p>
+                          <p className="mt-1 text-xs leading-5 text-[var(--text-muted)]">{service.description}</p>
+                        </Link>
+                      ))}
                     </div>
+                  </div>
                 </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-[13px] font-medium tracking-[-0.01em] transition-colors ${
+                    isActive(link.href) ? "text-[var(--brand)]" : "text-[var(--ink)] hover:text-[var(--brand)]"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
+          </nav>
 
-                <CalendlyWidget isOpen={isOpen} setIsOpen={setIsOpen} />
-            </div>
-        </>
-    )
-}
+          <div className="hidden items-center gap-3 lg:flex">
+            <AgencyButton href={pathname === "/" ? "#contact" : "/contact/"} className="!px-5 !py-2.5 text-[13px]">
+              Start a Project
+            </AgencyButton>
+          </div>
 
-export default Navbar
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] text-[var(--ink)] lg:hidden"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMobileOpen((open) => !open)}
+          >
+            <span className="sr-only">Menu</span>
+            <span className="relative block h-3.5 w-5">
+              <span
+                className={`absolute left-0 top-0 h-[1.5px] w-full bg-current transition-transform duration-300 ${
+                  mobileOpen ? "translate-y-[6px] rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-[6px] h-[1.5px] w-full bg-current transition-opacity duration-300 ${
+                  mobileOpen ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-[12px] h-[1.5px] w-full bg-current transition-transform duration-300 ${
+                  mobileOpen ? "-translate-y-[6px] -rotate-45" : ""
+                }`}
+              />
+            </span>
+          </button>
+        </div>
+      </header>
+
+      <div
+        ref={overlayRef}
+        className="fixed inset-0 z-[60] hidden lg:hidden"
+        style={{ display: "none" }}
+      >
+        <button
+          type="button"
+          className="absolute inset-0 bg-[var(--ink)]/40"
+          aria-label="Close menu overlay"
+          onClick={() => setMobileOpen(false)}
+        />
+        <div
+          id="mobile-nav"
+          ref={panelRef}
+          className="absolute inset-y-0 right-0 flex w-[86%] max-w-md flex-col bg-[var(--bg)] px-6 py-8"
+        >
+          <div className="mb-10 flex items-center justify-between">
+            <p className="font-display text-xl font-semibold">DevMola</p>
+            <button
+              type="button"
+              onClick={() => setMobileOpen(false)}
+              className="text-sm text-[var(--text-muted)]"
+            >
+              Close
+            </button>
+          </div>
+          <nav className="flex flex-col gap-2" aria-label="Mobile">
+            {navLinks.map((link, index) =>
+              link.label === "Services" ? (
+                <div key={link.href}>
+                  <button
+                    type="button"
+                    className="flex w-full items-center justify-between py-3 text-left font-display text-3xl tracking-[-0.04em]"
+                    onClick={() => setMobileServicesOpen((open) => !open)}
+                    ref={(el) => {
+                      if (el) linkRefs.current[index] = el as unknown as HTMLAnchorElement;
+                    }}
+                  >
+                    Services
+                    <ArrowIcon className={`h-5 w-5 transition-transform ${mobileServicesOpen ? "rotate-90" : ""}`} />
+                  </button>
+                  {mobileServicesOpen && (
+                    <div className="mb-4 space-y-2 pl-1">
+                      {serviceLinks.map((service) => (
+                        <Link
+                          key={service.path}
+                          href={service.path}
+                          className="block py-2 text-sm text-[var(--text-muted)]"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  ref={(el) => {
+                    if (el) linkRefs.current[index] = el;
+                  }}
+                  className="py-3 font-display text-3xl tracking-[-0.04em]"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
+          </nav>
+          <div className="mt-auto space-y-3">
+            <AgencyButton
+              href={pathname === "/" ? "#contact" : "/contact/"}
+              className="w-full"
+              onClick={() => setMobileOpen(false)}
+            >
+              Start a Project
+            </AgencyButton>
+            <button
+              type="button"
+              onClick={() => {
+                setMobileOpen(false);
+                setIsOpen(true);
+              }}
+              className="w-full rounded-full border border-[var(--border)] py-3 text-sm font-semibold"
+            >
+              Book a Call
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <CalendlyWidget isOpen={isOpen} setIsOpen={setIsOpen} />
+    </>
+  );
+};
+
+export default Navbar;
