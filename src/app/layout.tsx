@@ -54,8 +54,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
         <head>
+        <Script
+          id="devmola-loader-boot"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var k='devmola-loader-seen';if(sessionStorage.getItem(k)){document.documentElement.classList.add('devmola-loader-ready');}else{document.documentElement.classList.add('devmola-loader-pending');}}catch(e){document.documentElement.classList.add('devmola-loader-ready');}})();`,
+          }}
+        />
         {/* Google Analytics tag */}
         <link rel="icon" type="image/svg+xml" href="/next.svg" />
         <Script
@@ -79,13 +86,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} antialiased flex flex-col min-h-screen`}
       >
+        <div id="devmola-first-paint-veil" className="devmola-first-paint-veil" aria-hidden="true" />
         <SmoothScrollProvider>
           <PageLoader />
-          <Navbar/>
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
+          <div id="devmola-site" className="flex min-h-screen flex-1 flex-col">
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
         </SmoothScrollProvider>
       </body>
     </html>

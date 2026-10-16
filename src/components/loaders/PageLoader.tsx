@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -9,6 +9,27 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const STORAGE_KEY = "devmola-loader-seen";
+
+function shouldShowLoader() {
+  if (typeof window === "undefined") return false;
+  try {
+    return !sessionStorage.getItem(STORAGE_KEY);
+  } catch {
+    return false;
+  }
+}
+
+function finishLoader() {
+  try {
+    sessionStorage.setItem(STORAGE_KEY, "1");
+  } catch {
+    /* ignore */
+  }
+  document.documentElement.classList.remove("devmola-loader-pending", "devmola-loader-animating");
+  document.documentElement.classList.add("devmola-loader-ready");
+  document.body.classList.remove("page-loader-active");
+  ScrollTrigger.refresh();
+}
 
 function Diamond({ className = "h-4 w-4" }: { className?: string }) {
   return (
@@ -30,61 +51,58 @@ function waitForReady(minMs: number) {
     if (document.readyState === "complete") {
       void document.fonts?.ready?.then(done).catch(done);
     } else {
-      window.addEventListener("load", () => {
-        void document.fonts?.ready?.then(done).catch(done);
-      }, { once: true });
+      window.addEventListener(
+        "load",
+        () => {
+          void document.fonts?.ready?.then(done).catch(done);
+        },
+        { once: true }
+      );
     }
   });
 }
 
 export default function PageLoader() {
-  const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
   const root = useRef<HTMLDivElement | null>(null);
   const reduced = usePrefersReducedMotion();
 
-  useEffect(() => {
-    setMounted(true);
-    try {
-      if (sessionStorage.getItem(STORAGE_KEY)) return;
-    } catch {
+  useLayoutEffect(() => {
+    if (!shouldShowLoader()) {
+      finishLoader();
       return;
     }
-    setVisible(true);
+
+    document.documentElement.classList.add("devmola-loader-pending", "devmola-loader-animating");
     document.body.classList.add("page-loader-active");
+    setVisible(true);
   }, []);
 
   useGSAP(
     () => {
-      if (!visible || !root.current || reduced) {
-        if (visible && reduced && root.current) {
-          sessionStorage.setItem(STORAGE_KEY, "1");
-          setVisible(false);
-          document.body.classList.remove("page-loader-active");
-        }
+      if (!visible || !root.current) return;
+
+      if (reduced) {
+        finishLoader();
+        setVisible(false);
         return;
       }
 
       const scope = root.current;
+      gsap.set(scope, { autoAlpha: 1 });
+
       const tl = gsap.timeline({
         defaults: { ease: "power3.out" },
         onComplete: () => {
-          sessionStorage.setItem(STORAGE_KEY, "1");
+          finishLoader();
           setVisible(false);
-          document.body.classList.remove("page-loader-active");
-          ScrollTrigger.refresh();
         },
       });
 
       gsap.set(scope.querySelector("[data-loader-panel]"), { transformPerspective: 1200 });
 
       tl.fromTo(scope, { autoAlpha: 1 }, { autoAlpha: 1, duration: 0.01 })
-        .fromTo(
-          "[data-loader-grid]",
-          { opacity: 0 },
-          { opacity: 0.35, duration: 0.8 },
-          0
-        )
+        .fromTo("[data-loader-grid]", { opacity: 0 }, { opacity: 0.35, duration: 0.8 }, 0)
         .fromTo(
           "[data-loader-orbit-item]",
           { opacity: 0, scale: 0, rotateY: -120 },
@@ -148,7 +166,7 @@ export default function PageLoader() {
     { scope: root, dependencies: [visible, reduced] }
   );
 
-  if (!mounted || !visible) return null;
+  if (!visible) return null;
 
   const word = "DevMola";
   const chars = word.split("");
@@ -162,7 +180,7 @@ export default function PageLoader() {
     >
       <div
         data-loader-grid
-        className="playing-card-pips pointer-events-none absolute inset-0 opacity-0"
+        className="playing-card-pips pointer-events-none absolute inset-0 opacity-[0.35]"
         aria-hidden="true"
       />
       <div

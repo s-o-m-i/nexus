@@ -61,6 +61,37 @@ body.page-loader-active {
   overflow: hidden;
 }
 
+/* First paint: inline head script sets html.devmola-loader-pending before body paints */
+html.devmola-loader-pending {
+  background: var(--ink);
+}
+
+html.devmola-loader-pending body {
+  overflow: hidden;
+  background: var(--ink);
+}
+
+html.devmola-loader-pending #devmola-site {
+  visibility: hidden;
+}
+
+html.devmola-loader-pending #devmola-first-paint-veil {
+  display: block;
+}
+
+html.devmola-loader-animating #devmola-first-paint-veil {
+  display: none;
+}
+
+.devmola-first-paint-veil {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--ink);
+  pointer-events: none;
+}
+
 .page-loader {
   will-change: transform, opacity;
 }
