@@ -11,7 +11,7 @@ import { DiagonalArrowIcon } from "./PremiumUI";
 import CalendlyWidget from "@/components/CalendlyWidget";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 type FormValues = {
   name: string;

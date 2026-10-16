@@ -11,7 +11,7 @@ import { ArrowIcon, Eyebrow } from "./PremiumUI";
 import { DESKTOP_MQ } from "@/lib/motion";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function SelectedWork() {
   const root = useRef<HTMLElement | null>(null);
@@ -22,29 +22,62 @@ export default function SelectedWork() {
       if (!root.current || reduced) return;
 
       const mm = gsap.matchMedia();
+
       mm.add(DESKTOP_MQ, () => {
         const section = root.current;
-        const track = section?.querySelector<HTMLElement>("[data-work-track]");
-        if (!section || !track) return;
+        if (!section) return;
+
+        const track = section.querySelector<HTMLElement>("[data-work-track]");
+        if (!track) return;
+
+        let tween: gsap.core.Tween | null = null;
 
         const getTravel = () => {
           const viewport = track.parentElement?.clientWidth ?? window.innerWidth;
           return Math.max(0, track.scrollWidth - viewport);
         };
 
-        const tween = gsap.to(track, {
-          x: () => -getTravel(),
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 80px",
-            end: () => `+=${Math.max(getTravel() * 1.8, window.innerHeight * 0.9)}`,
-            pin: true,
-            scrub: 0.7,
-            invalidateOnRefresh: true,
-            anticipatePin: 1,
-          },
+        const killTween = () => {
+          if (!tween) return;
+          const st = tween.scrollTrigger;
+          if (st) st.kill();
+          tween.kill();
+          tween = null;
+          gsap.set(track, { clearProps: "transform" });
+        };
+
+        const createTween = () => {
+          killTween();
+
+          const travel = getTravel();
+          if (travel < 12) return;
+
+          const endDistance = Math.max(travel * 1.8, window.innerHeight * 0.9);
+
+          tween = gsap.to(track, {
+            x: () => -getTravel(),
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top 80px",
+              end: `+=${endDistance}`,
+              pin: true,
+              pinType: "transform",
+              scrub: 0.7,
+              invalidateOnRefresh: true,
+              anticipatePin: 0,
+            },
+          });
+        };
+
+        const rafId = requestAnimationFrame(() => {
+          createTween();
+          ScrollTrigger.refresh();
         });
+
+        const onResize = () => {
+          createTween();
+        };
 
         const refresh = () => ScrollTrigger.refresh();
         const images = track.querySelectorAll("img");
@@ -52,10 +85,13 @@ export default function SelectedWork() {
           if (!image.complete) image.addEventListener("load", refresh, { once: true });
         });
 
+        window.addEventListener("resize", onResize);
+
         return () => {
+          cancelAnimationFrame(rafId);
+          window.removeEventListener("resize", onResize);
           images.forEach((image) => image.removeEventListener("load", refresh));
-          tween.scrollTrigger?.kill();
-          tween.kill();
+          killTween();
         };
       });
 

@@ -5,7 +5,7 @@ import TeamIntro from "./TeamIntro";
 import TeamProfiles from "./TeamProfiles";
 import TeamExpertise from "./TeamExpertise";
 import TeamCulture from "./TeamCulture";
-import TeamClosingCTA from "./TeamClosingCTA";
+import HomeContact from "@/components/home/premium/HomeContact";
 
 export default function TeamPage() {
   return (
@@ -15,7 +15,7 @@ export default function TeamPage() {
       <TeamProfiles />
       <TeamExpertise />
       <TeamCulture />
-      <TeamClosingCTA />
+      <HomeContact />
     </div>
   );
 }
