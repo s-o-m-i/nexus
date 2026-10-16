@@ -1,32 +1,22 @@
-"use client"
-import React from 'react';
-import AboutHero from '@/components/about/AboutHero';
-import WayAreWeUnique from '@/components/about/WayAreWeUnique';
-import OurStory from '@/components/about/OurStory';
-// import TestimonialsSlider from '../../components/about/TestimonialsSlider';
-// import BelieveSection from '@/components/about/BelieveSection';
-import CallToAction from '@/components/home/CallToAction';
-import Hello from '@/components/about/Hello';
-import TechStack from '@/components/about/TechStack';
-import TeamSection from '@/components/about/TeamSection';
+import AboutPage from "@/components/about/premium/AboutPage";
+import type { Metadata } from "next";
 
-// export const metadata = {
-//   title: 'About Us | DevMola',
-//   description: 'Learn about DevMola - our story, mission, values and the team behind our innovative IT solutions.',
-// };
+export const metadata: Metadata = {
+  title: "About | DevMola",
+  description:
+    "Learn about DevMola — our story since 2021, how we think about design and engineering, the team behind the work, and how we partner with businesses to build digital products.",
+  alternates: {
+    canonical: "https://devmola.com/about/",
+  },
+  openGraph: {
+    title: "About | DevMola",
+    description:
+      "DevMola combines strategy, design, and engineering to help businesses build meaningful digital experiences.",
+    url: "https://devmola.com/about/",
+    type: "website",
+  },
+};
 
-export default function AboutPage() {
-  return (
-    <div className="min-h-screen">
-      <AboutHero />
-      <OurStory/>
-      <Hello/>
-      <TeamSection />
-      <TechStack/>
-      <WayAreWeUnique />
-      <CallToAction/>
-      {/* <OurJourney /> */}
-      {/* <OurTeam /> */}
-    </div>
-  );
-} 
+export default function Page() {
+  return <AboutPage />;
+}

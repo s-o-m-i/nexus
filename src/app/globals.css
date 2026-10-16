@@ -71,7 +71,9 @@ body.page-loader-active {
 #approach,
 #process,
 #team-profiles,
-#work-index {
+#work-index,
+#about-hero,
+#about-story {
   scroll-margin-top: 88px;
 }
 
