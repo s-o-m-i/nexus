@@ -149,9 +149,11 @@ export default function Process() {
           className="mb-6 max-w-xl text-center sm:mb-8 [&_[data-upward-eyebrow-mark]]:justify-center [&_h2]:mx-auto"
         />
 
-        <ProcessOrbitalStage steps={orbitalSteps} hubLabel="5" />
+        <div className="w-full">
+          <ProcessOrbitalStage steps={orbitalSteps} hubLabel="5" />
+        </div>
 
-        <div className="relative mt-8 min-h-[140px] w-full max-w-xl text-center sm:mt-10">
+        <div className="relative mt-6 min-h-[140px] w-full max-w-xl text-center sm:mt-8">
           {processSteps.map((step, index) => (
             <div
               key={step.number}

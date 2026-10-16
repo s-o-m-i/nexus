@@ -114,6 +114,16 @@ html.devmola-loader-animating #devmola-first-paint-veil {
   perspective: 1600px;
 }
 
+.process-orbit-stage.perspective-3d {
+  perspective: 1400px;
+}
+
+@media (min-width: 1024px) {
+  .process-orbit-stage.perspective-3d {
+    perspective: 1200px;
+  }
+}
+
 .preserve-3d {
   transform-style: preserve-3d;
 }
