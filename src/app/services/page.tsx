@@ -1,47 +1,22 @@
-"use client"
-import React from 'react'
-import ServicesPage from "../../components/services"
-import MainServicesCard from '@/components/services/MainServicesCard'
+import ServicesPage from "@/components/services/premium/ServicesPage";
+import type { Metadata } from "next";
 
-const services = [
-  {
-    id: '1',
-    number: '01',
-    title: 'Branding Design',
-    description: 'Establish a powerful brand identity that resonates with your target audience and leaves a lasting impression.',
-    slug: 'branding-design'
+export const metadata: Metadata = {
+  title: "Services | DevMola",
+  description:
+    "DevMola services — web development, mobile apps, UI/UX, SEO, digital marketing, and graphic design. One team for product, search, and growth.",
+  alternates: {
+    canonical: "https://devmola.com/services/",
   },
-  {
-    id: '2',
-    number: '02',
-    title: 'UI/UX Design',
-    description: 'Create intuitive, engaging user experiences that delight your customers and drive conversion rates.',
-    slug: 'ui-ux-design'
+  openGraph: {
+    title: "Services | DevMola",
+    description:
+      "Websites, apps, design, SEO, and marketing — crafted with the same standard as our homepage experience.",
+    url: "https://devmola.com/services/",
+    type: "website",
   },
-  {
-    id: '3',
-    number: '03',
-    title: 'Web Design',
-    description: 'Build stunning, responsive websites that showcase your brand and provide seamless user experiences.',
-    slug: 'web-design'
-  },
-  {
-    id: '4',
-    number: '04',
-    title: 'App Design',
-    description: 'Develop beautiful, functional mobile applications that engage users and deliver exceptional value.',
-    slug: 'app-design'
-  }
-];
+};
 
-const Services = () => {
-  return (
-    <div>
-   
-      
-      <ServicesPage/>
-    </div>
-  )
+export default function Page() {
+  return <ServicesPage />;
 }
-
-export default Services
