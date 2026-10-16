@@ -32,13 +32,11 @@ export type CultureValue = {
   description: string;
 };
 
-export const teamHero = {
-  eyebrow: "The people behind DevMola",
-  headline: ["Meet the Minds Behind", "the Digital Magic."],
-  subcopy:
-    "Behind every great digital experience is a team of curious thinkers, creative problem-solvers, and passionate builders turning ambitious ideas into reality.",
-  ctaLabel: "Meet the team",
-  ctaTarget: "#team-profiles",
+export const teamGrid = {
+  eyebrow: "Meet the team",
+  title: "Our team",
+  description:
+    "Founders, builders, and strategists behind DevMola — the people who turn briefs into shipped websites, products, and growth programs.",
 };
 
 export const teamIntro = {
