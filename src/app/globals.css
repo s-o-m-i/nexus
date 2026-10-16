@@ -69,7 +69,8 @@ body.page-loader-active {
 #services,
 #work,
 #approach,
-#process {
+#process,
+#team-profiles {
   scroll-margin-top: 88px;
 }
 
