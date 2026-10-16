@@ -114,6 +114,16 @@ html.devmola-loader-animating #devmola-first-paint-veil {
   perspective: 1600px;
 }
 
+.contact-orbit.perspective-3d {
+  perspective: 1300px;
+}
+
+@media (min-width: 1024px) {
+  .contact-orbit.perspective-3d {
+    perspective: 1150px;
+  }
+}
+
 .about-story-orbit.perspective-3d {
   perspective: 1300px;
 }

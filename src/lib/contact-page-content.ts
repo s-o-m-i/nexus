@@ -9,6 +9,52 @@ export const contactPageHero = {
   secondaryCta: { label: "View our work", href: "/works/" },
 };
 
+/** Orbit cards in the contact hero — CTAs that point clients toward starting work. */
+export const contactOrbitCards = [
+  {
+    number: "01",
+    title: "Share your brief",
+    tag: "Tell us the goal",
+    href: "#contact-form",
+    external: false,
+  },
+  {
+    number: "02",
+    title: "Book a discovery call",
+    tag: "Align on scope",
+    href: "#contact-form",
+    external: false,
+  },
+  {
+    number: "03",
+    title: "Email the team",
+    tag: contact.email,
+    href: `mailto:${contact.email}`,
+    external: true,
+  },
+  {
+    number: "04",
+    title: "Message on WhatsApp",
+    tag: "Quick questions",
+    href: contact.whatsappHref,
+    external: true,
+  },
+  {
+    number: "05",
+    title: "Review our work",
+    tag: "Proof before you write",
+    href: "/works/",
+    external: false,
+  },
+  {
+    number: "06",
+    title: "One team to launch",
+    tag: "Strategy · Build · Grow",
+    href: "#contact-form",
+    external: false,
+  },
+];
+
 export const contactPageForm = {
   title: "Tell us about your project",
   description: "A short note is enough. We typically respond within one business day.",
