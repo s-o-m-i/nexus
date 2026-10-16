@@ -21,7 +21,9 @@ export default function Pagination({ currentPage, totalPages, basePath }: Pagina
             href={href}
             aria-current={isActive ? "page" : undefined}
             className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-              isActive ? "bg-[#9f193f] text-white" : "border border-slate-200 bg-white text-slate-700 hover:border-[#9f193f] hover:text-[#9f193f]"
+              isActive
+                ? "bg-[var(--ink)] text-white"
+                : "border border-[var(--border-strong)] bg-white text-[var(--ink)] hover:border-[var(--ink)]/25"
             }`}
           >
             {page}

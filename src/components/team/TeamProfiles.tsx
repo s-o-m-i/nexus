@@ -3,7 +3,9 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { teamGrid, teamMembers } from "@/lib/team-content";
+import { teamGrid, teamMembers as allTeamMembers } from "@/lib/team-content";
+
+const teamMembers = allTeamMembers.filter((member) => !member.isPlaceholder);
 import TeamMemberCard from "./TeamMemberCard";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
