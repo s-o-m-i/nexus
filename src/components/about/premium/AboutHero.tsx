@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { aboutHero } from "@/lib/about-content";
 import { AgencyButton, Eyebrow } from "@/components/home/premium/PremiumUI";
-import AboutHeroVisual from "./AboutHeroVisual";
+import AboutHeroStoryScene from "./AboutHeroStoryScene";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 export default function AboutHero() {
@@ -27,10 +27,11 @@ export default function AboutHero() {
     <section
       id="about-hero"
       ref={root}
-      className="relative overflow-hidden bg-[var(--ink)] pt-28 text-white sm:pt-32 lg:pt-36"
+      className="about-hero relative overflow-hidden bg-[var(--ink)] pt-28 text-white sm:pt-32 lg:min-h-[min(88vh,820px)] lg:pt-36"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_0%,rgba(159,25,63,0.12),transparent_55%)]" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[var(--bg-section)] to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_70%_12%,rgba(159,25,63,0.16),transparent_58%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_45%_35%_at_15%_85%,rgba(255,255,255,0.035),transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--bg-section)] to-transparent" />
 
       <div className="relative mx-auto grid max-w-[1280px] gap-12 px-5 pb-20 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10 lg:pb-24 lg:px-12">
         <div data-about-hero-copy className="max-w-xl">
@@ -49,8 +50,8 @@ export default function AboutHero() {
           </div>
         </div>
 
-        <div data-about-hero-visual className="lg:justify-self-end">
-          <AboutHeroVisual />
+        <div data-about-hero-visual className="relative flex w-full items-center justify-center lg:justify-end">
+          <AboutHeroStoryScene />
         </div>
       </div>
 
