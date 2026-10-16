@@ -44,11 +44,14 @@ export default function AboutDifferentiators() {
 
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:mt-16 lg:gap-x-12 lg:gap-y-14">
           {aboutDifferentiators.items.map((item) => (
-            <article key={item.number} data-diff-item className="group relative pl-0 sm:pl-2">
-              <span className="font-display text-[clamp(3rem,8vw,4.5rem)] leading-none tracking-[-0.05em] text-[var(--ink)]/[0.07] transition-colors duration-300 group-hover:text-[var(--brand)]/20">
+            <article key={item.number} data-diff-item className="group relative sm:pl-1">
+              <p
+                aria-hidden="true"
+                className="font-display text-[clamp(2.5rem,6vw,3.5rem)] leading-none tracking-[-0.05em] text-[var(--ink)]/[0.09] transition-colors duration-300 group-hover:text-[var(--brand)]/22"
+              >
                 {item.number}
-              </span>
-              <h3 className="-mt-6 font-display text-xl tracking-[-0.03em] text-[var(--ink)] sm:text-2xl">
+              </p>
+              <h3 className="mt-4 font-display text-xl tracking-[-0.03em] text-[var(--ink)] sm:mt-5 sm:text-2xl">
                 {item.title}
               </h3>
               <p className="mt-3 max-w-md text-[15px] leading-7 text-[var(--text-muted)]">{item.description}</p>

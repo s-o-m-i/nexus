@@ -2,13 +2,10 @@
 
 import { useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { processSteps } from "@/lib/home-content";
 import { SectionIntro } from "./PremiumUI";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-
-gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function Process() {
   const root = useRef<HTMLElement | null>(null);
@@ -16,19 +13,23 @@ export default function Process() {
 
   useGSAP(
     () => {
-      if (!root.current || reduced) return;
-      gsap.fromTo(
-        "[data-step-card]",
-        { opacity: 0, y: 28 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.09,
-          ease: "power3.out",
-          scrollTrigger: { trigger: root.current, start: "top 78%", once: true },
-        }
+      const section = root.current;
+      if (!section || reduced) return;
+
+      const cards = section.querySelectorAll("[data-step-card]");
+      gsap.set(cards, { opacity: 0, y: 28 });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          gsap.to(cards, { opacity: 1, y: 0, duration: 0.8, stagger: 0.09, ease: "power3.out" });
+          observer.disconnect();
+        },
+        { threshold: 0.2, rootMargin: "0px 0px -8% 0px" }
       );
+
+      observer.observe(section);
+      return () => observer.disconnect();
     },
     { scope: root, dependencies: [reduced] }
   );

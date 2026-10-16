@@ -2,14 +2,11 @@
 
 import { useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { principles } from "@/lib/home-content";
 import { SectionIntro } from "./PremiumUI";
 import { useCardTilt } from "@/hooks/useCardTilt";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-
-gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 function PrincipleCard({ item }: { item: (typeof principles)[number] }) {
   const tilt = useCardTilt(6);
@@ -35,19 +32,23 @@ export default function Principles() {
 
   useGSAP(
     () => {
-      if (!root.current || reduced) return;
-      gsap.fromTo(
-        "[data-principle-card]",
-        { opacity: 0, y: 32 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.85,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: { trigger: root.current, start: "top 78%", once: true },
-        }
+      const section = root.current;
+      if (!section || reduced) return;
+
+      const cards = section.querySelectorAll("[data-principle-card]");
+      gsap.set(cards, { opacity: 0, y: 32 });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          gsap.to(cards, { opacity: 1, y: 0, duration: 0.85, stagger: 0.1, ease: "power3.out" });
+          observer.disconnect();
+        },
+        { threshold: 0.2, rootMargin: "0px 0px -8% 0px" }
       );
+
+      observer.observe(section);
+      return () => observer.disconnect();
     },
     { scope: root, dependencies: [reduced] }
   );

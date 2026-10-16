@@ -2,13 +2,10 @@
 
 import { useRef, useState } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { problems } from "@/lib/home-content";
 import { SectionIntro } from "./PremiumUI";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-
-gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function ProblemSolution() {
   const [active, setActive] = useState(0);
@@ -19,30 +16,30 @@ export default function ProblemSolution() {
 
   useGSAP(
     () => {
-      if (!root.current || reduced) return;
-      gsap.fromTo(
-        "[data-problem-item]",
-        { opacity: 0, y: 24 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.75,
-          stagger: 0.08,
-          ease: "power3.out",
-          scrollTrigger: { trigger: root.current, start: "top 78%", once: true },
-        }
+      const section = root.current;
+      if (!section || reduced) return;
+
+      const items = section.querySelectorAll("[data-problem-item]");
+      const panelEl = section.querySelector("[data-problem-panel]");
+      gsap.set(items, { opacity: 0, y: 24 });
+      if (panelEl) gsap.set(panelEl, { opacity: 0, y: 24 });
+
+      const play = () => {
+        gsap.to(items, { opacity: 1, y: 0, duration: 0.75, stagger: 0.08, ease: "power3.out" });
+        if (panelEl) gsap.to(panelEl, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" });
+      };
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          play();
+          observer.disconnect();
+        },
+        { threshold: 0.2, rootMargin: "0px 0px -8% 0px" }
       );
-      gsap.fromTo(
-        "[data-problem-panel]",
-        { opacity: 0, y: 28 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.9,
-          ease: "power3.out",
-          scrollTrigger: { trigger: root.current, start: "top 72%", once: true },
-        }
-      );
+
+      observer.observe(section);
+      return () => observer.disconnect();
     },
     { scope: root, dependencies: [reduced] }
   );

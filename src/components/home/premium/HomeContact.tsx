@@ -3,15 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { contactQuickLinks, formServices } from "@/lib/home-content";
 import { DiagonalArrowIcon } from "./PremiumUI";
 import CalendlyWidget from "@/components/CalendlyWidget";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-
-gsap.registerPlugin(ScrollTrigger);
 
 type FormValues = {
   name: string;
@@ -40,30 +37,26 @@ export default function HomeContact() {
 
   useGSAP(
     () => {
-      if (!root.current || reduced) return;
-      gsap.fromTo(
-        "[data-contact-tile]",
-        { opacity: 0, y: 24 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.75,
-          stagger: 0.07,
-          ease: "power3.out",
-          scrollTrigger: { trigger: root.current, start: "top 85%", once: true },
-        }
+      const section = root.current;
+      if (!section || reduced) return;
+
+      const tiles = section.querySelectorAll("[data-contact-tile]");
+      const form = section.querySelector("[data-contact-form]");
+      gsap.set(tiles, { opacity: 0, y: 24 });
+      if (form) gsap.set(form, { opacity: 0, y: 32 });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          gsap.to(tiles, { opacity: 1, y: 0, duration: 0.75, stagger: 0.07, ease: "power3.out" });
+          if (form) gsap.to(form, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" });
+          observer.disconnect();
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -6% 0px" }
       );
-      gsap.fromTo(
-        "[data-contact-form]",
-        { opacity: 0, y: 32 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.9,
-          ease: "power3.out",
-          scrollTrigger: { trigger: root.current, start: "top 80%", once: true },
-        }
-      );
+
+      observer.observe(section);
+      return () => observer.disconnect();
     },
     { scope: root, dependencies: [reduced] }
   );
