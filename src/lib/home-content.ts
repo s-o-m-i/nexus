@@ -248,3 +248,11 @@ export const contactQuickLinks = [
   { label: "Book a meeting", href: "#", action: "calendly" as const },
   { label: "View works", href: "/works/", external: false },
 ];
+
+/** Closing beat at the bottom of the homepage — thanks visitors who read the full page. */
+export const homeFarewell = {
+  word: "Bye",
+  line: "Thanks for visiting",
+  subline:
+    "You made it to the end — that matters to us. Whenever you're ready to start something, we'll bring the same care from first hello to launch.",
+};

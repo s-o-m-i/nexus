@@ -9,6 +9,8 @@ import ProblemSolution from "./premium/ProblemSolution";
 import Process from "./premium/Process";
 import Principles from "./premium/Principles";
 import HomeContact from "./premium/HomeContact";
+import FarewellByeSection from "@/components/motion/FarewellByeSection";
+import { homeFarewell } from "@/lib/home-content";
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -54,6 +56,7 @@ const HomePage = ({ children }: { children?: React.ReactNode }) => {
         <Principles />
         {children}
         <HomeContact />
+        <FarewellByeSection content={homeFarewell} ariaLabel="Thank you for visiting DevMola" />
       </div>
     </>
   );
