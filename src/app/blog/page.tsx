@@ -10,7 +10,7 @@ import BlogPostGridCard from "@/components/blog/BlogPostGridCard";
 import BlogCategoryPills from "@/components/blog/BlogCategoryPills";
 import HomeContact from "@/components/home/premium/HomeContact";
 import type { Metadata } from "next";
-
+// 
 export const metadata: Metadata = {
   title: "Blog | DevMola",
   description: "Insights, strategies, and stories for modern software development, SEO, and digital growth.",
