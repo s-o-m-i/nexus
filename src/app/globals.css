@@ -320,6 +320,68 @@ html.devmola-loader-animating {
   opacity: 1;
 }
 
+.problem-stack {
+  --stack-header: 72px;
+  --stack-stagger: 14px;
+  --stack-gap: 3rem;
+  --stack-card-h: clamp(
+    27rem,
+    calc(100svh - var(--stack-header) - 2.25rem - (var(--stack-count, 1) - 1) * var(--stack-stagger)),
+    32rem
+  );
+  --stack-dock: calc(var(--stack-header) + 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap);
+}
+
+.problem-stack__card {
+  min-height: max(var(--stack-card-h), var(--stack-card-fit, 0px));
+}
+
+.problem-stack__dim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  background-color: var(--bg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .problem-stack {
+    --stack-stagger: 20px;
+    --stack-gap: 5rem;
+    --stack-card-h: clamp(
+      26rem,
+      calc(100svh - var(--stack-header) - 4rem - (var(--stack-count, 1) - 1) * var(--stack-stagger)),
+      38rem
+    );
+    --stack-dock: max(
+      calc(var(--stack-header) + 1rem),
+      calc(
+        (
+            100svh - max(var(--stack-card-h), var(--stack-card-fit, 0px)) -
+              (var(--stack-count, 1) - 1) * var(--stack-stagger)
+          ) / 2 + var(--stack-header) / 2
+      )
+    );
+  }
+}
+
+/* Short viewports can't fit a docked card, so they keep the natural flow. */
+@media (min-height: 600px) and (prefers-reduced-motion: no-preference) {
+  .problem-stack__item {
+    position: sticky;
+    top: calc(var(--stack-dock) + var(--stack-index, 0) * var(--stack-stagger));
+  }
+
+  .problem-stack[data-stack-static] .problem-stack__item {
+    position: static;
+  }
+}
+
 .nav-roll {
   display: inline-block;
   position: relative;
