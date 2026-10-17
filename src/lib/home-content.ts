@@ -239,8 +239,8 @@ export const formServices = [
 
 export const contact = {
   email: "info@devmola.com",
-  whatsapp: "+92 370 5614842",
-  whatsappHref: "https://wa.me/923705614842",
+  whatsapp: "+86 183 9969 0230",
+  whatsappHref: "https://wa.me/8618399690230",
   location: "Islamabad, Pakistan",
 };
 

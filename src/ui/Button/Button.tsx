@@ -3,7 +3,7 @@ import React from 'react'
 const Button = ({text="Hire us!"}:{text?: string;}) => {
   return (
     <div>
-      <a href="https://wa.me/923705614842">
+      <a href="https://wa.me/8618399690230">
 
 <button
   type="submit"

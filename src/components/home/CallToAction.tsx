@@ -40,11 +40,11 @@ const CallToAction = ({ desc = "Ready to take your business to the next level wi
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <a href="https://wa.me/923705614842">
-                <PrimaryButton text="923705614842" />
+                <a href="https://wa.me/8618399690230">
+                <PrimaryButton text="8618399690230" />
                 </a>
               </motion.div>
-              <a href="https://wa.me/923705614842">
+              <a href="https://wa.me/8618399690230">
               <motion.button 
                 className="px-8 py-3 border border-[#9f193f]/30 text-white font-medium rounded-lg bg-[#1a1a1a]/80 backdrop-blur-sm transition-all hover:scale-105 text-sm hover:bg-[#9f193f] hover:border-[#9f193f] shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05 }}

@@ -31,9 +31,9 @@ export const leadershipContacts: LeadershipContact[] = [
     name: "M. Dawood",
     role: "CEO & Founder",
     email: "info@devmola.com",
-    phone: "+92 370 5614842",
-    telHref: "tel:+923705614842",
-    whatsappHref: "https://wa.me/923705614842",
+    phone: "+86 183 9969 0230",
+    telHref: "tel:+8618399690230",
+    whatsappHref: "https://wa.me/8618399690230",
   },
 ];
 

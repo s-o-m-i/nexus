@@ -31,7 +31,7 @@ const schemaData = {
     },
     {
       "@type": "ContactPoint",
-      telephone: "+92-370-5614842",
+      telephone: ceoContact.phone.replace(/\s/g, "-"),
       email: ceoContact.email,
       contactType: "customer support",
       areaServed: "PK",

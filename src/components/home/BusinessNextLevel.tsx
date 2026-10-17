@@ -144,10 +144,10 @@ const BusinessNextLevel = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <a href="https://wa.me/923705614842">
+            <a href="https://wa.me/8618399690230">
             <PrimaryButton text="Get Started Today" />
             </a>
-            <a href="https://wa.me/923705614842">
+            <a href="https://wa.me/8618399690230">
             <button className="px-8 py-4 border border-white/20 text-white font-medium rounded-lg bg-white/5 backdrop-blur-sm transition-all hover:bg-white/10 hover:scale-105 flex items-center gap-2">
               Learn More
               <ArrowRight className="w-4 h-4" />

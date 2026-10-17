@@ -197,7 +197,7 @@ const WhyChooseDevMola = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-               <a href="https://wa.me/923705614842">
+               <a href="https://wa.me/8618399690230">
                 <button className="bg-gradient-to-r from-[#9f193f] to-[#c42155] text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
                   Start Your Journey
                 </button>

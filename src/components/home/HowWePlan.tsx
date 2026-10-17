@@ -172,12 +172,12 @@ const HowWePlan = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/923705614842">
+                <a href="https://wa.me/8618399690230">
                 <button className="bg-gradient-to-r from-[#9f193f] to-[#c42155] text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
                   Start Planning Today
                 </button>
                 </a>
-                <a href="https://wa.me/923705614842">
+                <a href="https://wa.me/8618399690230">
                 <button className="bg-white/10 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                   Learn More
                 </button></a>
