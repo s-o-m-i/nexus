@@ -320,9 +320,33 @@ html.devmola-loader-animating {
   opacity: 1;
 }
 
+.nav-roll {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.nav-roll > span {
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 1lh currentColor;
+  transform: translateY(0) rotate(0.001deg);
+  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.nav-roll-trigger:hover .nav-roll > span,
+.nav-roll-trigger:focus-visible .nav-roll > span {
+  transform: translateY(-1lh) rotate(0.001deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .nav-roll > span {
+    transition: none;
   }
 
   .animate-marquee,

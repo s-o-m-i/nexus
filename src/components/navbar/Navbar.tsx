@@ -12,6 +12,16 @@ import { duration, easeOut, stagger } from "@/lib/motion";
 
 gsap.registerPlugin(useGSAP);
 
+const RollingLabel = ({ label }: { label: string }) => (
+  <span className="nav-roll" aria-hidden="true">
+    {Array.from(label).map((char, index) => (
+      <span key={index} style={{ transitionDelay: `${index * 0.01}s` }}>
+        {char === " " ? "\u00A0" : char}
+      </span>
+    ))}
+  </span>
+);
+
 const Navbar = () => {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -99,8 +109,8 @@ const Navbar = () => {
   };
 
   const navLinkClass = (href: string) =>
-    `inline-flex h-10 items-center whitespace-nowrap font-display text-[13px] font-medium leading-none tracking-[-0.01em] transition-colors ${
-      isActive(href) ? "text-[var(--brand)]" : "text-[var(--ink)] hover:text-[var(--brand)]"
+    `nav-roll-trigger inline-flex h-10 items-center whitespace-nowrap font-display text-[13px] font-medium leading-none tracking-[-0.01em] transition-colors ${
+      isActive(href) ? "text-[var(--brand)]" : "text-[var(--ink)]"
     }`;
 
   return (
@@ -131,8 +141,8 @@ const Navbar = () => {
                     onMouseEnter={() => setServicesOpen(true)}
                     onMouseLeave={() => setServicesOpen(false)}
                   >
-                    <Link href={link.href} className={navLinkClass(link.href)}>
-                      {link.label}
+                    <Link href={link.href} className={navLinkClass(link.href)} aria-label={link.label}>
+                      <RollingLabel label={link.label} />
                     </Link>
                     <div
                       className={`absolute left-1/2 top-full z-40 w-[560px] -translate-x-1/2 pt-5 transition-all duration-300 ${
@@ -155,8 +165,8 @@ const Navbar = () => {
                   </li>
                 ) : (
                   <li key={link.href} className="flex items-center">
-                    <Link href={link.href} className={navLinkClass(link.href)}>
-                      {link.label}
+                    <Link href={link.href} className={navLinkClass(link.href)} aria-label={link.label}>
+                      <RollingLabel label={link.label} />
                     </Link>
                   </li>
                 )
